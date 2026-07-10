@@ -18,17 +18,15 @@
   --radius-md: 14px;
   color: var(--ink);
   background: var(--bg);
-  font-family:
+  --font-family-base:
     Inter,
     ui-sans-serif,
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
-    Segoe UI,
+    "Segoe UI",
     sans-serif;
-  --font-family-base:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: var(--font-family-base);
   --color-heading: #081b36;
   --color-text: #18314f;
   --color-text-muted: #64758a;
@@ -41,12 +39,22 @@
   --font-weight-h2: 820;
   --line-height-h2: 1.12;
   --letter-spacing-h2: -0.032em;
+  --font-size-h3: 19px;
+  --font-weight-h3: 800;
+  --line-height-h3: 1.25;
+  --letter-spacing-h3: -0.018em;
   --font-size-body: 15.5px;
   --font-weight-body: 400;
   --line-height-body: 1.66;
   --font-size-lead: clamp(16px, 1.35vw, 18px);
   --line-height-lead: 1.62;
   --section-padding-y: 72px;
+  --section-padding-y-mobile: 52px;
+  --hero-padding-top: 62px;
+  --hero-padding-bottom: 72px;
+  --hero-padding-top-mobile: 36px;
+  --hero-padding-bottom-mobile: 52px;
+  --section-header-gap: 32px;
   --heading-text-gap: 12px;
 }
 
@@ -282,8 +290,13 @@ html[dir="rtl"] .productPreview {
   font-size: 14px;
 }
 
+.heroSection,
+.seoHero,
+.pollHero {
+  padding: var(--hero-padding-top) 0 var(--hero-padding-bottom);
+}
+
 .heroSection {
-  padding: 62px 0 72px;
   position: relative;
   overflow: hidden;
 }
@@ -339,7 +352,9 @@ html[dir="rtl"] .productPreview {
   display: inline-flex;
 }
 
-h1 {
+h1,
+.seoPage h1,
+.pollHeroCopy h1 {
   margin: 0;
   color: var(--color-heading);
   font-size: var(--font-size-h1);
@@ -348,11 +363,15 @@ h1 {
   letter-spacing: var(--letter-spacing-h1);
 }
 
-.heroCopy h1 {
+.heroCopy h1,
+.seoPage h1,
+.pollHeroCopy h1 {
   max-width: 680px;
 }
 
-.heroLead {
+.heroLead,
+.seoLead,
+.pollHeroLead {
   margin-top: 20px;
   color: var(--color-lead);
   font-size: var(--font-size-lead);
@@ -695,8 +714,142 @@ h1 {
   top: 225px;
 }
 
-.section {
-  padding: 72px 0;
+.section,
+.seoSection,
+.pollSection {
+  padding: var(--section-padding-y) 0;
+}
+
+
+.seoSectionHeader {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.seoSectionHeader.isLeft {
+  text-align: left;
+  margin-left: 0;
+}
+
+.seoSectionHeader.isLeft .seoKicker {
+  margin-left: 0;
+}
+
+.seoKicker {
+  color: #21466f;
+  background: #ffffffb8;
+  border: 1px solid #d8e7f7;
+  border-radius: 999px;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin: 0 auto 14px;
+  padding: 8px 13px;
+  font-size: 13px;
+  font-weight: 800;
+  display: inline-flex;
+}
+
+.seoKicker:before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 0 5px #e3182c12;
+}
+
+.seoSectionText {
+  margin-top: var(--heading-text-gap);
+  color: var(--color-lead);
+}
+
+.seoCta {
+  padding: 22px 0 88px;
+}
+
+.seoCtaBox,
+.pollCtaBox {
+  border-radius: var(--radius-xl);
+  color: #fff;
+  background: linear-gradient(145deg, #0c2244, #123661 56%, #e3182c 150%);
+  box-shadow: var(--shadow);
+  padding: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.seoCtaBox:before,
+.pollCtaBox:before {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: #ffffff1a;
+}
+
+.seoCtaBox > div,
+.seoCtaBox > a,
+.pollCtaBox > div,
+.pollCtaBox > a {
+  position: relative;
+}
+
+.seoCtaBox h2,
+.pollCtaBox h2 {
+  color: #fff;
+}
+
+.seoCtaBox p,
+.pollCtaBox p {
+  color: #c9d6e4;
+  margin-top: var(--heading-text-gap);
+  max-width: 760px;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+}
+
+.seoFooter {
+  padding: 0 0 34px;
+}
+
+.seoFooterInner {
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.seoFooterText {
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.seoFooterLinks {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #31506f;
+  font-size: 13.5px;
+  font-weight: 800;
+}
+
+.seoFooterLinks a:hover {
+  color: var(--blue-dark);
 }
 
 .sectionTint {
@@ -705,8 +858,9 @@ h1 {
   border-bottom: 1px solid #dfe8f2bd;
 }
 
-.sectionHeader {
-  margin-bottom: 32px;
+.sectionHeader,
+.seoSectionHeader {
+  margin-bottom: var(--section-header-gap);
 }
 
 .sectionHeader span,
@@ -722,7 +876,15 @@ h1 {
   display: inline-block;
 }
 
-h2 {
+h2,
+.seoSectionHeader h2,
+.pollFormatIntro h2,
+.pollBlendCopy h2,
+.seoSplitCard h2,
+.seoDesignPanel h2,
+.finalCtaBox h2,
+.seoCtaBox h2,
+.pollCtaBox h2 {
   margin: 0;
   color: var(--color-heading);
   font-size: var(--font-size-h2);
@@ -733,13 +895,18 @@ h2 {
 
 h3 {
   color: #102b4d;
-  letter-spacing: -0.018em;
   margin: 0;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h3);
+  line-height: var(--line-height-h3);
+  letter-spacing: var(--letter-spacing-h3);
 }
 
 .sectionHeader p,
 .scenarioIntro p,
 .finalCtaBox p,
+.seoSectionText,
+.pollStepsIntroText,
 .noJsContent p {
   margin-top: var(--heading-text-gap);
   color: var(--color-text-muted);
@@ -901,7 +1068,15 @@ h3 {
   top: 90px;
 }
 
-.scenarioIntro h2 {
+.scenarioIntro h2,
+.seoSectionHeader h2,
+.pollFormatIntro h2,
+.pollBlendCopy h2,
+.seoSplitCard h2,
+.seoDesignPanel h2,
+.finalCtaBox h2,
+.seoCtaBox h2,
+.pollCtaBox h2 {
   margin-bottom: 0;
   color: #fff;
 }
@@ -1054,7 +1229,15 @@ h3 {
   padding-right: 250px;
 }
 
-.finalCtaBox h2 {
+.finalCtaBox h2,
+.seoSectionHeader h2,
+.pollFormatIntro h2,
+.pollBlendCopy h2,
+.seoSplitCard h2,
+.seoDesignPanel h2,
+.finalCtaBox h2,
+.seoCtaBox h2,
+.pollCtaBox h2 {
   color: #fff;
   max-width: 760px;
 }
@@ -1597,11 +1780,43 @@ lottie-player:not(:defined).endLottie:before {
   .floatingCardTwo {
     left: 16%;
     bottom: 102px;
+    right: 12%;
   }
 
   .floatingCardThree {
     right: 12%;
     top: 238px;
+    left: 16%;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .heroCopy {
+    max-width: 900px;
+  }
+
+  .productPreview {
+    min-height: 520px;
+  }
+
+  .floatingCardOne {
+    left: 12%;
+  }
+
+  .stepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .splitHeader,
+  .scenariosWrap {
+    grid-template-columns: 1fr;
+  }
+
+  .scenarioIntro {
+    position: static;
   }
 }
 
@@ -1609,20 +1824,28 @@ lottie-player:not(:defined).endLottie:before {
   .floatingCardTwo {
     left: 8px;
     bottom: 102px;
+    top: 238px;
+    right: 0;
   }
 
   .floatingCardThree {
     right: 0;
     top: 225px;
+    bottom: 102px;
+    left: 8px;
   }
 
   .finalCtaBox {
     padding-right: 24px;
+    border-radius: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
   }
 
   .finalButton {
     position: static;
-    width: 154px;
+    width: 100%;
     height: 176px;
     align-self: center;
     transform: none;
@@ -1633,7 +1856,85 @@ lottie-player:not(:defined).endLottie:before {
   }
 
   .floatingCardOne {
-    top: 60px;
+    top: 112px;
+    left: 0;
+  }
+
+  .container {
+    width: min(100% - 28px, 680px);
+  }
+
+  .logo img {
+    width: 130px;
+  }
+
+  .heroSection,
+  .seoHero,
+  .pollHero {
+    padding: var(--hero-padding-top-mobile) 0 var(--hero-padding-bottom-mobile);
+  }
+
+  .heroProof {
+    grid-template-columns: 1fr;
+  }
+
+  .proofItem {
+    align-items: flex-start;
+    gap: 12px;
+    min-height: auto;
+    display: flex;
+  }
+
+  .proofItem svg {
+    margin-bottom: 0;
+  }
+
+  .productPreview {
+    transform-origin: top;
+    min-height: 520px;
+    margin-bottom: -24px;
+    transform: scale(0.94);
+  }
+
+  .floatingCard {
+    min-height: 46px;
+    font-size: 12.5px;
+  }
+
+  .section,
+  .seoSection,
+  .pollSection {
+    padding: var(--section-padding-y-mobile) 0;
+  }
+
+  .sectionHeader {
+    margin-bottom: 22px;
+  }
+
+  .featureGrid,
+  .scenarioGrid,
+  .faqSections {
+    grid-template-columns: 1fr;
+  }
+
+  .faqSectionBlock:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
+  .scenarioGrid {
+    grid-template-rows: none;
+    min-height: auto;
+  }
+
+  .scenarioIntro,
+  .featureCard,
+  .scenarioCard {
+    min-height: auto;
+  }
+
+  .footerInner {
+    text-align: center;
+    flex-direction: column;
   }
 }
 
@@ -1792,6 +2093,7 @@ lottie-player:not(:defined).endLottie:before {
 
   .floatingCardTwo {
     left: -8px;
+    right: -8px;
   }
 
   .floatingCardThree {
@@ -1810,6 +2112,82 @@ lottie-player:not(:defined).endLottie:before {
 
   .floatingCardOne {
     top: 60px;
+    left: -8px;
+  }
+
+  .headerInner {
+    min-height: 60px;
+  }
+
+  .btnSmall {
+    min-height: 40px;
+    padding: 0 13px;
+    font-size: 13px;
+  }
+
+  .languageSelectWrap {
+    min-height: 40px;
+    padding-left: 11px;
+    padding-right: 32px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .heroActions {
+    gap: 10px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+  }
+
+  .heroLead,
+.seoLead,
+.pollHeroLead {
+    font-size: 16px;
+  }
+
+  .phoneShell {
+    width: 270px;
+  }
+
+  .productPreview {
+    min-height: 470px;
+    margin: 0;
+    transform: scale(0.88);
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .stepCard {
+    min-height: auto;
+  }
+
+  .stepNumber {
+    margin-bottom: 18px;
+  }
+
+  .sectionHeader p,
+  .scenarioIntro p,
+  .finalCtaBox p {
+    font-size: 15px;
+  }
+
+  .faqSectionBlock {
+    padding: 18px;
+  }
+
+  .faqSectionBlock h3 {
+    font-size: 18px;
+  }
+
+  .faqItem summary {
+    min-height: 0;
+    padding: 12px 14px;
   }
 }
 
@@ -1967,229 +2345,5 @@ lottie-player:not(:defined).endLottie:before {
   .siteHeader .btnSmall {
     width: 38px;
     min-width: 38px;
-  }
-}
-
-@media (width<=1100px) {
-  .heroGrid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .heroCopy {
-    max-width: 900px;
-  }
-
-  .productPreview {
-    min-height: 520px;
-  }
-
-  .floatingCardOne {
-    left: 12%;
-  }
-
-  .floatingCardTwo {
-    right: 12%;
-  }
-
-  .floatingCardThree {
-    left: 16%;
-  }
-
-  .stepsGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .splitHeader,
-  .scenariosWrap {
-    grid-template-columns: 1fr;
-  }
-
-  .scenarioIntro {
-    position: static;
-  }
-}
-
-@media (width<=540px) {
-  .headerInner {
-    min-height: 60px;
-  }
-
-  .btnSmall {
-    min-height: 40px;
-    padding: 0 13px;
-    font-size: 13px;
-  }
-
-  .languageSelectWrap {
-    min-height: 40px;
-    padding-left: 11px;
-    padding-right: 32px;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .heroActions {
-    gap: 10px;
-  }
-
-  .eyebrow {
-    font-size: 12px;
-  }
-
-  .heroLead {
-    font-size: 16px;
-  }
-
-  .phoneShell {
-    width: 270px;
-  }
-
-  .productPreview {
-    min-height: 470px;
-    margin: 0;
-    transform: scale(0.88);
-  }
-
-  .floatingCardOne {
-    left: -8px;
-  }
-
-  .floatingCardTwo {
-    right: -8px;
-  }
-
-  .stepsGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .stepCard {
-    min-height: auto;
-  }
-
-  .stepNumber {
-    margin-bottom: 18px;
-  }
-
-  .sectionHeader p,
-  .scenarioIntro p,
-  .finalCtaBox p {
-    font-size: 15px;
-  }
-
-  .faqSectionBlock {
-    padding: 18px;
-  }
-
-  .faqSectionBlock h3 {
-    font-size: 18px;
-  }
-
-  .faqItem summary {
-    min-height: 0;
-    padding: 12px 14px;
-  }
-}
-
-@media (width<=820px) {
-  .container {
-    width: min(100% - 28px, 680px);
-  }
-
-  .logo img {
-    width: 130px;
-  }
-
-  .heroSection {
-    padding: 36px 0 52px;
-  }
-
-  .heroProof {
-    grid-template-columns: 1fr;
-  }
-
-  .proofItem {
-    align-items: flex-start;
-    gap: 12px;
-    min-height: auto;
-    display: flex;
-  }
-
-  .proofItem svg {
-    margin-bottom: 0;
-  }
-
-  .productPreview {
-    transform-origin: top;
-    min-height: 520px;
-    margin-bottom: -24px;
-    transform: scale(0.94);
-  }
-
-  .floatingCard {
-    min-height: 46px;
-    font-size: 12.5px;
-  }
-
-  .floatingCardOne {
-    top: 112px;
-    left: 0;
-  }
-
-  .floatingCardTwo {
-    top: 238px;
-    right: 0;
-  }
-
-  .floatingCardThree {
-    bottom: 102px;
-    left: 8px;
-  }
-
-  .section {
-    padding: 52px 0;
-  }
-
-  .sectionHeader {
-    margin-bottom: 22px;
-  }
-
-  .featureGrid,
-  .scenarioGrid,
-  .faqSections {
-    grid-template-columns: 1fr;
-  }
-
-  .faqSectionBlock:last-child:nth-child(odd) {
-    grid-column: auto;
-  }
-
-  .scenarioGrid {
-    grid-template-rows: none;
-    min-height: auto;
-  }
-
-  .scenarioIntro,
-  .featureCard,
-  .scenarioCard {
-    min-height: auto;
-  }
-
-  .finalCtaBox {
-    border-radius: 24px;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 24px;
-  }
-
-  .finalButton {
-    width: 100%;
-  }
-
-  .footerInner {
-    text-align: center;
-    flex-direction: column;
   }
 }
