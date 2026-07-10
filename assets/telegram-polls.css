@@ -1,0 +1,2081 @@
+
+/* /telegram-polls/ v7 */
+.pollsLandingPage{background:radial-gradient(circle at 86% 8%,rgba(11,116,209,.12),transparent 28%),radial-gradient(circle at 8% 18%,rgba(227,24,44,.08),transparent 24%),linear-gradient(180deg,#fff 0%,#f6fbff 46%,#fff 100%);min-width:320px;margin:0;color:#081b36;overflow-x:hidden}
+.pollsLandingPage main{overflow:hidden}
+.pollsLandingPage section{scroll-margin-top:86px}
+.pollsLandingPage p{margin:0}
+
+.pollHero{padding:54px 0 58px;position:relative}
+.pollHero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 96% 10%,rgba(57,163,255,.14),transparent 26%),radial-gradient(circle at 5% 100%,rgba(227,24,44,.07),transparent 32%);pointer-events:none}
+.pollHeroGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.72fr);gap:46px;align-items:center}
+.pollHeroCopy{position:relative;z-index:2;max-width:650px}
+.pollHeroCopy .seoEyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px}
+.pollHeroCopy h1{margin:0;color:#081b36;font-size:clamp(38px,5vw,66px);line-height:1.02;letter-spacing:-.05em;max-width:720px}
+.pollHeroLead{margin-top:18px;font-size:clamp(16px,1.35vw,19px);line-height:1.66;color:#52677f;max-width:620px}
+.pollHeroActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.pollHeroMiniNav{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.pollHeroMiniNav a{min-height:38px;display:inline-flex;align-items:center;gap:10px;padding:0 13px;border-radius:999px;border:1px solid #d8e7f6;background:rgba(255,255,255,.9);color:#0f3b73;text-decoration:none;font-weight:850;font-size:13px;box-shadow:0 8px 20px rgba(8,27,54,.06)}
+.pollHeroMiniNav a:before{content:"";width:7px;height:7px;border-radius:50%;background:#0b74d1;box-shadow:0 0 0 4px rgba(11,116,209,.10)}
+.pollHeroVisual{position:relative;z-index:1;display:flex;justify-content:center}
+
+/* exact phone size: 260x524 + 12px border */
+.pollPhoneStage{position:relative;display:flex;justify-content:center;align-items:flex-start;width:100%;min-height:620px}
+.pollPhoneStage .floatingCard{position:absolute;z-index:5;display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 13px;border-radius:16px;border:1px solid rgba(0,118,236,.18);background:rgba(255,255,255,.9);color:#0f3b73;font-weight:900;font-size:13px;box-shadow:0 14px 32px rgba(8,27,54,.10);white-space:nowrap}
+.pollPhoneStage .floatingCard svg{color:#0b74d1}
+.pollFloatingCardOne{left:-10px;top:88px}
+.pollFloatingCardTwo{right:-22px;top:224px}
+.pollFloatingCardThree{left:12px;bottom:42px}
+
+.seoPhoneWrap{position:relative;width:284px;height:548px;display:flex;justify-content:center;align-items:flex-start;--phone-bg:#f4effa;--phone-surface:#fff;--phone-surface-2:#fff;--phone-border:#e1d4f3;--phone-ink:#111827;--phone-muted:#6b7280;--phone-accent:#7146ce;--phone-accent-2:#8f69db;--phone-accent-soft:#f1eafb;--phone-glow:rgba(113,70,206,.22)}
+.seoPhoneWrap[data-color-theme=default]{--phone-bg:#f5f8fc;--phone-surface:#fff;--phone-surface-2:#fff;--phone-border:#dbe7f4;--phone-ink:#111827;--phone-muted:#6b7280;--phone-accent:#0b74d1;--phone-accent-2:#39a3ff;--phone-accent-soft:#eaf4ff;--phone-glow:rgba(11,116,209,.20)}
+.seoPhoneWrap[data-color-theme=sapphire]{--phone-bg:#eff6ff;--phone-surface:#fff;--phone-surface-2:#fff;--phone-border:#cfe2fa;--phone-ink:#111827;--phone-muted:#6b7280;--phone-accent:#0a66c8;--phone-accent-2:#4ca9ff;--phone-accent-soft:#e7f1ff;--phone-glow:rgba(10,102,200,.20)}
+.seoPhoneWrap[data-color-theme=emerald]{--phone-bg:#effbf5;--phone-surface:#fff;--phone-surface-2:#fff;--phone-border:#cbe9db;--phone-ink:#111827;--phone-muted:#6b7280;--phone-accent:#11885f;--phone-accent-2:#25b77e;--phone-accent-soft:#e6f8f0;--phone-glow:rgba(17,136,95,.20)}
+.seoPhoneWrap[data-color-theme=ruby]{--phone-bg:#fff2f4;--phone-surface:#fff;--phone-surface-2:#fff;--phone-border:#f2cbd4;--phone-ink:#111827;--phone-muted:#6b7280;--phone-accent:#c9264c;--phone-accent-2:#f05277;--phone-accent-soft:#ffebf0;--phone-glow:rgba(201,38,76,.18)}
+.seoPhoneWrap[data-color-theme=violet]{--phone-bg:#f4effa;--phone-surface:#fff;--phone-surface-2:#fff;--phone-border:#e1d4f3;--phone-ink:#111827;--phone-muted:#6b7280;--phone-accent:#7146ce;--phone-accent-2:#8f69db;--phone-accent-soft:#f1eafb;--phone-glow:rgba(113,70,206,.22)}
+.seoPhoneWrap[data-color-theme=amber]{--phone-bg:#fff8ee;--phone-surface:#fff;--phone-surface-2:#fff;--phone-border:#f3ddb3;--phone-ink:#111827;--phone-muted:#6b7280;--phone-accent:#c46a11;--phone-accent-2:#ff9f2f;--phone-accent-soft:#fff4de;--phone-glow:rgba(196,106,17,.18)}
+.seoPhoneWrap[data-color-theme=aurora]{--phone-bg:#edf9fd;--phone-surface:#fff;--phone-surface-2:#fff;--phone-border:#c8e8f3;--phone-ink:#111827;--phone-muted:#6b7280;--phone-accent:#1b8fb3;--phone-accent-2:#4fbfe0;--phone-accent-soft:#e2f8ff;--phone-glow:rgba(27,143,179,.18)}
+.seoPhoneWrap[data-color-theme=noir]{--phone-bg:#111827;--phone-surface:#172033;--phone-surface-2:#1d2940;--phone-border:#2f3d55;--phone-ink:#fff;--phone-muted:#a9b8cf;--phone-accent:#d6dff6;--phone-accent-2:#ffffff;--phone-accent-soft:#24314b;--phone-glow:rgba(255,255,255,.10)}
+
+.seoPhoneAura{position:absolute;inset:38px 6px 10px;border-radius:42px;background:radial-gradient(circle at 50% 10%,var(--phone-glow),transparent 36%),radial-gradient(circle at 20% 90%,rgba(227,24,44,.10),transparent 28%);filter:blur(14px)}
+.seoPhone{position:relative;box-sizing:border-box;width:260px;height:524px;border:12px solid #0b2f5b;border-radius:42px;background:var(--phone-bg);box-shadow:0 30px 66px rgba(8,27,54,.22);overflow:hidden}
+.seoPhoneTop{position:absolute;left:50%;top:0;transform:translateX(-50%);width:92px;height:22px;background:#06172b;border-radius:0 0 15px 15px;z-index:5}
+.seoPhoneScreen{position:relative;box-sizing:border-box;width:100%;height:100%;padding:12px;background:linear-gradient(180deg,var(--phone-bg),var(--phone-bg));overflow:hidden}
+.seoPhoneScreen:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(11,116,209,.08) 1px,transparent 1px);background-size:17px 17px;opacity:.23;pointer-events:none}
+.seoAppTop,.seoMiniCard{position:relative;z-index:1}
+.seoAppTop{display:flex;align-items:center;justify-content:space-between;margin:16px 0 9px}
+.seoAppBrand{display:flex;align-items:center;gap:7px;color:var(--phone-ink);font-weight:950;font-size:13px}
+.seoAppBrand img{width:24px;height:24px;border-radius:7px;display:block}
+.seoAppPill{min-height:28px;padding:0 10px;border-radius:999px;display:inline-flex;align-items:center;background:var(--phone-accent-soft);color:var(--phone-accent);font-size:12px;font-weight:900}
+
+.seoMiniCard{background:var(--phone-surface);border:1px solid var(--phone-border);border-radius:18px;padding:10px;box-shadow:0 10px 22px rgba(8,27,54,.06)}
+.seoMiniCard+.seoMiniCard{margin-top:9px}
+.pollQuestionSliderCard{overflow:hidden;height:340px}
+.pollCardHead{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.pollHeadLeft{display:flex;align-items:center;gap:6px;color:var(--phone-ink);font-weight:900;font-size:12px}
+.pollLogoMini{width:24px;height:24px;border-radius:9px;background:var(--phone-accent-soft);color:var(--phone-accent);display:grid;place-items:center;font-weight:950}
+.pollHeadRight{display:grid;gap:4px;justify-items:end;color:var(--phone-muted);font-size:9px;font-weight:800}
+.pollProgressLine{width:64px;height:4px;background:var(--phone-accent-soft);border-radius:999px;overflow:hidden}
+.pollProgressLine i{display:block;height:100%;background:var(--phone-accent);border-radius:inherit;animation:pollProgress 24s infinite steps(1,end)}
+.pollHeadRight b{color:var(--phone-accent);font-size:10px}
+.pollSliderWindow{overflow:hidden;border-radius:14px;height:250px}
+.pollSliderTrack{display:flex;width:600%;height:100%;animation:pollSlides 24s infinite steps(1,end)}
+.pollAppSlide{box-sizing:border-box;width:16.6667%;height:100%;flex:none;padding:1px 1px 6px;overflow:hidden}
+.question-kicker{color:var(--phone-muted);font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}
+.question-title{font-size:17px;line-height:1.12;letter-spacing:-.03em;font-weight:950;color:var(--phone-ink);margin:0 0 10px}
+.poll-answer{display:grid;gap:8px}
+.pollAppOption,.pollTextArea,.contact-fields label span{min-height:38px;display:flex;align-items:center;gap:8px;border:1px solid var(--phone-border);border-radius:12px;background:var(--phone-surface-2);color:var(--phone-ink);font-size:12px;font-weight:800;padding:0 10px}
+.pollAppInput{width:15px;height:15px;border:2px solid var(--phone-accent);border-radius:50%;flex:none;opacity:.78}
+.pollAppInput.checkbox{border-radius:5px}
+.pollAppOption.active{border-color:var(--phone-accent);background:var(--phone-surface);box-shadow:0 0 0 1px var(--phone-accent)}
+.pollAppOption.active .pollAppInput{background:var(--phone-accent);border-color:var(--phone-accent);box-shadow:inset 0 0 0 4px var(--phone-surface)}
+.pollTextArea{align-items:flex-start;min-height:116px;padding-top:12px;color:var(--phone-muted)}
+.rating-field{display:flex;justify-content:center;gap:7px;margin-top:24px}
+.rating-field span{height:28px;width:28px;border-radius:50%;display:grid;place-items:center;background:var(--phone-surface);border:2px solid var(--phone-accent);color:var(--phone-accent);font-size:15px;font-weight:950;box-shadow:0 8px 16px rgba(8,27,54,.08)}
+.rating-field span.active{background:var(--phone-accent);color:#fff}
+.nps-field{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:16px}
+.nps-field span{height:28px;border-radius:9px;display:grid;place-items:center;background:var(--phone-surface);border:1px solid var(--phone-border);color:var(--phone-ink);font-size:12px;font-weight:900}
+.nps-field span.selected{border-color:var(--phone-accent);box-shadow:0 0 0 2px var(--phone-accent-soft);background:var(--phone-accent-soft);color:var(--phone-accent)}
+.contact-fields{display:grid;gap:8px;margin-top:6px}
+.contact-fields label{display:grid;gap:4px;color:var(--phone-ink);font-size:10px;font-weight:700}
+.contact-fields label span{min-height:34px;color:var(--phone-muted);font-size:11px;font-weight:500}
+.pollPhoneActions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:8px}
+.pollPhoneActions button{min-width:74px;min-height:34px;border-radius:12px;border:1px solid var(--phone-border);background:var(--phone-surface);color:var(--phone-ink);font-size:12px;font-weight:900}
+.pollPhoneActions button+button{background:var(--phone-accent);border-color:var(--phone-accent);color:#fff;box-shadow:0 10px 18px var(--phone-glow)}
+
+.pollThemeCard{height:98px}
+.seoThemeCaption{color:var(--phone-ink);font-size:15px;font-weight:900;margin-bottom:10px}
+.seoThemeControls{display:grid;grid-template-columns:repeat(4,28px);gap:8px;justify-content:flex-start}
+.seoThemeDot{width:28px;height:28px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(8,27,54,.08);cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;position:relative}
+.seoThemeDot:hover{transform:translateY(-1px)}
+.seoThemeDot.isActive{box-shadow:0 0 0 2px var(--phone-accent),0 0 0 4px rgba(8,27,54,.08)}
+.seoThemeDot.default{background:linear-gradient(135deg,#0b74d1,#0b1220)}
+.seoThemeDot.sapphire{background:linear-gradient(135deg,#0a66c8,#4ca9ff)}
+.seoThemeDot.emerald{background:linear-gradient(135deg,#11885f,#25b77e)}
+.seoThemeDot.ruby{background:linear-gradient(135deg,#c9264c,#f05277)}
+.seoThemeDot.violet{background:linear-gradient(135deg,#7048d4,#9868ff)}
+.seoThemeDot.amber{background:linear-gradient(135deg,#c46a11,#ff9f2f)}
+.seoThemeDot.aurora{background:linear-gradient(135deg,#1b8fb3,#4fbfe0)}
+.seoThemeDot.noir{background:linear-gradient(135deg,#111827,#3f4f6a)}
+
+@keyframes pollSlides{
+  0%,15.99%{transform:translateX(0)}
+  16.66%,32.65%{transform:translateX(-16.6667%)}
+  33.33%,49.32%{transform:translateX(-33.3334%)}
+  50%,65.99%{transform:translateX(-50%)}
+  66.66%,82.65%{transform:translateX(-66.6668%)}
+  83.33%,99.32%{transform:translateX(-83.3335%)}
+  100%{transform:translateX(0)}
+}
+@keyframes pollProgress{
+  0%,15.99%{width:16.6667%}
+  16.66%,32.65%{width:33.3334%}
+  33.33%,49.32%{width:50%}
+  50%,65.99%{width:66.6667%}
+  66.66%,82.65%{width:83.3334%}
+  83.33%,99.32%{width:100%}
+  100%{width:16.6667%}
+}
+
+/* signature and sections: normal typography, no oversize */
+.pollSignatureSection{padding:0 0 28px}
+.pollSignatureGrid{display:grid;grid-template-columns:1.28fr .86fr .86fr;gap:16px;align-items:stretch}
+.pollSignatureCard{min-height:100%;border:1px solid #d9e6f4;background:radial-gradient(circle at 100% 0,rgba(11,116,209,.08),transparent 34%),linear-gradient(180deg,#fff,#fbfdff);border-radius:28px;padding:24px;box-shadow:0 18px 42px rgba(8,27,54,.08)}
+.pollSignatureWide{background:radial-gradient(circle at 100% 0,rgba(227,24,44,.10),transparent 30%),linear-gradient(135deg,#fff,#f3f9ff)}
+.pollSignatureIcon{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;color:#fff;background:#0b74d1;box-shadow:0 12px 24px rgba(11,116,209,.20);margin-bottom:14px}
+.pollSignatureCard:nth-child(2) .pollSignatureIcon{background:#1f8bff}
+.pollSignatureCard:nth-child(3) .pollSignatureIcon{background:#0f7ab0}
+.pollSignatureCard span{display:block;color:#0b74d1;text-transform:uppercase;letter-spacing:.08em;font-size:12px;font-weight:950;margin-bottom:10px}
+.pollSignatureCard h2,.pollSignatureCard h3{margin:0;color:#081b36;line-height:1.14;letter-spacing:-.03em}
+.pollSignatureCard h2{font-size:clamp(24px,2.4vw,34px)}
+.pollSignatureCard h3{font-size:clamp(22px,1.8vw,22px)}
+.pollSignatureCard p{margin-top:15px;color:#2d3947;font-size:13px;line-height:1.4}
+.pollSignatureWide p{max-width:760px}
+
+.pollSection{padding:32px 0 36px}
+.seoSectionHeader{max-width:850px;margin:0 auto 24px 0}
+.seoKicker{display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border-radius:999px;border:1px solid #d8e7f6;background:#fff;color:#0b74d1;font-size:12px;font-weight:950;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 10px 24px rgba(8,27,54,.05)}
+.seoSectionHeader h2{margin:16px 0 0;color:#081b36;font-size:clamp(30px,3.2vw,44px);line-height:1.08;letter-spacing:-.04em}
+.seoSectionText{margin-top:14px;color:#52677f;font-size:16px;line-height:1.66}
+
+.pollFeatureGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.pollFeatureCard{min-height:100%;border:1px solid #d9e6f4;border-radius:26px;padding:22px;background:radial-gradient(circle at 100% 0,rgba(11,116,209,.06),transparent 34%),linear-gradient(180deg,#fff,#fbfdff);box-shadow:0 14px 34px rgba(8,27,54,.07)}
+.pollFeatureCard svg{width:48px;height:48px;padding:13px;border-radius:16px;color:#fff;margin-bottom:14px;box-sizing:border-box}
+.pollFeatureCard:nth-child(1) svg{background:#0b74d1}
+.pollFeatureCard:nth-child(2) svg{background:#1f8bff}
+.pollFeatureCard:nth-child(3) svg{background:#4a70d9}
+.pollFeatureCard:nth-child(4) svg{background:#6f56d9}
+.pollFeatureCard:nth-child(5) svg{background:#1f99a7}
+.pollFeatureCard:nth-child(6) svg{background:#0f7ab0}
+.pollFeatureCard h3{margin:0;font-size:clamp(21px,1.7vw,26px);line-height:1.12;letter-spacing:-.03em;color:#081b36}
+.pollFeatureCard p{margin-top:12px;color:#52677f;font-size:15px;line-height:1.62}
+
+.pollSectionSoft{background:radial-gradient(circle at 10% 10%,rgba(227,24,44,.05),transparent 22%),radial-gradient(circle at 90% 40%,rgba(11,116,209,.07),transparent 26%),linear-gradient(180deg,#f7fbff 0%,#fff 100%)}
+.pollFormatWrap{display:grid;grid-template-columns:minmax(270px,.86fr) minmax(0,1fr);gap:18px;align-items:start}
+.pollFormatIntro{position:sticky;top:110px;border:1px solid #d9e6f4;border-radius:26px;padding:24px;background:linear-gradient(180deg,#fff,#f6fbff);box-shadow:0 14px 34px rgba(8,27,54,.06)}
+.pollFormatIntro h2{margin:16px 0 0;font-size:clamp(28px,3vw,42px);line-height:1.08;letter-spacing:-.04em;color:#081b36}
+.pollFormatIntro p{margin-top:14px;color:#52677f;font-size:16px;line-height:1.66}
+.pollFormatGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pollFormatCard{border:1px solid #d9e6f4;border-radius:24px;padding:22px;background:#fff;box-shadow:0 12px 28px rgba(8,27,54,.06)}
+.pollFormatCard span{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:12px;background:#eef6ff;color:#0b74d1;font-size:13px;font-weight:950}
+.pollFormatCard h3{margin:16px 0 0;color:#081b36;font-size:21px;line-height:1.12;letter-spacing:-.03em}
+.pollFormatCard p{margin-top:10px;color:#52677f;font-size:15px;line-height:1.6}
+
+.pollStepsGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.pollStepCard{border:1px solid #d9e6f4;border-radius:24px;padding:22px;background:#fff;box-shadow:0 12px 28px rgba(8,27,54,.06)}
+.pollStepCard span{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:42px;padding:0 12px;border-radius:14px;background:linear-gradient(135deg,#0b74d1,#39a3ff);color:#fff;font-size:14px;font-weight:950}
+.pollStepCard h3{margin:18px 0 0;color:#081b36;font-size:22px;line-height:1.12;letter-spacing:-.03em}
+.pollStepCard p{margin-top:10px;color:#52677f;font-size:15px;line-height:1.62}
+
+.pollSectionBlend{padding:36px 0;background:linear-gradient(180deg,#fff,#f7fbff);border-top:1px solid #d9e6f4;border-bottom:1px solid #d9e6f4}
+.pollBlendGrid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:18px;align-items:stretch}
+.pollBlendCopy,.pollSoftCard{border:1px solid #d9e6f4;border-radius:28px;padding:24px;background:radial-gradient(circle at 100% 0,rgba(11,116,209,.08),transparent 32%),linear-gradient(180deg,#fff,#f8fbff);box-shadow:0 16px 36px rgba(8,27,54,.06)}
+.pollBlendCopy h2{margin:16px 0 0;font-size:clamp(28px,3vw,42px);line-height:1.08;letter-spacing:-.04em;color:#081b36}
+.pollBlendCopy p{margin-top:14px;color:#52677f;font-size:16px;line-height:1.66}
+.pollSoftCards{display:grid;grid-template-columns:1fr;gap:16px}
+.pollSoftCard h3{margin:0;color:#081b36;font-size:21px;line-height:1.12;letter-spacing:-.03em}
+.pollSoftCard p{margin-top:10px;color:#52677f;font-size:15px;line-height:1.62}
+
+.pollFaqWide{width:100%;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.pollFaqWide .seoFaqItem{min-height:100%;border-radius:26px;border:1px solid #d9e6f4;background:#fff;padding:26px;box-shadow:0 12px 30px rgba(8,27,54,.07)}
+.pollFaqWide .seoFaqItem h3{margin:0 0 10px;color:#081b36;font-size:20px;line-height:1.22;letter-spacing:-.02em}
+.pollFaqWide .seoFaqItem p{color:#52677f;font-size:15px;line-height:1.66}
+
+.seoCta{padding:34px 0 84px}
+.pollCtaBox,.seoCtaBox{border-radius:32px;color:#fff;background:radial-gradient(circle at 92% 0,rgba(57,163,255,.28),transparent 30%),linear-gradient(145deg,#0c2244,#123661 56%,#e3182c 150%);box-shadow:0 24px 70px rgba(8,27,54,.16);padding:36px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;overflow:hidden}
+.pollCtaBox:before,.seoCtaBox:before{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.12)}
+.pollCtaBox>div,.pollCtaBox>a,.seoCtaBox>div,.seoCtaBox>a{position:relative}
+.pollCtaBox h2,.seoCtaBox h2{margin:0;color:#fff;font-size:clamp(28px,3vw,42px);line-height:1.08;letter-spacing:-.04em}
+.pollCtaBox p,.seoCtaBox p{margin-top:12px;color:#c9d6e4;font-size:16px;line-height:1.62;max-width:760px}
+
+.seoFooter{padding:0 0 34px}
+.seoFooterInner{border-top:1px solid #d9e6f4;padding-top:22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.seoFooterText{color:#52677f;font-size:13.5px}
+.seoFooterLinks{display:flex;gap:14px;align-items:center;flex-wrap:wrap;color:#31506f;font-size:13.5px;font-weight:800}
+.seoFooterLinks a:hover{color:#0b74d1}
+
+@media (max-width:1180px){
+  .pollHeroGrid{grid-template-columns:1fr}
+  .pollHeroCopy{max-width:none}
+  .pollHeroVisual{order:2}
+  .pollSignatureGrid,.pollFeatureGrid,.pollStepsGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pollSignatureWide{grid-column:1/-1}
+  .pollFormatWrap,.pollBlendGrid{grid-template-columns:1fr}
+  .pollFormatIntro{position:static}
+  .pollFaqWide{grid-template-columns:1fr}
+}
+@media (max-width:900px){
+  .pollPhoneStage{min-height:610px}
+  .pollFloatingCardOne{left:calc(50% - 180px);top:74px}
+  .pollFloatingCardTwo{right:calc(50% - 184px);top:214px}
+  .pollFloatingCardThree{left:calc(50% - 150px);bottom:46px}
+  .pollFeatureGrid,.pollFormatGrid,.pollStepsGrid,.pollSignatureGrid{grid-template-columns:1fr}
+  .pollSignatureWide{grid-column:auto}
+}
+@media (max-width:640px){
+  .pollHero{padding-top:32px}
+  .pollHeroGrid{gap:22px}
+  .pollPhoneStage{transform:scale(.94);transform-origin:top center;min-height:590px;margin:0 -16px -20px}
+  .pollSection{padding:28px 0 32px}
+  .pollCtaBox,.seoCtaBox{padding:28px 22px;flex-direction:column;align-items:flex-start}
+}
+@media (max-width:430px){
+  .pollHeroCopy h1{font-size:38px}
+  .pollPhoneStage{transform:scale(.88);min-height:570px;margin:0 -30px -36px}
+  .pollPhoneStage .floatingCard{min-height:42px;padding:0 11px;font-size:12px}
+  .pollFloatingCardOne{left:calc(50% - 156px);top:70px}
+  .pollFloatingCardTwo{right:calc(50% - 165px);top:208px}
+  .pollFloatingCardThree{left:calc(50% - 130px);bottom:58px}
+}
+
+
+/* v8 fixes */
+.seoPhoneWrap{
+  width:310px !important; /* 286px body + 12px border on each side */
+  height:548px !important;
+}
+.seoPhone{
+  width:286px !important;
+  height:524px !important;
+  border:12px solid #0b2f5b !important;
+  box-sizing:border-box !important;
+}
+.question-title{
+  font-size:15.5px !important;
+  line-height:1.15 !important;
+  letter-spacing:-.025em !important;
+  margin-bottom:9px !important;
+}
+
+/* вернул плавную смену вопросов */
+.pollSliderTrack{
+  animation:pollSlides 24s infinite ease-in-out !important;
+}
+@keyframes pollSlides{
+  0%,12%{transform:translateX(0)}
+  16%,28%{transform:translateX(-16.6667%)}
+  33%,45%{transform:translateX(-33.3334%)}
+  50%,62%{transform:translateX(-50%)}
+  66%,78%{transform:translateX(-66.6668%)}
+  83%,95%{transform:translateX(-83.3335%)}
+  100%{transform:translateX(0)}
+}
+.pollProgressLine i{
+  animation:pollProgress 24s infinite ease-in-out !important;
+}
+
+/* кнопки назад/далее должны помещаться */
+.pollPhoneActions{
+  gap:6px !important;
+}
+.pollPhoneActions button{
+  min-width:62px !important;
+  min-height:32px !important;
+  padding:0 8px !important;
+  font-size:11px !important;
+  border-radius:11px !important;
+  white-space:nowrap !important;
+}
+.pollPhoneActions button+button{
+  min-width:68px !important;
+}
+
+/* цветовая тема как на скриншоте: две строки по 4, дефолт — пустой круг */
+.pollThemeCard{
+  height:118px !important;
+  padding:12px !important;
+  overflow:visible !important;
+}
+.seoThemeCaption{
+  font-size:14px !important;
+  line-height:1.1 !important;
+  margin-bottom:9px !important;
+}
+.seoThemeControls{
+  display:grid !important;
+  grid-template-columns:repeat(4,34px) !important;
+  grid-auto-rows:34px !important;
+  gap:8px 10px !important;
+  justify-content:flex-start !important;
+  align-items:center !important;
+}
+.seoThemeDot{
+  width:34px !important;
+  height:34px !important;
+  border:2px solid #fff !important;
+  box-shadow:0 0 0 1px rgba(8,27,54,.10), 0 8px 18px rgba(8,27,54,.08) !important;
+}
+.seoThemeDot.isActive{
+  box-shadow:0 0 0 2px #ffffff, 0 0 0 4px var(--phone-accent), 0 10px 22px rgba(8,27,54,.12) !important;
+}
+.seoThemeDot.default{
+  background:#fff !important;
+  border:2px solid #d9e2ef !important;
+}
+.seoThemeDot.default:after{
+  content:"";
+  position:absolute;
+  inset:4px;
+  border-radius:50%;
+  border:2px solid #d1dbe8;
+}
+.seoThemeDot.sapphire{background:#0b5f9d !important}
+.seoThemeDot.emerald{background:#007a57 !important}
+.seoThemeDot.ruby{background:#c82820 !important}
+.seoThemeDot.violet{background:#7048d4 !important}
+.seoThemeDot.amber{background:#c24d00 !important}
+.seoThemeDot.aurora{background:linear-gradient(135deg,#1a78d8,#1ec0cf) !important}
+.seoThemeDot.noir{background:#101820 !important}
+
+/* контактный слайд компактнее без звёздочек */
+.contact-fields{
+  gap:7px !important;
+}
+.contact-fields label{
+  font-size:10px !important;
+  gap:3px !important;
+}
+.contact-fields label span{
+  min-height:31px !important;
+  font-size:10.5px !important;
+}
+
+/* чтобы нижняя floating-card не закрывала цветовые кнопки */
+.pollFloatingCardThree{
+  left:42px !important;
+  bottom:18px !important;
+}
+
+@media (max-width:900px){
+  .seoPhoneWrap{width:310px !important}
+  .pollFloatingCardThree{left:calc(50% - 112px) !important;bottom:18px !important}
+}
+@media (max-width:430px){
+  .pollPhoneStage{transform:scale(.86) !important}
+  .pollFloatingCardThree{left:calc(50% - 108px) !important;bottom:18px !important}
+}
+
+/* v10 layout fix: phone must not be cropped or covered */
+.pollHeroGrid{
+  grid-template-columns:minmax(0,1fr) minmax(520px,560px) !important;
+  gap:48px !important;
+  align-items:center !important;
+}
+
+.pollHeroVisual{
+  min-width:520px !important;
+  display:flex !important;
+  justify-content:center !important;
+  overflow:visible !important;
+}
+
+.pollPhoneStage{
+  width:520px !important;
+  min-height:610px !important;
+  margin:0 auto !important;
+  overflow:visible !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:flex-start !important;
+  transform:none !important;
+}
+
+/* The actual phone stays 286px + 12px border */
+.seoPhoneWrap{
+  width:310px !important;
+  height:548px !important;
+  flex:0 0 310px !important;
+}
+
+.seoPhone{
+  width:286px !important;
+  height:524px !important;
+  border:12px solid #0b2f5b !important;
+  box-sizing:border-box !important;
+  border-radius:42px !important;
+}
+
+.seoPhoneScreen{
+  padding:12px !important;
+  overflow:hidden !important;
+}
+
+/* keep top app row inside the phone */
+.seoAppTop{
+  gap:8px !important;
+  min-width:0 !important;
+}
+
+.seoAppBrand{
+  min-width:0 !important;
+  flex:1 1 auto !important;
+  overflow:hidden !important;
+}
+
+.seoAppBrand img{
+  flex:0 0 auto !important;
+}
+
+.seoAppPill{
+  flex:0 0 auto !important;
+  max-width:72px !important;
+  padding:0 8px !important;
+  font-size:11px !important;
+  white-space:nowrap !important;
+}
+
+/* side labels no longer cover the phone or get cut by the viewport */
+.pollPhoneStage .floatingCard{
+  z-index:6 !important;
+  min-height:46px !important;
+  padding:0 13px !important;
+  border-radius:16px !important;
+  font-size:13px !important;
+  white-space:nowrap !important;
+}
+
+.pollFloatingCardOne{
+  left:0 !important;
+  top:112px !important;
+}
+
+.pollFloatingCardTwo{
+  right:0 !important;
+  top:204px !important;
+}
+
+.pollFloatingCardThree{
+  right:12px !important;
+  left:auto !important;
+  bottom:72px !important;
+}
+
+/* question block fits into 524px phone */
+.pollQuestionSliderCard{
+  height:318px !important;
+  min-height:318px !important;
+  padding:10px !important;
+  overflow:hidden !important;
+}
+
+.pollSliderWindow{
+  height:215px !important;
+}
+
+.question-title{
+  font-size:15.5px !important;
+  line-height:1.15 !important;
+  letter-spacing:-.025em !important;
+  padding-left:5px !important;
+  margin-bottom:9px !important;
+}
+
+.question-kicker{
+  padding-left:5px !important;
+}
+
+.pollPhoneActions{
+  gap:6px !important;
+  margin-top:7px !important;
+}
+
+.pollPhoneActions button{
+  min-width:62px !important;
+  min-height:32px !important;
+  padding:0 8px !important;
+  font-size:11px !important;
+  border-radius:11px !important;
+  white-space:nowrap !important;
+}
+
+.pollPhoneActions button+button{
+  min-width:68px !important;
+}
+
+/* copied theme card behavior from /telegram-giveaway-bot/, but kept inside this phone */
+.seoThemeCard{
+  padding-top:10px !important;
+  height:auto !important;
+  min-height:0 !important;
+  overflow:visible !important;
+}
+
+.seoThemeCaption{
+  font-size:13px !important;
+  font-weight:800 !important;
+  color:var(--phone-text, var(--phone-ink)) !important;
+  margin-bottom:9px !important;
+  line-height:1.2 !important;
+}
+
+.seoThemeControls{
+  display:flex !important;
+  gap:6px !important;
+  flex-wrap:wrap !important;
+  margin-top:10px !important;
+  grid-template-columns:none !important;
+  grid-auto-rows:auto !important;
+  justify-content:flex-start !important;
+  align-items:center !important;
+}
+
+.seoThemeDot{
+  cursor:pointer !important;
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  width:24px !important;
+  height:24px !important;
+  border:2px solid #fff !important;
+  border-radius:50% !important;
+  padding:0 !important;
+  box-shadow:0 0 0 1px #102b4d14 !important;
+  transition:transform .14s, box-shadow .14s !important;
+}
+
+.seoThemeDot:hover{
+  transform:translateY(-1px) !important;
+}
+
+.seoThemeDot.isActive{
+  box-shadow:0 0 0 3px #fff, 0 0 0 6px color-mix(in oklab, var(--phone-primary, var(--phone-accent)), transparent 72%) !important;
+}
+
+.seoThemeDot.default{
+  background:linear-gradient(180deg,#fff 0%,#e6edf5 100%) !important;
+  border-color:#dbe6f2 !important;
+}
+
+.seoThemeDot.default:after{
+  display:none !important;
+  content:none !important;
+}
+
+.seoThemeDot.sapphire{background:#0F4C81 !important}
+.seoThemeDot.emerald{background:#0B6B4F !important}
+.seoThemeDot.ruby{background:#B42318 !important}
+.seoThemeDot.violet{background:#6941C6 !important}
+.seoThemeDot.amber{background:#B54708 !important}
+.seoThemeDot.aurora{background:linear-gradient(135deg,#4F46E5,#06B6D4) !important}
+.seoThemeDot.noir{background:#0B0F17 !important}
+
+/* responsive: stack before the phone becomes clipped */
+@media (max-width:1180px){
+  .pollHeroGrid{
+    grid-template-columns:1fr !important;
+  }
+
+  .pollHeroVisual{
+    min-width:0 !important;
+    width:100% !important;
+  }
+}
+
+@media (max-width:640px){
+  .pollPhoneStage{
+    width:360px !important;
+    min-height:590px !important;
+    transform:scale(.94) !important;
+    transform-origin:top center !important;
+    margin:0 auto -24px !important;
+  }
+
+  .pollFloatingCardOne{
+    left:-6px !important;
+    top:88px !important;
+  }
+
+  .pollFloatingCardTwo{
+    right:-8px !important;
+    top:206px !important;
+  }
+
+  .pollFloatingCardThree{
+    right:18px !important;
+    bottom:72px !important;
+  }
+}
+
+@media (max-width:430px){
+  .pollPhoneStage{
+    transform:scale(.88) !important;
+    margin-left:-24px !important;
+    margin-right:-24px !important;
+    min-height:560px !important;
+  }
+
+  .pollPhoneStage .floatingCard{
+    font-size:12px !important;
+    min-height:42px !important;
+    padding:0 10px !important;
+  }
+
+  .pollFloatingCardOne{
+    left:0 !important;
+  }
+
+  .pollFloatingCardTwo{
+    right:0 !important;
+  }
+
+  .pollFloatingCardThree{
+    right:22px !important;
+  }
+}
+
+/* v11: phone and floating labels fixed to match target preview */
+.pollHeroGrid{
+  grid-template-columns:minmax(0,1fr) minmax(360px,430px) !important;
+  gap:44px !important;
+}
+
+.pollHeroVisual{
+  min-width:0 !important;
+  width:100% !important;
+  overflow:visible !important;
+  display:flex !important;
+  justify-content:center !important;
+}
+
+.pollPhoneStage{
+  position:relative !important;
+  width:430px !important;
+  max-width:430px !important;
+  min-height:570px !important;
+  margin:0 auto !important;
+  overflow:visible !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:flex-start !important;
+  transform:none !important;
+}
+
+/* kill inherited left/right stretch from giveaway seoFloatingCard classes */
+.pollPhoneStage .floatingCard,
+.pollPhoneStage .seoFloatingCard,
+.pollPhoneStage .seoFloatingCardOne,
+.pollPhoneStage .seoFloatingCardTwo,
+.pollPhoneStage .seoFloatingCardThree{
+  width:auto !important;
+  min-width:0 !important;
+  max-width:max-content !important;
+  right:auto !important;
+  left:auto !important;
+  top:auto !important;
+  bottom:auto !important;
+  position:absolute !important;
+  box-sizing:border-box !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  gap:8px !important;
+  min-height:46px !important;
+  padding:0 14px !important;
+  border-radius:16px !important;
+  border:1px solid rgba(0,118,236,.45) !important;
+  background:rgba(255,255,255,.92) !important;
+  color:#0f3b73 !important;
+  font-size:13px !important;
+  font-weight:900 !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+  box-shadow:0 14px 32px rgba(8,27,54,.10) !important;
+  backdrop-filter:none !important;
+  z-index:9 !important;
+}
+
+.pollPhoneStage .floatingCard svg{
+  width:18px !important;
+  height:18px !important;
+  flex:0 0 18px !important;
+  color:#0b74d1 !important;
+}
+
+/* target positions */
+.pollFloatingCardOne{
+  left:0 !important;
+  top:82px !important;
+}
+
+.pollFloatingCardTwo{
+  right:-10px !important;
+  top:244px !important;
+}
+
+.pollFloatingCardThree{
+  right:26px !important;
+  bottom:22px !important;
+}
+
+/* actual phone: 286px + 12px border, centered */
+.seoPhoneWrap{
+  width:310px !important;
+  height:548px !important;
+  flex:0 0 310px !important;
+  margin:0 auto !important;
+}
+
+.seoPhone{
+  width:286px !important;
+  height:524px !important;
+  border:12px solid #0b2f5b !important;
+  box-sizing:border-box !important;
+  border-radius:42px !important;
+}
+
+.seoPhoneScreen{
+  padding:12px !important;
+  overflow:hidden !important;
+}
+
+.pollQuestionSliderCard{
+  height:318px !important;
+  min-height:318px !important;
+  overflow:hidden !important;
+}
+
+.pollSliderWindow{
+  height:215px !important;
+}
+
+.question-title{
+  font-size:15.5px !important;
+  padding-left:5px !important;
+}
+
+.question-kicker{
+  padding-left:5px !important;
+}
+
+.seoThemeCard{
+  height:auto !important;
+  min-height:0 !important;
+  overflow:visible !important;
+}
+
+/* hero responsive */
+@media (max-width:1180px){
+  .pollHeroGrid{
+    grid-template-columns:1fr !important;
+  }
+
+  .pollPhoneStage{
+    width:430px !important;
+    max-width:100% !important;
+  }
+}
+
+@media (max-width:640px){
+  .pollPhoneStage{
+    width:380px !important;
+    min-height:545px !important;
+    transform:scale(.92) !important;
+    transform-origin:top center !important;
+    margin:0 auto -36px !important;
+  }
+
+  .pollFloatingCardOne{
+    left:-4px !important;
+    top:78px !important;
+  }
+
+  .pollFloatingCardTwo{
+    right:-8px !important;
+    top:238px !important;
+  }
+
+  .pollFloatingCardThree{
+    right:18px !important;
+    bottom:20px !important;
+  }
+}
+
+@media (max-width:430px){
+  .pollPhoneStage{
+    width:360px !important;
+    transform:scale(.86) !important;
+    margin-left:-18px !important;
+    margin-right:-18px !important;
+    min-height:520px !important;
+  }
+
+  .pollPhoneStage .floatingCard,
+  .pollPhoneStage .seoFloatingCard{
+    font-size:12px !important;
+    min-height:40px !important;
+    padding:0 10px !important;
+  }
+
+  .pollFloatingCardOne{
+    left:6px !important;
+  }
+
+  .pollFloatingCardTwo{
+    right:0 !important;
+  }
+
+  .pollFloatingCardThree{
+    right:20px !important;
+  }
+}
+
+
+/* v12 final phone preview alignment */
+.pollHeroGrid{
+  grid-template-columns:minmax(0,1fr) minmax(390px,440px) !important;
+  gap:44px !important;
+  align-items:center !important;
+}
+
+.pollHeroVisual{
+  width:100% !important;
+  min-width:0 !important;
+  overflow:visible !important;
+  display:flex !important;
+  justify-content:center !important;
+}
+
+.pollPhoneStage{
+  position:relative !important;
+  width:430px !important;
+  max-width:430px !important;
+  min-height:560px !important;
+  margin:0 auto !important;
+  overflow:visible !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:flex-start !important;
+  transform:none !important;
+}
+
+/* жестко отменяем растягивание floating-карточек от seoFloatingCard* */
+.pollPhoneStage > .floatingCard,
+.pollPhoneStage > .seoFloatingCard,
+.pollPhoneStage > .pollFloatingCardOne,
+.pollPhoneStage > .pollFloatingCardTwo,
+.pollPhoneStage > .pollFloatingCardThree{
+  position:absolute !important;
+  inset:auto !important;
+  width:max-content !important;
+  min-width:0 !important;
+  max-width:max-content !important;
+  height:auto !important;
+  min-height:46px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  gap:8px !important;
+  padding:0 14px !important;
+  border-radius:16px !important;
+  border:1px solid rgba(0,118,236,.55) !important;
+  background:rgba(255,255,255,.94) !important;
+  color:#0f3b73 !important;
+  font-size:13px !important;
+  line-height:1 !important;
+  font-weight:900 !important;
+  white-space:nowrap !important;
+  box-shadow:0 14px 32px rgba(8,27,54,.10) !important;
+  backdrop-filter:none !important;
+  transform:none !important;
+  z-index:12 !important;
+}
+
+.pollPhoneStage > .floatingCard svg{
+  width:18px !important;
+  height:18px !important;
+  flex:0 0 18px !important;
+  color:#0b74d1 !important;
+}
+
+/* позиции как на целевом скриншоте */
+.pollPhoneStage > .pollFloatingCardOne{
+  left:0 !important;
+  top:86px !important;
+  right:auto !important;
+  bottom:auto !important;
+}
+
+.pollPhoneStage > .pollFloatingCardTwo{
+  right:-6px !important;
+  top:232px !important;
+  left:auto !important;
+  bottom:auto !important;
+}
+
+.pollPhoneStage > .pollFloatingCardThree{
+  right:22px !important;
+  bottom:22px !important;
+  left:auto !important;
+  top:auto !important;
+}
+
+/* телефон по центру, без обрезки */
+.pollPhoneStage .seoPhoneWrap{
+  width:310px !important;
+  height:548px !important;
+  flex:0 0 310px !important;
+  margin:0 auto !important;
+  position:relative !important;
+}
+
+.pollPhoneStage .seoPhone{
+  width:286px !important;
+  height:524px !important;
+  border:12px solid #0b2f5b !important;
+  box-sizing:border-box !important;
+  border-radius:42px !important;
+}
+
+.pollPhoneStage .seoPhoneScreen{
+  padding:12px !important;
+  overflow:hidden !important;
+}
+
+.pollPhoneStage .pollQuestionSliderCard{
+  height:318px !important;
+  min-height:318px !important;
+  overflow:hidden !important;
+}
+
+.pollPhoneStage .pollSliderWindow{
+  height:215px !important;
+}
+
+.pollPhoneStage .question-title{
+  font-size:15.5px !important;
+  padding-left:5px !important;
+}
+
+.pollPhoneStage .question-kicker{
+  padding-left:5px !important;
+}
+
+/* показываем синюю дефолтную тему при первой загрузке */
+.pollPhoneStage .seoPhoneWrap[data-color-theme="default"]{
+  --phone-bg:#f5f8fc !important;
+  --phone-surface:#fff !important;
+  --phone-surface-2:#fff !important;
+  --phone-border:#dbe7f4 !important;
+  --phone-ink:#111827 !important;
+  --phone-muted:#6b7280 !important;
+  --phone-accent:#0b74d1 !important;
+  --phone-primary:#0b74d1 !important;
+  --phone-accent-2:#39a3ff !important;
+  --phone-accent-soft:#eaf4ff !important;
+  --phone-glow:rgba(11,116,209,.20) !important;
+}
+
+@media (max-width:1180px){
+  .pollHeroGrid{
+    grid-template-columns:1fr !important;
+  }
+
+  .pollPhoneStage{
+    width:430px !important;
+    max-width:100% !important;
+  }
+}
+
+@media (max-width:640px){
+  .pollPhoneStage{
+    width:380px !important;
+    min-height:545px !important;
+    transform:scale(.92) !important;
+    transform-origin:top center !important;
+    margin:0 auto -36px !important;
+  }
+
+  .pollPhoneStage > .pollFloatingCardOne{
+    left:0 !important;
+    top:82px !important;
+  }
+
+  .pollPhoneStage > .pollFloatingCardTwo{
+    right:-4px !important;
+    top:228px !important;
+  }
+
+  .pollPhoneStage > .pollFloatingCardThree{
+    right:18px !important;
+    bottom:22px !important;
+  }
+}
+
+@media (max-width:430px){
+  .pollPhoneStage{
+    width:360px !important;
+    transform:scale(.86) !important;
+    margin-left:-18px !important;
+    margin-right:-18px !important;
+    min-height:520px !important;
+  }
+
+  .pollPhoneStage > .floatingCard,
+  .pollPhoneStage > .seoFloatingCard{
+    font-size:12px !important;
+    min-height:40px !important;
+    padding:0 10px !important;
+  }
+
+  .pollPhoneStage > .pollFloatingCardOne{
+    left:6px !important;
+  }
+
+  .pollPhoneStage > .pollFloatingCardTwo{
+    right:0 !important;
+  }
+
+  .pollPhoneStage > .pollFloatingCardThree{
+    right:20px !important;
+  }
+}
+
+
+/* v13: default visible phone state is black/noir */
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"]{
+  --phone-bg:#111827 !important;
+  --phone-surface:#172033 !important;
+  --phone-surface-2:#1d2940 !important;
+  --phone-border:#2f3d55 !important;
+  --phone-ink:#ffffff !important;
+  --phone-muted:#a9b8cf !important;
+  --phone-accent:#d6dff6 !important;
+  --phone-primary:#d6dff6 !important;
+  --phone-accent-2:#ffffff !important;
+  --phone-accent-soft:#24314b !important;
+  --phone-glow:rgba(255,255,255,.10) !important;
+}
+
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"] .seoAppPill{
+  color:#111827 !important;
+  background:#ffffff !important;
+}
+
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"] .pollPhoneActions button+button{
+  color:#111827 !important;
+  background:#ffffff !important;
+  border-color:#ffffff !important;
+}
+
+
+/* v14: default grey dot uses black/grey phone theme */
+.pollPhoneStage .seoPhoneWrap[data-color-theme="default"]{
+  --phone-bg:#111827 !important;
+  --phone-surface:#172033 !important;
+  --phone-surface-2:#1d2940 !important;
+  --phone-border:#2f3d55 !important;
+  --phone-ink:#ffffff !important;
+  --phone-muted:#a9b8cf !important;
+  --phone-accent:#d1d5db !important;
+  --phone-primary:#d1d5db !important;
+  --phone-accent-2:#f9fafb !important;
+  --phone-accent-soft:#24314b !important;
+  --phone-glow:rgba(209,213,219,.16) !important;
+}
+
+.pollPhoneStage .seoPhoneWrap[data-color-theme="default"] .seoAppPill{
+  color:#111827 !important;
+  background:#f9fafb !important;
+}
+
+.pollPhoneStage .seoPhoneWrap[data-color-theme="default"] .pollPhoneActions button+button{
+  color:#111827 !important;
+  background:#f9fafb !important;
+  border-color:#f9fafb !important;
+}
+
+/* серый кружок дефолтной темы, но активирует чёрно-серое оформление */
+.pollPhoneStage .seoThemeDot.default{
+  background:linear-gradient(180deg,#ffffff 0%,#e5e7eb 100%) !important;
+  border-color:#d1d5db !important;
+}
+
+.pollPhoneStage .seoThemeDot.default.isActive{
+  box-shadow:0 0 0 3px #ffffff, 0 0 0 6px rgba(17,24,39,.22) !important;
+}
+
+
+/* v15 hard fix: isolated phone preview, no inherited giveaway layout */
+.pollHeroGrid{
+  grid-template-columns:minmax(0,1fr) minmax(390px,430px) !important;
+  gap:44px !important;
+  align-items:center !important;
+}
+
+.pollHeroVisual{
+  width:100% !important;
+  min-width:0 !important;
+  overflow:visible !important;
+  display:flex !important;
+  justify-content:center !important;
+}
+
+.pollPhoneStage{
+  position:relative !important;
+  width:430px !important;
+  max-width:430px !important;
+  height:570px !important;
+  min-height:570px !important;
+  margin:0 auto !important;
+  overflow:visible !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:flex-start !important;
+  transform:none !important;
+}
+
+/* direct child floating cards only; no stretching, no inherited left/right */
+.pollPhoneStage > .floatingCard,
+.pollPhoneStage > .seoFloatingCard,
+.pollPhoneStage > .pollFloatingCardOne,
+.pollPhoneStage > .pollFloatingCardTwo,
+.pollPhoneStage > .pollFloatingCardThree{
+  position:absolute !important;
+  inset:auto !important;
+  width:auto !important;
+  min-width:0 !important;
+  max-width:max-content !important;
+  height:auto !important;
+  min-height:44px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  gap:8px !important;
+  padding:0 13px !important;
+  border-radius:15px !important;
+  border:1px solid rgba(0,118,236,.55) !important;
+  background:rgba(255,255,255,.96) !important;
+  color:#0f3b73 !important;
+  font-size:13px !important;
+  line-height:1 !important;
+  font-weight:900 !important;
+  white-space:nowrap !important;
+  box-shadow:0 14px 32px rgba(8,27,54,.10) !important;
+  backdrop-filter:none !important;
+  transform:none !important;
+  z-index:20 !important;
+}
+
+.pollPhoneStage > .floatingCard svg{
+  width:18px !important;
+  height:18px !important;
+  flex:0 0 18px !important;
+  color:#0b74d1 !important;
+}
+
+/* positions like the approved screenshot */
+.pollPhoneStage > .pollFloatingCardOne{
+  left:0 !important;
+  top:88px !important;
+  right:auto !important;
+  bottom:auto !important;
+}
+
+.pollPhoneStage > .pollFloatingCardTwo{
+  right:0 !important;
+  top:238px !important;
+  left:auto !important;
+  bottom:auto !important;
+}
+
+.pollPhoneStage > .pollFloatingCardThree{
+  right:26px !important;
+  bottom:28px !important;
+  left:auto !important;
+  top:auto !important;
+}
+
+/* phone: 286px body + 12px border */
+.pollPhoneStage .seoPhoneWrap{
+  position:relative !important;
+  width:310px !important;
+  height:548px !important;
+  flex:0 0 310px !important;
+  margin:0 auto !important;
+
+  /* default grey dot theme: light black/grey, not blue */
+  --phone-bg:#f3f5f8 !important;
+  --phone-surface:#ffffff !important;
+  --phone-surface-2:#ffffff !important;
+  --phone-border:#d8e0ea !important;
+  --phone-ink:#101828 !important;
+  --phone-muted:#667085 !important;
+  --phone-accent:#475467 !important;
+  --phone-primary:#475467 !important;
+  --phone-accent-2:#667085 !important;
+  --phone-accent-soft:#eef2f6 !important;
+  --phone-glow:rgba(71,84,103,.16) !important;
+}
+
+.pollPhoneStage .seoPhoneWrap[data-color-theme="default"]{
+  --phone-bg:#f3f5f8 !important;
+  --phone-surface:#ffffff !important;
+  --phone-surface-2:#ffffff !important;
+  --phone-border:#d8e0ea !important;
+  --phone-ink:#101828 !important;
+  --phone-muted:#667085 !important;
+  --phone-accent:#475467 !important;
+  --phone-primary:#475467 !important;
+  --phone-accent-2:#667085 !important;
+  --phone-accent-soft:#eef2f6 !important;
+  --phone-glow:rgba(71,84,103,.16) !important;
+}
+
+.pollPhoneStage .seoPhone{
+  position:relative !important;
+  width:286px !important;
+  height:524px !important;
+  border:12px solid #0b2f5b !important;
+  box-sizing:border-box !important;
+  border-radius:42px !important;
+  background:var(--phone-bg) !important;
+  overflow:hidden !important;
+  box-shadow:0 30px 66px rgba(8,27,54,.22) !important;
+}
+
+/* notch centered */
+.pollPhoneStage .seoPhoneTop{
+  position:absolute !important;
+  left:50% !important;
+  top:0 !important;
+  transform:translateX(-50%) !important;
+  width:92px !important;
+  height:22px !important;
+  border-radius:0 0 15px 15px !important;
+  background:#06172b !important;
+  z-index:30 !important;
+}
+
+.pollPhoneStage .seoPhoneScreen{
+  position:relative !important;
+  box-sizing:border-box !important;
+  width:100% !important;
+  height:100% !important;
+  padding:12px !important;
+  overflow:hidden !important;
+  background:linear-gradient(180deg,var(--phone-bg),var(--phone-bg)) !important;
+}
+
+.pollPhoneStage .seoPhoneScreen:before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background-image:radial-gradient(rgba(11,116,209,.08) 1px, transparent 1px) !important;
+  background-size:17px 17px !important;
+  opacity:.23 !important;
+  pointer-events:none !important;
+}
+
+.pollPhoneStage .seoAppTop{
+  position:relative !important;
+  z-index:1 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:8px !important;
+  margin:16px 0 9px !important;
+  min-width:0 !important;
+}
+
+.pollPhoneStage .seoAppBrand{
+  min-width:0 !important;
+  flex:1 1 auto !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:7px !important;
+  color:var(--phone-ink) !important;
+  font-weight:950 !important;
+  font-size:13px !important;
+  overflow:hidden !important;
+}
+
+.pollPhoneStage .seoAppBrand img{
+  width:24px !important;
+  height:24px !important;
+  border-radius:7px !important;
+  flex:0 0 auto !important;
+}
+
+.pollPhoneStage .seoAppPill{
+  flex:0 0 auto !important;
+  max-width:72px !important;
+  min-height:28px !important;
+  padding:0 8px !important;
+  border-radius:999px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  background:var(--phone-accent-soft) !important;
+  color:var(--phone-accent) !important;
+  font-size:11px !important;
+  font-weight:900 !important;
+  white-space:nowrap !important;
+}
+
+.pollPhoneStage .seoMiniCard{
+  position:relative !important;
+  z-index:1 !important;
+  background:var(--phone-surface) !important;
+  border:1px solid var(--phone-border) !important;
+  border-radius:18px !important;
+  padding:10px !important;
+  box-shadow:0 10px 22px rgba(8,27,54,.06) !important;
+}
+
+.pollPhoneStage .seoMiniCard + .seoMiniCard{
+  margin-top:9px !important;
+}
+
+/* question card and slider */
+.pollPhoneStage .pollQuestionSliderCard{
+  height:318px !important;
+  min-height:318px !important;
+  overflow:hidden !important;
+}
+
+.pollPhoneStage .pollCardHead{
+  display:flex !important;
+  align-items:flex-start !important;
+  justify-content:space-between !important;
+  gap:8px !important;
+  margin-bottom:8px !important;
+}
+
+.pollPhoneStage .pollHeadLeft{
+  display:flex !important;
+  align-items:center !important;
+  gap:6px !important;
+  color:var(--phone-ink) !important;
+  font-weight:900 !important;
+  font-size:12px !important;
+}
+
+.pollPhoneStage .pollLogoMini{
+  width:24px !important;
+  height:24px !important;
+  border-radius:9px !important;
+  background:var(--phone-accent-soft) !important;
+  color:var(--phone-accent) !important;
+  display:grid !important;
+  place-items:center !important;
+  font-weight:950 !important;
+}
+
+.pollPhoneStage .pollHeadRight{
+  display:grid !important;
+  gap:4px !important;
+  justify-items:end !important;
+  color:var(--phone-muted) !important;
+  font-size:9px !important;
+  font-weight:800 !important;
+}
+
+.pollPhoneStage .pollProgressLine{
+  width:64px !important;
+  height:4px !important;
+  background:var(--phone-accent-soft) !important;
+  border-radius:999px !important;
+  overflow:hidden !important;
+}
+
+.pollPhoneStage .pollProgressLine i{
+  display:block !important;
+  height:100% !important;
+  background:var(--phone-accent) !important;
+  border-radius:inherit !important;
+  animation:pollProgress 24s infinite ease-in-out !important;
+}
+
+.pollPhoneStage .pollHeadRight b{
+  color:var(--phone-accent) !important;
+  font-size:10px !important;
+}
+
+.pollPhoneStage .pollSliderWindow{
+  height:215px !important;
+  overflow:hidden !important;
+  border-radius:14px !important;
+}
+
+.pollPhoneStage .pollSliderTrack{
+  display:flex !important;
+  width:600% !important;
+  height:100% !important;
+  animation:pollSlides 24s infinite ease-in-out !important;
+}
+
+.pollPhoneStage .pollAppSlide{
+  box-sizing:border-box !important;
+  width:16.6667% !important;
+  height:100% !important;
+  flex:0 0 16.6667% !important;
+  padding:1px 1px 6px !important;
+  overflow:hidden !important;
+}
+
+.pollPhoneStage .question-kicker{
+  color:var(--phone-muted) !important;
+  font-size:9px !important;
+  font-weight:900 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+  margin-bottom:5px !important;
+  padding-left:5px !important;
+}
+
+.pollPhoneStage .question-title{
+  font-size:15.5px !important;
+  line-height:1.15 !important;
+  letter-spacing:-.025em !important;
+  font-weight:950 !important;
+  color:var(--phone-ink) !important;
+  margin:0 0 9px !important;
+  padding-left:5px !important;
+}
+
+.pollPhoneStage .poll-answer{
+  display:grid !important;
+  gap:8px !important;
+}
+
+.pollPhoneStage .pollAppOption,
+.pollPhoneStage .pollTextArea,
+.pollPhoneStage .contact-fields label span{
+  min-height:38px !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:8px !important;
+  border:1px solid var(--phone-border) !important;
+  border-radius:12px !important;
+  background:var(--phone-surface-2) !important;
+  color:var(--phone-ink) !important;
+  font-size:12px !important;
+  font-weight:800 !important;
+  padding:0 10px !important;
+}
+
+.pollPhoneStage .pollAppInput{
+  width:15px !important;
+  height:15px !important;
+  border:2px solid var(--phone-accent) !important;
+  border-radius:50% !important;
+  flex:none !important;
+  opacity:.78 !important;
+}
+
+.pollPhoneStage .pollAppInput.checkbox{
+  border-radius:5px !important;
+}
+
+.pollPhoneStage .pollAppOption.active{
+  border-color:var(--phone-accent) !important;
+  background:var(--phone-surface) !important;
+  box-shadow:0 0 0 1px var(--phone-accent) !important;
+}
+
+.pollPhoneStage .pollAppOption.active .pollAppInput{
+  background:var(--phone-accent) !important;
+  border-color:var(--phone-accent) !important;
+  box-shadow:inset 0 0 0 4px var(--phone-surface) !important;
+}
+
+.pollPhoneStage .pollTextArea{
+  align-items:flex-start !important;
+  min-height:116px !important;
+  padding-top:12px !important;
+  color:var(--phone-muted) !important;
+}
+
+.pollPhoneStage .rating-field{
+  display:flex !important;
+  justify-content:center !important;
+  gap:7px !important;
+  margin-top:24px !important;
+}
+
+.pollPhoneStage .rating-field span{
+  height:28px !important;
+  width:28px !important;
+  border-radius:50% !important;
+  display:grid !important;
+  place-items:center !important;
+  background:var(--phone-surface) !important;
+  border:2px solid var(--phone-accent) !important;
+  color:var(--phone-accent) !important;
+  font-size:15px !important;
+  font-weight:950 !important;
+}
+
+.pollPhoneStage .rating-field span.active{
+  background:var(--phone-accent) !important;
+  color:#fff !important;
+}
+
+.pollPhoneStage .nps-field{
+  display:grid !important;
+  grid-template-columns:repeat(6,1fr) !important;
+  gap:6px !important;
+  margin-top:16px !important;
+}
+
+.pollPhoneStage .nps-field span{
+  height:28px !important;
+  border-radius:9px !important;
+  display:grid !important;
+  place-items:center !important;
+  background:var(--phone-surface) !important;
+  border:1px solid var(--phone-border) !important;
+  color:var(--phone-ink) !important;
+  font-size:12px !important;
+  font-weight:900 !important;
+}
+
+.pollPhoneStage .nps-field span.selected{
+  border-color:var(--phone-accent) !important;
+  box-shadow:0 0 0 2px var(--phone-accent-soft) !important;
+  background:var(--phone-accent-soft) !important;
+  color:var(--phone-accent) !important;
+}
+
+.pollPhoneStage .contact-fields{
+  display:grid !important;
+  gap:7px !important;
+  margin-top:6px !important;
+}
+
+.pollPhoneStage .contact-fields label{
+  display:grid !important;
+  gap:3px !important;
+  color:var(--phone-ink) !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+}
+
+.pollPhoneStage .contact-fields label span{
+  min-height:31px !important;
+  color:var(--phone-muted) !important;
+  font-size:10.5px !important;
+  font-weight:500 !important;
+}
+
+.pollPhoneStage .pollPhoneActions{
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:6px !important;
+  margin-top:7px !important;
+}
+
+.pollPhoneStage .pollPhoneActions button{
+  min-width:62px !important;
+  min-height:32px !important;
+  padding:0 8px !important;
+  border-radius:11px !important;
+  border:1px solid var(--phone-border) !important;
+  background:var(--phone-surface) !important;
+  color:var(--phone-ink) !important;
+  font-size:11px !important;
+  font-weight:900 !important;
+  white-space:nowrap !important;
+}
+
+.pollPhoneStage .pollPhoneActions button+button{
+  min-width:68px !important;
+  background:var(--phone-accent) !important;
+  border-color:var(--phone-accent) !important;
+  color:#fff !important;
+}
+
+/* Theme card: like giveaway, but scoped and stable */
+.pollPhoneStage .seoThemeCard{
+  padding-top:10px !important;
+  height:auto !important;
+  min-height:0 !important;
+  overflow:visible !important;
+}
+
+.pollPhoneStage .seoThemeCaption{
+  font-size:13px !important;
+  font-weight:800 !important;
+  color:var(--phone-ink) !important;
+  margin-bottom:9px !important;
+  line-height:1.2 !important;
+}
+
+.pollPhoneStage .seoThemeControls{
+  display:flex !important;
+  gap:6px !important;
+  flex-wrap:wrap !important;
+  margin-top:10px !important;
+  justify-content:flex-start !important;
+  align-items:center !important;
+}
+
+.pollPhoneStage .seoThemeDot{
+  cursor:pointer !important;
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  width:24px !important;
+  height:24px !important;
+  border:2px solid #fff !important;
+  border-radius:50% !important;
+  padding:0 !important;
+  box-shadow:0 0 0 1px #102b4d14 !important;
+  transition:transform .14s, box-shadow .14s !important;
+}
+
+.pollPhoneStage .seoThemeDot.isActive{
+  box-shadow:0 0 0 3px #fff, 0 0 0 6px rgba(71,84,103,.22) !important;
+}
+
+.pollPhoneStage .seoThemeDot.default{
+  background:linear-gradient(180deg,#fff 0%,#e6edf5 100%) !important;
+  border-color:#dbe6f2 !important;
+}
+
+.pollPhoneStage .seoThemeDot.default:after{
+  display:none !important;
+  content:none !important;
+}
+
+.pollPhoneStage .seoThemeDot.sapphire{background:#0F4C81 !important}
+.pollPhoneStage .seoThemeDot.emerald{background:#0B6B4F !important}
+.pollPhoneStage .seoThemeDot.ruby{background:#B42318 !important}
+.pollPhoneStage .seoThemeDot.violet{background:#6941C6 !important}
+.pollPhoneStage .seoThemeDot.amber{background:#B54708 !important}
+.pollPhoneStage .seoThemeDot.aurora{background:linear-gradient(135deg,#4F46E5,#06B6D4) !important}
+.pollPhoneStage .seoThemeDot.noir{background:#0B0F17 !important}
+
+@media (max-width:1180px){
+  .pollHeroGrid{grid-template-columns:1fr !important}
+  .pollPhoneStage{width:430px !important;max-width:100% !important}
+}
+
+@media (max-width:640px){
+  .pollPhoneStage{
+    width:380px !important;
+    height:545px !important;
+    min-height:545px !important;
+    transform:scale(.92) !important;
+    transform-origin:top center !important;
+    margin:0 auto -36px !important;
+  }
+  .pollPhoneStage > .pollFloatingCardOne{left:0 !important;top:82px !important}
+  .pollPhoneStage > .pollFloatingCardTwo{right:-4px !important;top:228px !important}
+  .pollPhoneStage > .pollFloatingCardThree{right:18px !important;bottom:22px !important}
+}
+
+@media (max-width:430px){
+  .pollPhoneStage{
+    width:360px !important;
+    transform:scale(.86) !important;
+    margin-left:-18px !important;
+    margin-right:-18px !important;
+    height:520px !important;
+    min-height:520px !important;
+  }
+  .pollPhoneStage > .floatingCard,
+  .pollPhoneStage > .seoFloatingCard{
+    font-size:12px !important;
+    min-height:40px !important;
+    padding:0 10px !important;
+  }
+  .pollPhoneStage > .pollFloatingCardOne{left:6px !important}
+  .pollPhoneStage > .pollFloatingCardTwo{right:0 !important}
+  .pollPhoneStage > .pollFloatingCardThree{right:20px !important}
+}
+
+
+
+/* v16: phone color themes aligned with miniapp/poll.css */
+.pollPhoneStage .seoPhoneWrap[data-color-theme="default"]{
+  --phone-bg:#E9EBEE !important;
+  --phone-surface:#F9F9F9 !important;
+  --phone-surface-2:#F4F5F7 !important;
+  --phone-border:#C9CED6 !important;
+  --phone-ink:#0B0C0E !important;
+  --phone-muted:#646A73 !important;
+  --phone-accent:#2C2F34 !important;
+  --phone-primary:#2C2F34 !important;
+  --phone-accent-2:#1A1D21 !important;
+  --phone-accent-soft:#DDE1E7 !important;
+  --phone-glow:rgba(44,47,52,.20) !important;
+}
+
+.pollPhoneStage .seoPhoneWrap[data-color-theme="sapphire"]{
+  --phone-bg:#E8F0F8 !important;
+  --phone-surface:#FFFFFF !important;
+  --phone-surface-2:#F3F7FB !important;
+  --phone-border:#D9E4F2 !important;
+  --phone-ink:#182230 !important;
+  --phone-muted:#52606D !important;
+  --phone-accent:#0F4C81 !important;
+  --phone-primary:#0F4C81 !important;
+  --phone-accent-2:#0F4C81 !important;
+  --phone-accent-soft:#E8F0F8 !important;
+  --phone-glow:rgba(15,76,129,.20) !important;
+}
+
+.pollPhoneStage .seoPhoneWrap[data-color-theme="emerald"]{
+  --phone-bg:#E4F1EC !important;
+  --phone-surface:#FFFFFF !important;
+  --phone-surface-2:#F2F8F5 !important;
+  --phone-border:#D7E9E2 !important;
+  --phone-ink:#182230 !important;
+  --phone-muted:#52606D !important;
+  --phone-accent:#0B6B4F !important;
+  --phone-primary:#0B6B4F !important;
+  --phone-accent-2:#0B6B4F !important;
+  --phone-accent-soft:#E4F1EC !important;
+  --phone-glow:rgba(11,107,79,.20) !important;
+}
+
+.pollPhoneStage .seoPhoneWrap[data-color-theme="ruby"]{
+  --phone-bg:#F7E7E4 !important;
+  --phone-surface:#FFFFFF !important;
+  --phone-surface-2:#FBF4F3 !important;
+  --phone-border:#F0D8D5 !important;
+  --phone-ink:#182230 !important;
+  --phone-muted:#52606D !important;
+  --phone-accent:#B42318 !important;
+  --phone-primary:#B42318 !important;
+  --phone-accent-2:#B42318 !important;
+  --phone-accent-soft:#F7E7E4 !important;
+  --phone-glow:rgba(180,35,24,.18) !important;
+}
+
+.pollPhoneStage .seoPhoneWrap[data-color-theme="violet"]{
+  --phone-bg:#EEE7FA !important;
+  --phone-surface:#FFFFFF !important;
+  --phone-surface-2:#F7F4FC !important;
+  --phone-border:#E2D8F7 !important;
+  --phone-ink:#182230 !important;
+  --phone-muted:#52606D !important;
+  --phone-accent:#6941C6 !important;
+  --phone-primary:#6941C6 !important;
+  --phone-accent-2:#6941C6 !important;
+  --phone-accent-soft:#EEE7FA !important;
+  --phone-glow:rgba(105,65,198,.20) !important;
+}
+
+.pollPhoneStage .seoPhoneWrap[data-color-theme="amber"]{
+  --phone-bg:#F6EAD9 !important;
+  --phone-surface:#FFFFFF !important;
+  --phone-surface-2:#FBF6EF !important;
+  --phone-border:#F0E0C8 !important;
+  --phone-ink:#182230 !important;
+  --phone-muted:#52606D !important;
+  --phone-accent:#B54708 !important;
+  --phone-primary:#B54708 !important;
+  --phone-accent-2:#B54708 !important;
+  --phone-accent-soft:#F6EAD9 !important;
+  --phone-glow:rgba(181,71,8,.18) !important;
+}
+
+.pollPhoneStage .seoPhoneWrap[data-color-theme="aurora"]{
+  --phone-bg:#ECFEFF !important;
+  --phone-surface:#FFFFFF !important;
+  --phone-surface-2:#F4F7FF !important;
+  --phone-border:#DDE7FF !important;
+  --phone-ink:#182230 !important;
+  --phone-muted:#52606D !important;
+  --phone-accent:#4F46E5 !important;
+  --phone-primary:#4F46E5 !important;
+  --phone-accent-2:#06B6D4 !important;
+  --phone-accent-soft:#ECFEFF !important;
+  --phone-glow:rgba(79,70,229,.18) !important;
+}
+
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"]{
+  --phone-bg:#0B0F17 !important;
+  --phone-surface:#111827 !important;
+  --phone-surface-2:#172033 !important;
+  --phone-border:#273244 !important;
+  --phone-ink:#F8FAFC !important;
+  --phone-muted:#A7B0BE !important;
+  --phone-accent:#F8FAFC !important;
+  --phone-primary:#F8FAFC !important;
+  --phone-accent-2:#F8FAFC !important;
+  --phone-accent-soft:#1F2937 !important;
+  --phone-glow:rgba(248,250,252,.10) !important;
+}
+
+/* Use second color for aurora accents where the miniapp has a gradient. */
+.pollPhoneStage .seoPhoneWrap[data-color-theme="aurora"] .pollProgressLine i,
+.pollPhoneStage .seoPhoneWrap[data-color-theme="aurora"] .pollPhoneActions button+button{
+  background:linear-gradient(135deg,#4F46E5 0%,#06B6D4 100%) !important;
+  border-color:#4F46E5 !important;
+}
+
+.pollPhoneStage .seoThemeDot.default{
+  background:linear-gradient(180deg,#F9FAFB 0%,#BFC5CE 100%) !important;
+  border-color:#C9CED6 !important;
+}
+
+.pollPhoneStage .seoThemeDot.default.isActive{
+  box-shadow:0 0 0 3px #fff,0 0 0 6px rgba(44,47,52,.30) !important;
+}
+
+.pollPhoneStage .seoThemeDot.sapphire{background:#0F4C81 !important}
+.pollPhoneStage .seoThemeDot.emerald{background:#0B6B4F !important}
+.pollPhoneStage .seoThemeDot.ruby{background:#B42318 !important}
+.pollPhoneStage .seoThemeDot.violet{background:#6941C6 !important}
+.pollPhoneStage .seoThemeDot.amber{background:#B54708 !important}
+.pollPhoneStage .seoThemeDot.aurora{background:linear-gradient(135deg,#4F46E5 0%,#06B6D4 100%) !important}
+.pollPhoneStage .seoThemeDot.noir{background:#0B0F17 !important}
+
+
+
+/* v17 polishing by request */
+/* Hero pill like main page chips, but with a poll icon */
+.pollHeroCopy .seoEyebrow{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:9px !important;
+  width:max-content !important;
+  max-width:100% !important;
+  min-height:42px !important;
+  padding:0 18px !important;
+  border:1px solid #d8e7f6 !important;
+  border-radius:999px !important;
+  background:rgba(255,255,255,.92) !important;
+  color:#0f3b73 !important;
+  font-size:13px !important;
+  font-weight:900 !important;
+  letter-spacing:0 !important;
+  text-transform:none !important;
+  box-shadow:0 8px 22px rgba(8,27,54,.06) !important;
+}
+.pollHeroCopy .seoEyebrow:before{display:none !important;content:none !important}
+.pollHeroCopy .seoEyebrow svg{width:16px !important;height:16px !important;color:#0b74d1 !important;flex:0 0 18px !important}
+
+/* Kicker style like main page sectionHeader/scenario/final CTA pills */
+.seoKicker{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:8px !important;
+  width:max-content !important;
+  max-width:100% !important;
+  min-height:34px !important;
+  padding:0 13px !important;
+  border-radius:999px !important;
+  border:1px solid #d8e7f7 !important;
+  background:#fff !important;
+  color:#21466f !important;
+  font-size:13px !important;
+  line-height:1 !important;
+  font-weight:850 !important;
+  letter-spacing:0 !important;
+  text-transform:none !important;
+  box-shadow:0 8px 22px rgba(8,27,54,.06) !important;
+}
+.seoKicker:before{
+  content:"" !important;
+  width:7px !important;
+  height:7px !important;
+  border-radius:50% !important;
+  background:#0b74d1 !important;
+  box-shadow:0 0 0 5px rgba(11,116,209,.10) !important;
+}
+
+/* Phone theme controls: 2 rows x 4 dots, fixed width, no stretching */
+.pollPhoneStage .seoThemeControls{
+  display:grid !important;
+  grid-template-columns:repeat(4,24px) !important;
+  grid-auto-rows:24px !important;
+  gap:7px 8px !important;
+  width:max-content !important;
+  max-width:none !important;
+  justify-content:flex-start !important;
+  align-items:center !important;
+  margin-top:10px !important;
+}
+.pollPhoneStage .seoThemeDot{
+  width:24px !important;
+  height:24px !important;
+  min-width:24px !important;
+  min-height:24px !important;
+  flex:0 0 24px !important;
+}
+
+/* Default grey theme: darker grey, next button dark with white text */
+.pollPhoneStage .seoPhoneWrap[data-color-theme="default"]{
+  --phone-bg:#E1E4E8 !important;
+  --phone-surface:#F7F8FA !important;
+  --phone-surface-2:#EEF0F3 !important;
+  --phone-border:#C4CAD3 !important;
+  --phone-ink:#0B0C0E !important;
+  --phone-muted:#5B6470 !important;
+  --phone-accent:#1A1D21 !important;
+  --phone-primary:#1A1D21 !important;
+  --phone-accent-2:#2C2F34 !important;
+  --phone-accent-soft:#D6DAE1 !important;
+  --phone-glow:rgba(26,29,33,.24) !important;
+}
+.pollPhoneStage .seoPhoneWrap[data-color-theme="default"] .pollPhoneActions button+button{
+  background:#1A1D21 !important;
+  border-color:#1A1D21 !important;
+  color:#fff !important;
+}
+
+/* Noir: all white panels become dark */
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"] .seoMiniCard,
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"] .pollAppOption,
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"] .pollTextArea,
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"] .contact-fields label span,
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"] .rating-field span,
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"] .nps-field span,
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"] .pollPhoneActions button{
+  background:var(--phone-surface) !important;
+  color:var(--phone-ink) !important;
+  border-color:var(--phone-border) !important;
+}
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"] .pollAppOption.active,
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"] .nps-field span.selected{
+  background:var(--phone-surface-2) !important;
+  border-color:var(--phone-accent) !important;
+}
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"] .pollPhoneActions button+button,
+.pollPhoneStage .seoPhoneWrap[data-color-theme="noir"] .rating-field span.active{
+  background:var(--phone-accent) !important;
+  border-color:var(--phone-accent) !important;
+  color:var(--phone-btnText,#0B0F17) !important;
+}
+
+/* Signature icons: no background, colorful individual icons */
+.pollSignatureIcon{
+  background:transparent !important;
+  box-shadow:none !important;
+  width:44px !important;
+  height:44px !important;
+  margin-bottom:14px !important;
+  display:grid !important;
+  place-items:center !important;
+}
+.pollSignatureIcon svg{width:24px !important;height:24px !important;stroke-width:2.2 !important}
+.pollSignatureCard:nth-child(1) .pollSignatureIcon{color:#0b74d1 !important}
+.pollSignatureCard:nth-child(2) .pollSignatureIcon{color:#10a37f !important}
+.pollSignatureCard:nth-child(3) .pollSignatureIcon{color:#8b5cf6 !important}
+.pollSignatureWide h3{
+  margin:0 !important;
+  color:#081b36 !important;
+  font-size:clamp(22px,2.4vw,22px) !important;
+  line-height:1.14 !important;
+  letter-spacing:-.03em !important;
+}
+
+/* Center feature heading and SEO paragraph */
+#features .seoSectionHeader,
+#telegram-polls-faq .seoSectionHeader{
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+}
+#features .seoSectionHeader .seoKicker,
+#telegram-polls-faq .seoSectionHeader .seoKicker,
+#how-to-create-telegram-poll .seoSectionHeader .seoKicker{
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+#features .seoSectionText,
+#telegram-polls-faq .seoSectionText{
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+}
+
+/* Feature icons smaller and more diverse */
+.pollFeatureCard svg{
+  width:44px !important;
+  height:44px !important;
+  padding:11px !important;
+  box-sizing:border-box !important;
+}
+.pollFeatureCard:nth-child(1) svg{background:#0b74d1 !important}
+.pollFeatureCard:nth-child(2) svg{background:#e3182c !important}
+.pollFeatureCard:nth-child(3) svg{background:#7c3aed !important}
+.pollFeatureCard:nth-child(4) svg{background:#f59e0b !important}
+.pollFeatureCard:nth-child(5) svg{background:#10a37f !important}
+.pollFeatureCard:nth-child(6) svg{background:#2563eb !important}
+
+/* Steps section: make it like the main page 'How TgDraw works' */
+#how-to-create-telegram-poll{
+  padding:70px 0 72px !important;
+  background:linear-gradient(180deg,#fff 0%,#f7fbff 100%) !important;
+}
+#how-to-create-telegram-poll .seoSectionHeader{
+  max-width:900px !important;
+  margin:0 auto 30px !important;
+  text-align:center !important;
+}
+#how-to-create-telegram-poll .seoSectionHeader h2{
+  margin:12px 0 0 !important;
+  text-align:center !important;
+  font-size:clamp(32px,3.6vw,46px) !important;
+  line-height:1.05 !important;
+  letter-spacing:-.045em !important;
+}
+#how-to-create-telegram-poll .pollStepsIntroText{
+  max-width:760px !important;
+  margin:12px auto 0 !important;
+  text-align:center !important;
+  color:#5f7188 !important;
+  font-size:15.5px !important;
+  line-height:1.65 !important;
+}
+.pollStepsGrid{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:18px !important;
+  align-items:stretch !important;
+}
+.pollStepCard{
+  position:relative !important;
+  overflow:hidden !important;
+  min-height:190px !important;
+  border:1px solid #d9e6f4 !important;
+  border-radius:18px !important;
+  background:#fff !important;
+  padding:26px 22px 24px !important;
+  box-shadow:0 18px 40px rgba(8,27,54,.07) !important;
+}
+.pollStepCard:after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  height:3px !important;
+  background:linear-gradient(90deg,#e3182c 0%,#0b74d1 100%) !important;
+}
+.pollStepCard span{
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  min-width:0 !important;
+  padding:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#8aa0b8 !important;
+  font-size:12px !important;
+  font-weight:900 !important;
+  letter-spacing:.04em !important;
+}
+.pollStepCard h3{
+  margin:26px 0 0 !important;
+  color:#081b36 !important;
+  font-size:21px !important;
+  line-height:1.16 !important;
+  letter-spacing:-.025em !important;
+}
+.pollStepCard p{
+  margin-top:12px !important;
+  color:#52677f !important;
+  font-size:14.5px !important;
+  line-height:1.62 !important;
+}
+
+@media (max-width:1180px){
+  .pollStepsGrid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+}
+@media (max-width:760px){
+  .pollStepsGrid{grid-template-columns:1fr !important}
+  .pollStepCard{min-height:auto !important}
+}

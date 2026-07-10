@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tgdraw.com/sitemap.xml

@@ -1,0 +1,5 @@
+SEO files prepared for https://tgdraw.com/
+- robots.txt allows crawling and references sitemap.xml
+- sitemap.xml includes all localized static routes
+- canonical, og:url, og:image, twitter:image and hreflang links use absolute URLs
+- JSON-LD relative URLs converted to absolute URLs

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TgDraw — 抽選・投票・クイズ向けTelegramボット.</title>
+<meta content="TgDrawはTelegramで抽選やキャンペーンを行うためのボットです。購読チェック、WebApp、当選者のランダム選出、投票、クイズ、データエクスポートに対応しています。" name="description"/>
+<meta content="TgDraw, Telegram抽選ボット, Telegram抽選, ランダム抽選, 当選者選出, Telegram投票, Telegramクイズ, 購読チェック, Telegram WebApp, データエクスポート" name="keywords"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<meta content="#e30f18" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="TgDraw" property="og:site_name"/>
+<meta content="TgDraw — Telegram抽選、ランダム抽選、投票、クイズ" property="og:title"/>
+<meta content="Telegramで抽選、購読チェック、WebApp参加、当選者選出、投票、クイズ、データエクスポートをまとめて実行できます。" property="og:description"/>
+<meta content="https://tgdraw.com/ja/" property="og:url"/>
+<meta content="https://tgdraw.com/logo.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="TgDraw — Telegram抽選、ランダム抽選、投票、クイズ" name="twitter:title"/>
+<meta content="Telegramで抽選、購読チェック、WebApp参加、当選者選出、投票、クイズ、データエクスポートをまとめて実行できます。" name="twitter:description"/>
+<meta content="https://tgdraw.com/logo.png" name="twitter:image"/>
+<link href="https://tgdraw.com/ja/" rel="canonical"/>
+<link href="https://tgdraw.com/" hreflang="x-default" rel="alternate"/>
+<link href="https://tgdraw.com/ar/" hreflang="ar" rel="alternate"/>
+<link href="https://tgdraw.com/hy/" hreflang="hy" rel="alternate"/>
+<link href="https://tgdraw.com/az/" hreflang="az" rel="alternate"/>
+<link href="https://tgdraw.com/be/" hreflang="be" rel="alternate"/>
+<link href="https://tgdraw.com/zh-cn/" hreflang="zh-CN" rel="alternate"/>
+<link href="https://tgdraw.com/zh-tw/" hreflang="zh-TW" rel="alternate"/>
+<link href="https://tgdraw.com/cs/" hreflang="cs" rel="alternate"/>
+<link href="https://tgdraw.com/nl/" hreflang="nl" rel="alternate"/>
+<link href="https://tgdraw.com/" hreflang="en" rel="alternate"/>
+<link href="https://tgdraw.com/fr/" hreflang="fr" rel="alternate"/>
+<link href="https://tgdraw.com/ka/" hreflang="ka" rel="alternate"/>
+<link href="https://tgdraw.com/de/" hreflang="de" rel="alternate"/>
+<link href="https://tgdraw.com/hi/" hreflang="hi" rel="alternate"/>
+<link href="https://tgdraw.com/id/" hreflang="id" rel="alternate"/>
+<link href="https://tgdraw.com/it/" hreflang="it" rel="alternate"/>
+<link href="https://tgdraw.com/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://tgdraw.com/kk/" hreflang="kk" rel="alternate"/>
+<link href="https://tgdraw.com/ko/" hreflang="ko" rel="alternate"/>
+<link href="https://tgdraw.com/ms/" hreflang="ms" rel="alternate"/>
+<link href="https://tgdraw.com/fa/" hreflang="fa" rel="alternate"/>
+<link href="https://tgdraw.com/pl/" hreflang="pl" rel="alternate"/>
+<link href="https://tgdraw.com/pt-br/" hreflang="pt-BR" rel="alternate"/>
+<link href="https://tgdraw.com/pt-pt/" hreflang="pt-PT" rel="alternate"/>
+<link href="https://tgdraw.com/ro/" hreflang="ro" rel="alternate"/>
+<link href="https://tgdraw.com/ru/" hreflang="ru" rel="alternate"/>
+<link href="https://tgdraw.com/es/" hreflang="es" rel="alternate"/>
+<link href="https://tgdraw.com/th/" hreflang="th" rel="alternate"/>
+<link href="https://tgdraw.com/tr/" hreflang="tr" rel="alternate"/>
+<link href="https://tgdraw.com/uk/" hreflang="uk" rel="alternate"/>
+<link href="https://tgdraw.com/uz/" hreflang="uz" rel="alternate"/>
+<link href="https://tgdraw.com/vi/" hreflang="vi" rel="alternate"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://tgdraw.com/ja/#organization","name":"TgDraw","url":"https://tgdraw.com/ja/","logo":"https://tgdraw.com/logo.png","sameAs":["https://t.me/tgdraw_bot"]},{"@type":"WebSite","@id":"https://tgdraw.com/ja/#website","url":"https://tgdraw.com/ja/","name":"TgDraw","description":"TgDrawはTelegramで抽選やキャンペーンを行うためのボットです。購読チェック、WebApp、当選者のランダム選出、投票、クイズ、データエクスポートに対応しています。","inLanguage":"ja","publisher":{"@id":"https://tgdraw.com/ja/#organization"}},{"@type":"SoftwareApplication","@id":"https://tgdraw.com/ja/#app","name":"TgDraw","applicationCategory":"BusinessApplication","operatingSystem":"Telegram","url":"https://t.me/tgdraw_bot","image":"https://tgdraw.com/logo.png","description":"TgDrawはTelegramで抽選やキャンペーンを行うためのボットです。購読チェック、WebApp、当選者のランダム選出、投票、クイズ、データエクスポートに対応しています。","inLanguage":"ja","keywords":"TgDraw, Telegram抽選ボット, Telegram抽選, ランダム抽選, 当選者選出, Telegram投票, Telegramクイズ, 購読チェック, Telegram WebApp, データエクスポート","offers":{"@type":"Offer","category":"Subscription"},"featureList":["抽選","ランダム抽選","購読チェック","Telegram WebApp","投票","クイズ"]},{"@type":"FAQPage","@id":"https://tgdraw.com/ja/#faq","mainEntity":[{"@type":"Question","name":"TgDrawとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"TgDrawは、Telegramで抽選、投票、クイズを作成するためのボットです。投稿の公開、参加条件の確認、WebAppでの参加者収集、当選者の選出をサポートします。"}},{"@type":"Question","name":"どこで利用できますか？","acceptedAnswer":{"@type":"Answer","text":"TgDrawはTelegramのチャンネルとグループで利用できます。コミュニティ管理者、クリエイター、ブランド、Telegram内でキャンペーンを行うプロジェクトに適しています。"}},{"@type":"Question","name":"なぜボットに管理者権限が必要ですか？","acceptedAnswer":{"@type":"Answer","text":"公開、購読チェック、ボタン、WebApp関連の操作を正しく動作させるために管理者権限が必要です。"}},{"@type":"Question","name":"抽選や投票を事前に準備できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。アクティビティを事前に設定し、準備が整ったタイミングで公開できます。"}},{"@type":"Question","name":"ランダム抽選はどのように動作しますか？","acceptedAnswer":{"@type":"Answer","text":"設定した条件を満たした参加者の中から、1名または複数の当選者をランダムに選びます。"}},{"@type":"Question","name":"複数の当選者を選べますか？","acceptedAnswer":{"@type":"Answer","text":"はい。1つの賞品または複数の賞品枠に対して、当選者数を指定できます。"}},{"@type":"Question","name":"当選者の選出をやり直せますか？","acceptedAnswer":{"@type":"Answer","text":"はい。ルール上必要な場合は、現在の条件に基づいて再度当選者を選べます。"}},{"@type":"Question","name":"結果はどこで確認できますか？","acceptedAnswer":{"@type":"Answer","text":"結果はボット内で確認できます。参加者、ステータス、当選者、結果公開のための次の操作が表示されます。"}},{"@type":"Question","name":"購読チェックはどのように動作しますか？","acceptedAnswer":{"@type":"Answer","text":"主催者が必須チャンネルを追加し、TgDrawが参加者が条件を満たしているか確認します。"}},{"@type":"Question","name":"参加者には何が表示されますか？","acceptedAnswer":{"@type":"Answer","text":"参加者は、アクティビティカード、必須条件、ステータス、利用できる操作が表示されたTelegram WebAppを開きます。"}},{"@type":"Question","name":"外部サイトを開く必要がありますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。主な流れはTelegram WebApp内で完結するため、抽選、投票、クイズはTelegramのインターフェース内で利用できます。"}},{"@type":"Question","name":"必須チャンネルを複数追加できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。選択したシナリオが対応している場合、購読チェック用に複数のチャンネルを追加できます。"}},{"@type":"Question","name":"どのような投票を作成できますか？","acceptedAnswer":{"@type":"Answer","text":"シナリオに応じて、回答、評価、自由記述、連絡先情報を収集できます。"}},{"@type":"Question","name":"クイズはどのように動作しますか？","acceptedAnswer":{"@type":"Answer","text":"クイズには質問、選択肢、正解、スコア、参加条件を含めることができます。"}},{"@type":"Question","name":"条件を満たした参加者だけを結果に含められますか？","acceptedAnswer":{"@type":"Answer","text":"はい。最終選出の前に、参加条件、クイズの進行状況、結果を考慮できます。"}},{"@type":"Question","name":"クイズ参加者の中から当選者を選べますか？","acceptedAnswer":{"@type":"Answer","text":"はい。クイズ終了後、必要な条件やスコアを満たした参加者の中から当選者を選べます。"}},{"@type":"Question","name":"参加者データをエクスポートできますか？","acceptedAnswer":{"@type":"Answer","text":"はい。利用できるプランに応じて、参加者データと結果をエクスポートできます。"}},{"@type":"Question","name":"TgDraw Plusで何が使えますか？","acceptedAnswer":{"@type":"Answer","text":"TgDraw Plusでは、投票とクイズの公開、公開済み抽選の編集、データエクスポート、その他の管理機能が利用できます。"}},{"@type":"Question","name":"公開済みの抽選を編集できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。公開済み抽選の編集はTgDraw Plusで利用できます。"}},{"@type":"Question","name":"追加の参加チェックはありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。一部のシナリオでは、captchaや参加条件の追加確認に対応しています。"}}]}]}</script>
+<script crossorigin="" src="/assets/index-CagnqpyF-phone-v6-batch5.js?v=flags-img-1" type="module"></script>
+<link href="/logo.png" rel="icon" type="image/png"/>
+<link href="/logo.png" rel="apple-touch-icon"/>
+<link as="image" href="/logo2.png" rel="preload"/>
+<link crossorigin="" href="/assets/index-3-rQnzYZ-phone-v6.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="root"></div>
+<noscript>TgDrawはTelegramで抽選やキャンペーンを行うためのボットです。購読チェック、WebApp、当選者のランダム選出、投票、クイズ、データエクスポートに対応しています。</noscript>
+</body>
+</html>
