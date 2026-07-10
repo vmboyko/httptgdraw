@@ -81,7 +81,7 @@
 }
 
 .pollHeroLead {
-  margin-top: 18px;
+  margin-top: 20px;
   max-width: 620px;
 }
 
@@ -146,24 +146,6 @@
   justify-content: center;
   align-items: flex-start;
   transform: none;
-}
-
-.pollPhoneStage .floatingCard {
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid rgba(0, 118, 236, 0.18);
-  background: rgba(255, 255, 255, 0.9);
-  color: #0f3b73;
-  font-weight: 900;
-  box-shadow: 0 14px 32px rgba(8, 27, 54, 0.1);
-  z-index: 6;
-  min-height: 46px;
-  padding: 0 13px;
-  border-radius: 16px;
-  font-size: 13px;
-  white-space: nowrap;
 }
 
 .pollPhoneStage .floatingCard svg {
@@ -371,12 +353,6 @@
   pointer-events: none;
 }
 
-.pollsLandingPage .seoAppTop,
-.pollsLandingPage .seoMiniCard {
-  position: relative;
-  z-index: 1;
-}
-
 .pollsLandingPage .seoAppTop {
   display: flex;
   align-items: center;
@@ -384,6 +360,8 @@
   margin: 16px 0 9px;
   gap: 8px;
   min-width: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .pollsLandingPage .seoAppBrand {
@@ -427,6 +405,8 @@
   border-radius: 18px;
   padding: 10px;
   box-shadow: 0 10px 22px rgba(8, 27, 54, 0.06);
+  position: relative;
+  z-index: 1;
 }
 
 .pollsLandingPage .seoMiniCard + .seoMiniCard {
@@ -546,9 +526,7 @@
   gap: 8px;
 }
 
-.pollAppOption,
-.pollTextArea,
-.contact-fields label span {
+.pollAppOption {
   min-height: 38px;
   display: flex;
   align-items: center;
@@ -592,6 +570,14 @@
   min-height: 116px;
   padding-top: 12px;
   color: var(--phone-muted);
+  display: flex;
+  gap: 8px;
+  border: 1px solid var(--phone-border);
+  border-radius: 12px;
+  background: var(--phone-surface-2);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 0 10px;
 }
 
 .rating-field {
@@ -665,6 +651,13 @@
   font-weight: 500;
   min-height: 31px;
   font-size: 10.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--phone-border);
+  border-radius: 12px;
+  background: var(--phone-surface-2);
+  padding: 0 10px;
 }
 
 .pollPhoneActions {
@@ -850,20 +843,22 @@
   margin-bottom: 10px;
 }
 
-.pollSignatureCard h2,
-.pollSignatureCard h3 {
-  margin: 0;
-  color: #081b36;
-  line-height: 1.14;
-  letter-spacing: -0.03em;
-}
-
 .pollSignatureCard h2 {
-  font-size: clamp(24px, 2.4vw, 34px);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-h2);
+  margin: 0;
+  color: var(--color-heading);
+  line-height: var(--line-height-h2);
+  letter-spacing: var(--letter-spacing-h2);
 }
 
 .pollSignatureCard h3 {
-  font-size: clamp(22px, 1.8vw, 22px);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h3);
+  margin: 0;
+  color: var(--color-heading);
+  line-height: var(--line-height-h3);
+  letter-spacing: var(--letter-spacing-h3);
 }
 
 .pollSignatureCard p {
@@ -1242,10 +1237,7 @@
 }
 
 .pollPhoneStage > .floatingCard,
-.pollPhoneStage > .seoFloatingCard,
-.pollPhoneStage > .pollFloatingCardOne,
-.pollPhoneStage > .pollFloatingCardTwo,
-.pollPhoneStage > .pollFloatingCardThree {
+.pollPhoneStage > .seoFloatingCard {
   position: absolute;
   inset: auto;
   width: auto;
@@ -1284,6 +1276,30 @@
   top: 88px;
   right: auto;
   bottom: auto;
+  position: absolute;
+  inset: auto;
+  width: auto;
+  min-width: 0;
+  max-width: max-content;
+  height: auto;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 0 13px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 118, 236, 0.55);
+  background: rgba(255, 255, 255, 0.96);
+  color: #0f3b73;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow: 0 14px 32px rgba(8, 27, 54, 0.1);
+  backdrop-filter: none;
+  transform: none;
+  z-index: 20;
 }
 
 .pollPhoneStage > .pollFloatingCardTwo {
@@ -1291,6 +1307,30 @@
   top: 238px;
   left: auto;
   bottom: auto;
+  position: absolute;
+  inset: auto;
+  width: auto;
+  min-width: 0;
+  max-width: max-content;
+  height: auto;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 0 13px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 118, 236, 0.55);
+  background: rgba(255, 255, 255, 0.96);
+  color: #0f3b73;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow: 0 14px 32px rgba(8, 27, 54, 0.1);
+  backdrop-filter: none;
+  transform: none;
+  z-index: 20;
 }
 
 .pollPhoneStage > .pollFloatingCardThree {
@@ -1298,6 +1338,30 @@
   bottom: 28px;
   left: auto;
   top: auto;
+  position: absolute;
+  inset: auto;
+  width: auto;
+  min-width: 0;
+  max-width: max-content;
+  height: auto;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 0 13px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 118, 236, 0.55);
+  background: rgba(255, 255, 255, 0.96);
+  color: #0f3b73;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow: 0 14px 32px rgba(8, 27, 54, 0.1);
+  backdrop-filter: none;
+  transform: none;
+  z-index: 20;
 }
 
 .pollPhoneStage .seoPhoneWrap {
@@ -1406,26 +1470,12 @@
   background: #ffffff;
 }
 
-.pollPhoneStage
-  .pollsLandingPage .seoPhoneWrap[data-color-theme="noir"]
-  .pollPhoneActions
-  button
-  + button {
-  color: #111827;
-  background: #ffffff;
-  border-color: #ffffff;
-}
-
 .pollPhoneStage .seoPhoneWrap[data-color-theme="default"] .seoAppPill {
   color: #111827;
   background: #f9fafb;
 }
 
-.pollPhoneStage
-  .pollsLandingPage .seoPhoneWrap[data-color-theme="default"]
-  .pollPhoneActions
-  button
-  + button {
+.pollsLandingPage .pollPhoneStage .seoPhoneWrap[data-color-theme="default"] .pollPhoneActions button + button {
   background: #1a1d21;
   border-color: #1a1d21;
   color: #fff;
@@ -1605,9 +1655,7 @@
   gap: 8px;
 }
 
-.pollPhoneStage .pollAppOption,
-.pollPhoneStage .pollTextArea,
-.pollPhoneStage .contact-fields label span {
+.pollPhoneStage .pollAppOption {
   min-height: 38px;
   display: flex;
   align-items: center;
@@ -1651,6 +1699,14 @@
   min-height: 116px;
   padding-top: 12px;
   color: var(--phone-muted);
+  display: flex;
+  gap: 8px;
+  border: 1px solid var(--phone-border);
+  border-radius: 12px;
+  background: var(--phone-surface-2);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 0 10px;
 }
 
 .pollPhoneStage .rating-field {
@@ -1723,6 +1779,13 @@
   color: var(--phone-muted);
   font-size: 10.5px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--phone-border);
+  border-radius: 12px;
+  background: var(--phone-surface-2);
+  padding: 0 10px;
 }
 
 .pollPhoneStage .pollPhoneActions {
@@ -2053,8 +2116,9 @@
   margin: 12px auto 0;
   text-align: center;
   color: #5f7188;
-  font-size: 15.5px;
-  line-height: 1.65;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
 }
 
 .pollStepCard:after {
@@ -2082,9 +2146,8 @@
     width: 100%;
   }
 
-  .pollSignatureGrid,
-  .pollFeatureGrid,
-  .pollStepsGrid {
+.pollSignatureGrid,
+.pollFeatureGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -2111,8 +2174,8 @@
   }
 
   .pollStepsGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 }
 
 @media (max-width: 900px) {
@@ -2224,13 +2287,7 @@
     min-height: 520px;
   }
 
-  .pollPhoneStage .floatingCard {
-    font-size: 12px;
-    min-height: 42px;
-    padding: 0 10px;
-  }
-
-  .pollFloatingCardOne {
+.pollFloatingCardOne {
     top: 70px;
     left: 6px;
   }
@@ -2248,10 +2305,10 @@
 
   .pollPhoneStage .floatingCard,
   .pollPhoneStage .seoFloatingCard {
-    font-size: 12px;
-    min-height: 40px;
-    padding: 0 10px;
-  }
+  font-size: 12px;
+  min-height: 40px;
+  padding: 0 10px;
+}
 
   .pollPhoneStage > .floatingCard,
   .pollPhoneStage > .seoFloatingCard {
