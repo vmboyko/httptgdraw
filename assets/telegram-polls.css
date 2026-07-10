@@ -21,9 +21,6 @@
   scroll-margin-top: 86px;
 }
 
-.pollsLandingPage p {
-  margin: 0;
-}
 
 .pollHero {
   position: relative;
@@ -81,7 +78,6 @@
 }
 
 .pollHeroLead {
-  margin-top: 20px;
   max-width: 620px;
 }
 
@@ -864,8 +860,8 @@
 .pollSignatureCard p {
   margin-top: 15px;
   color: #2d3947;
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: var(--font-size-card-body);
+  line-height: var(--line-height-card-body);
 }
 
 .pollSignatureWide p {
@@ -936,17 +932,14 @@
 
 .pollFeatureCard h3 {
   margin: 0;
-  font-size: clamp(21px, 1.7vw, 26px);
-  line-height: 1.12;
-  letter-spacing: -0.03em;
   color: #081b36;
 }
 
 .pollFeatureCard p {
   margin-top: 12px;
   color: #52677f;
-  font-size: 15px;
-  line-height: 1.62;
+  font-size: var(--font-size-card-body);
+  line-height: var(--line-height-card-body);
 }
 
 .pollSectionSoft {
@@ -1022,16 +1015,13 @@
 .pollFormatCard h3 {
   margin: 16px 0 0;
   color: #081b36;
-  font-size: 21px;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
 }
 
 .pollFormatCard p {
   margin-top: 10px;
   color: #52677f;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: var(--font-size-card-body);
+  line-height: var(--line-height-card-body);
 }
 
 .pollStepsGrid {
@@ -1071,16 +1061,13 @@
 .pollStepCard h3 {
   margin: 26px 0 0;
   color: #081b36;
-  font-size: 21px;
-  line-height: 1.16;
-  letter-spacing: -0.025em;
 }
 
 .pollStepCard p {
   margin-top: 12px;
   color: #52677f;
-  font-size: 14.5px;
-  line-height: 1.62;
+  font-size: var(--font-size-card-body);
+  line-height: var(--line-height-card-body);
 }
 
 .pollSectionBlend {
@@ -1132,16 +1119,13 @@
 .pollSoftCard h3 {
   margin: 0;
   color: #081b36;
-  font-size: 21px;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
 }
 
 .pollSoftCard p {
   margin-top: 10px;
   color: #52677f;
-  font-size: 15px;
-  line-height: 1.62;
+  font-size: var(--font-size-card-body);
+  line-height: var(--line-height-card-body);
 }
 
 .pollFaqWide {
@@ -1165,15 +1149,12 @@
 .pollFaqWide .seoFaqItem h3 {
   margin: 0 0 10px;
   color: #081b36;
-  font-size: 20px;
-  line-height: 1.22;
-  letter-spacing: -0.02em;
 }
 
 .pollFaqWide .seoFaqItem p {
   color: #52677f;
-  font-size: var(--font-size-body);
-  line-height: var(--line-height-body);
+  font-size: var(--font-size-card-body);
+  line-height: var(--line-height-card-body);
 }
 
 
@@ -2071,9 +2052,6 @@
 .pollSignatureWide h3 {
   margin: 0;
   color: #081b36;
-  font-size: clamp(22px, 2.4vw, 22px);
-  line-height: 1.14;
-  letter-spacing: -0.03em;
 }
 
 #features .seoSectionHeader,

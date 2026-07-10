@@ -43,6 +43,8 @@
   --font-weight-h3: 800;
   --line-height-h3: 1.25;
   --letter-spacing-h3: -0.018em;
+  --font-size-card-body: 14px;
+  --line-height-card-body: 1.58;
   --font-size-body: 15.5px;
   --font-weight-body: 400;
   --line-height-body: 1.66;
@@ -945,15 +947,17 @@ h3 {
 }
 
 .stepCard h3 {
-  font-size: 18px;
-  line-height: 1.18;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h3);
+  line-height: var(--line-height-h3);
+  letter-spacing: var(--letter-spacing-h3);
 }
 
 .stepCard p {
   color: var(--muted);
   margin-top: 11px;
-  font-size: 13.5px;
-  line-height: 1.52;
+  font-size: var(--font-size-card-body);
+  line-height: var(--line-height-card-body);
 }
 
 .featureGrid {
@@ -1013,14 +1017,17 @@ h3 {
 }
 
 .featureCard h3 {
-  font-size: 19px;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h3);
+  line-height: var(--line-height-h3);
+  letter-spacing: var(--letter-spacing-h3);
 }
 
 .featureCard p {
   color: var(--muted);
   margin-top: 10px;
-  font-size: 13.7px;
-  line-height: 1.55;
+  font-size: var(--font-size-card-body);
+  line-height: var(--line-height-card-body);
 }
 
 .scenariosWrap {
@@ -1096,15 +1103,17 @@ h3 {
 }
 
 .scenarioCard h3 {
-  font-size: 17px;
-  line-height: 1.22;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h3);
+  line-height: var(--line-height-h3);
+  letter-spacing: var(--letter-spacing-h3);
 }
 
 .scenarioCard p {
   color: var(--muted);
   margin-top: 8px;
-  font-size: 13px;
-  line-height: 1.52;
+  font-size: var(--font-size-card-body);
+  line-height: var(--line-height-card-body);
 }
 
 .faqSection {
@@ -1132,7 +1141,10 @@ h3 {
 
 .faqSectionBlock h3 {
   margin: 0 0 14px;
-  font-size: 20px;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h3);
+  line-height: var(--line-height-h3);
+  letter-spacing: var(--letter-spacing-h3);
 }
 
 .faqItemsList {
@@ -1799,7 +1811,11 @@ lottie-player:not(:defined).endLottie:before {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .splitHeader,
+  .splitHeader {
+    grid-template-columns: 1fr;
+    gap: var(--heading-text-gap);
+  }
+
   .scenariosWrap {
     grid-template-columns: 1fr;
   }
@@ -2157,10 +2173,6 @@ lottie-player:not(:defined).endLottie:before {
 
   .faqSectionBlock {
     padding: 18px;
-  }
-
-  .faqSectionBlock h3 {
-    font-size: 18px;
   }
 
   .faqItem summary {
