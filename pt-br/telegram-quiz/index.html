@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Como criar um quiz no Telegram: perguntas, pontos e resultados | TgDraw</title>
+<meta content="Veja como criar um quiz no Telegram com respostas corretas, pontuação, verificação de inscrição e três finais: sem vencedores, com cupom ou com sorteio aleatório." name="description"/>
+<meta content="como criar um quiz no Telegram, bot de quiz para Telegram, quiz interativo no Telegram, respostas corretas, pontuação, verificação de inscrição, cupom promocional, sorteio aleatório, quiz sem vencedores, exportação de resultados" name="keywords"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<meta content="#0b74d1" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="pt_BR" property="og:locale"/>
+<meta content="TgDraw" property="og:site_name"/>
+<meta content="Quiz no Telegram com pontuação e finais flexíveis — TgDraw" property="og:title"/>
+<meta content="Crie quizzes no Telegram, confira respostas e finalize sem vencedores, com cupom promocional ou com um vencedor escolhido aleatoriamente." property="og:description"/>
+<meta content="https://tgdraw.com/pt-br/telegram-quiz/" property="og:url"/>
+<meta content="https://tgdraw.com/logo.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Quiz no Telegram com pontuação e finais flexíveis — TgDraw" name="twitter:title"/>
+<meta content="Crie quizzes no Telegram, confira respostas e finalize sem vencedores, com cupom promocional ou com um vencedor escolhido aleatoriamente." name="twitter:description"/>
+<meta content="https://tgdraw.com/logo.png" name="twitter:image"/>
+<link href="/logo.png" rel="icon" type="image/png"/>
+<link href="/assets/index-3-rQnzYZ-phone-v6.css" rel="stylesheet"/>
+<link href="/assets/telegram-polls.css?v=7" rel="stylesheet"/>
+<link href="/assets/telegram-quiz.css?v=1" rel="stylesheet"/>
+<link href="https://tgdraw.com/pt-br/telegram-quiz/" rel="canonical"/><link href="https://tgdraw.com/telegram-quiz/" hreflang="x-default" rel="alternate"/><link href="https://tgdraw.com/telegram-quiz/" hreflang="en" rel="alternate"/><link href="https://tgdraw.com/ru/telegram-quiz/" hreflang="ru" rel="alternate"/><link href="https://tgdraw.com/es/telegram-quiz/" hreflang="es" rel="alternate"/><link href="https://tgdraw.com/de/telegram-quiz/" hreflang="de" rel="alternate"/><link href="https://tgdraw.com/fr/telegram-quiz/" hreflang="fr" rel="alternate"/><link href="https://tgdraw.com/pt-br/telegram-quiz/" hreflang="pt-BR" rel="alternate"/><link href="https://tgdraw.com/it/telegram-quiz/" hreflang="it" rel="alternate"/><link href="https://tgdraw.com/nl/telegram-quiz/" hreflang="nl" rel="alternate"/><link href="https://tgdraw.com/pl/telegram-quiz/" hreflang="pl" rel="alternate"/><link href="https://tgdraw.com/th/telegram-quiz/" hreflang="th" rel="alternate"/><link href="https://tgdraw.com/tr/telegram-quiz/" hreflang="tr" rel="alternate"/><link href="https://tgdraw.com/uk/telegram-quiz/" hreflang="uk" rel="alternate"/><link href="https://tgdraw.com/be/telegram-quiz/" hreflang="be" rel="alternate"/><link href="https://tgdraw.com/kk/telegram-quiz/" hreflang="kk" rel="alternate"/><link href="https://tgdraw.com/uz/telegram-quiz/" hreflang="uz" rel="alternate"/><link href="https://tgdraw.com/az/telegram-quiz/" hreflang="az" rel="alternate"/><link href="https://tgdraw.com/ka/telegram-quiz/" hreflang="ka" rel="alternate"/><link href="https://tgdraw.com/hy/telegram-quiz/" hreflang="hy" rel="alternate"/><link href="https://tgdraw.com/ro/telegram-quiz/" hreflang="ro" rel="alternate"/><link href="https://tgdraw.com/ar/telegram-quiz/" hreflang="ar" rel="alternate"/><link href="https://tgdraw.com/fa/telegram-quiz/" hreflang="fa" rel="alternate"/><link href="https://tgdraw.com/zh-cn/telegram-quiz/" hreflang="zh-CN" rel="alternate"/><link href="https://tgdraw.com/zh-tw/telegram-quiz/" hreflang="zh-TW" rel="alternate"/><link href="https://tgdraw.com/ja/telegram-quiz/" hreflang="ja" rel="alternate"/><link href="https://tgdraw.com/ko/telegram-quiz/" hreflang="ko" rel="alternate"/><link href="https://tgdraw.com/hi/telegram-quiz/" hreflang="hi" rel="alternate"/><link href="https://tgdraw.com/id/telegram-quiz/" hreflang="id" rel="alternate"/><link href="https://tgdraw.com/pt-pt/telegram-quiz/" hreflang="pt-PT" rel="alternate"/><link href="https://tgdraw.com/cs/telegram-quiz/" hreflang="cs" rel="alternate"/><link href="https://tgdraw.com/ms/telegram-quiz/" hreflang="ms" rel="alternate"/><link href="https://tgdraw.com/vi/telegram-quiz/" hreflang="vi" rel="alternate"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://tgdraw.com/pt-br/"},{"@type":"ListItem","position":2,"name":"Quizzes no Telegram","item":"https://tgdraw.com/pt-br/telegram-quiz/"}]},{"@type":"SoftwareApplication","name":"TgDraw","applicationCategory":"BusinessApplication","operatingSystem":"Telegram","url":"https://t.me/tgdraw_bot","image":"https://tgdraw.com/logo.png","description":"TgDraw é um bot de quiz para Telegram com respostas corretas, pontuação, verificação de inscrição e finais flexíveis: sem vencedores, com cupom promocional ou com sorteio integrado.","featureList":["Quizzes no Telegram","Respostas corretas e pontuação","Verificação de inscrição","Final sem vencedores","Cupom após o quiz","Sorteio integrado de vencedor","Exportação de resultados"],"offers":{"@type":"Offer","category":"Subscription"}}]}</script>
+<link href="/assets/site-navigation.css?v=1" rel="stylesheet"/>
+</head>
+<body class="pollsLandingPage quizLandingPage">
+<header class="siteHeader">
+<div class="container headerInner">
+<a aria-label="TgDraw" class="logo" href="/pt-br/"><img alt="TgDraw" src="/logo2.png"/><span class="logoFallback">TgDraw</span></a>
+<div class="headerRight">
+<div class="languageSelectWrap" data-language-select="">
+<button aria-expanded="false" aria-haspopup="listbox" aria-label="Selecionar idioma" class="languageSelectButton" data-language-button="" type="button">
+<img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/br.png" srcset="https://flagcdn.com/w80/br.png 2x"/><span>Português (Brasil)</span>
+<svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<div aria-label="Selecionar idioma" class="languageMenu" data-language-menu="" hidden="" role="listbox"><button aria-selected="false" class="languageOption" data-lang-href="/ar/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/sa.png" srcset="https://flagcdn.com/w80/sa.png 2x"/><span>العربية</span></button><button aria-selected="false" class="languageOption" data-lang-href="/hy/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/am.png" srcset="https://flagcdn.com/w80/am.png 2x"/><span>Հայերեն</span></button><button aria-selected="false" class="languageOption" data-lang-href="/az/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/az.png" srcset="https://flagcdn.com/w80/az.png 2x"/><span>Azərbaycan</span></button><button aria-selected="false" class="languageOption" data-lang-href="/be/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/by.png" srcset="https://flagcdn.com/w80/by.png 2x"/><span>Беларуская</span></button><button aria-selected="false" class="languageOption" data-lang-href="/zh-cn/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/cn.png" srcset="https://flagcdn.com/w80/cn.png 2x"/><span>简体中文</span></button><button aria-selected="false" class="languageOption" data-lang-href="/zh-tw/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/tw.png" srcset="https://flagcdn.com/w80/tw.png 2x"/><span>繁體中文</span></button><button aria-selected="false" class="languageOption" data-lang-href="/cs/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/cz.png" srcset="https://flagcdn.com/w80/cz.png 2x"/><span>Čeština</span></button><button aria-selected="false" class="languageOption" data-lang-href="/nl/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/nl.png" srcset="https://flagcdn.com/w80/nl.png 2x"/><span>Nederlands</span></button><button aria-selected="false" class="languageOption" data-lang-href="/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/gb.png" srcset="https://flagcdn.com/w80/gb.png 2x"/><span>English</span></button><button aria-selected="false" class="languageOption" data-lang-href="/fr/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/fr.png" srcset="https://flagcdn.com/w80/fr.png 2x"/><span>Français</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ka/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ge.png" srcset="https://flagcdn.com/w80/ge.png 2x"/><span>ქართული</span></button><button aria-selected="false" class="languageOption" data-lang-href="/de/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/de.png" srcset="https://flagcdn.com/w80/de.png 2x"/><span>Deutsch</span></button><button aria-selected="false" class="languageOption" data-lang-href="/hi/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/in.png" srcset="https://flagcdn.com/w80/in.png 2x"/><span>हिन्दी</span></button><button aria-selected="false" class="languageOption" data-lang-href="/id/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/id.png" srcset="https://flagcdn.com/w80/id.png 2x"/><span>Bahasa Indonesia</span></button><button aria-selected="false" class="languageOption" data-lang-href="/it/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/it.png" srcset="https://flagcdn.com/w80/it.png 2x"/><span>Italiano</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ja/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/jp.png" srcset="https://flagcdn.com/w80/jp.png 2x"/><span>日本語</span></button><button aria-selected="false" class="languageOption" data-lang-href="/kk/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/kz.png" srcset="https://flagcdn.com/w80/kz.png 2x"/><span>Қазақша</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ko/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/kr.png" srcset="https://flagcdn.com/w80/kr.png 2x"/><span>한국어</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ms/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/my.png" srcset="https://flagcdn.com/w80/my.png 2x"/><span>Bahasa Melayu</span></button><button aria-selected="false" class="languageOption" data-lang-href="/fa/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ir.png" srcset="https://flagcdn.com/w80/ir.png 2x"/><span>فارسی</span></button><button aria-selected="false" class="languageOption" data-lang-href="/pl/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/pl.png" srcset="https://flagcdn.com/w80/pl.png 2x"/><span>Polski</span></button><button aria-selected="true" class="languageOption isActive" data-lang-href="/pt-br/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/br.png" srcset="https://flagcdn.com/w80/br.png 2x"/><span>Português (Brasil)</span></button><button aria-selected="false" class="languageOption" data-lang-href="/pt-pt/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/pt.png" srcset="https://flagcdn.com/w80/pt.png 2x"/><span>Português (Portugal)</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ro/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ro.png" srcset="https://flagcdn.com/w80/ro.png 2x"/><span>Română</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ru/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ru.png" srcset="https://flagcdn.com/w80/ru.png 2x"/><span>Русский</span></button><button aria-selected="false" class="languageOption" data-lang-href="/es/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/es.png" srcset="https://flagcdn.com/w80/es.png 2x"/><span>Español</span></button><button aria-selected="false" class="languageOption" data-lang-href="/th/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/th.png" srcset="https://flagcdn.com/w80/th.png 2x"/><span>ไทย</span></button><button aria-selected="false" class="languageOption" data-lang-href="/tr/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/tr.png" srcset="https://flagcdn.com/w80/tr.png 2x"/><span>Türkçe</span></button><button aria-selected="false" class="languageOption" data-lang-href="/uk/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ua.png" srcset="https://flagcdn.com/w80/ua.png 2x"/><span>Українська</span></button><button aria-selected="false" class="languageOption" data-lang-href="/uz/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/uz.png" srcset="https://flagcdn.com/w80/uz.png 2x"/><span>O‘zbekcha</span></button><button aria-selected="false" class="languageOption" data-lang-href="/vi/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/vn.png" srcset="https://flagcdn.com/w80/vn.png 2x"/><span>Tiếng Việt</span></button></div>
+</div>
+<a class="btn btn-primary btnSmall" href="https://t.me/tgdraw_bot" rel="noreferrer" target="_blank">Abrir TgDraw <svg aria-hidden="true" class="lucide lucide-send" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg></a>
+</div>
+</div>
+</header>
+<main>
+<section class="pollHero" id="telegram-quiz">
+<div class="container">
+<div class="pollHeroGrid">
+<div class="pollHeroCopy">
+<div class="seoEyebrow"><svg aria-hidden="true" class="pollEyebrowIcon" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="17"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg><span>Quizzes no Telegram</span></div>
+<h1>Crie um quiz no Telegram com regras claras e um final flexível</h1>
+<p class="pollHeroLead">O TgDraw ajuda você a criar um quiz com respostas corretas, pontuação e verificação de inscrição. No final, mostre o resultado sem escolher vencedores, libere um cupom promocional ou selecione um vencedor com o sorteio aleatório integrado.</p>
+<div class="pollHeroActions">
+<a class="btn btn-primary" href="https://t.me/tgdraw_bot" rel="noreferrer" target="_blank">Criar no Telegram <svg aria-hidden="true" class="lucide lucide-send" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg></a>
+<a class="btn btn-secondary" href="#formats">Escolher formato</a>
+</div>
+<div class="pollHeroMiniNav"><a href="#formats">Quiz</a><a href="#formats">Respostas corretas</a><a href="#formats">Pontuação</a><a href="#formats">Sorteio aleatório</a><a href="#formats">Exportação</a></div>
+</div>
+<div class="pollHeroVisual">
+<div class="seoPhoneStage pollPhoneStage">
+<div class="floatingCard seoFloatingCard seoFloatingCardOne pollFloatingCardOne"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="20"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg><span>Respostas corretas</span></div>
+<div class="floatingCard seoFloatingCard seoFloatingCardThree pollFloatingCardThree"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="20"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 5.8 2 10.5 2 14.9 5.7 18 10.2 18H12c1.2 0 2 .8 2 2s.8 2 2 2c3.3 0 6-3.8 6-8.5C22 7.2 17.5 2 12 2Z"></path></svg><span>Configuração do tema</span></div>
+<div aria-label="Prévia do quiz WebApp do TgDraw no Telegram" class="seoPhoneWrap" data-color-theme="default">
+<div class="seoPhoneAura"></div>
+<div class="seoPhone">
+<div class="seoPhoneTop"></div>
+<div class="seoPhoneScreen">
+<div class="seoAppTop">
+<div class="seoAppBrand"><img alt="" aria-hidden="true" src="/logo.png"/>TgDraw</div>
+<div class="seoAppPill">WebApp</div>
+</div>
+<div class="seoMiniCard seoMiniCardTight pollQuestionSliderCard">
+<div class="pollCardHead">
+<div class="pollHeadLeft"><span class="pollLogoMini">T</span><strong>Quiz</strong></div>
+<div class="pollHeadRight">
+<span>Progresso</span>
+<div class="pollProgressLine"><i></i></div>
+<b data-poll-progress-count="">1 / 3</b>
+</div>
+</div>
+<div class="pollSliderWindow">
+<div class="pollSliderTrack">
+<div class="pollAppSlide">
+<div class="question-kicker">PERGUNTA</div>
+<div class="question-title">Qual planeta é conhecido como Planeta Vermelho?</div>
+<div class="poll-answer">
+<label class="pollAppOption active"><span class="pollAppInput radio"></span><b>Marte</b></label>
+<label class="pollAppOption"><span class="pollAppInput radio"></span><b>Vênus</b></label>
+<label class="pollAppOption"><span class="pollAppInput radio"></span><b>Júpiter</b></label>
+</div>
+</div>
+<div class="pollAppSlide">
+<div class="question-kicker">PERGUNTA</div>
+<div class="question-title">Quais são linguagens de programação?</div>
+<div class="poll-answer">
+<label class="pollAppOption active"><span class="pollAppInput checkbox"></span><b>Python</b></label>
+<label class="pollAppOption active"><span class="pollAppInput checkbox"></span><b>JavaScript</b></label>
+<label class="pollAppOption"><span class="pollAppInput checkbox"></span><b>HTML</b></label>
+</div>
+</div>
+<div class="pollAppSlide">
+<div class="question-kicker">PERGUNTA</div>
+<div class="question-title">Digite o nome do maior oceano</div>
+<div class="poll-answer">
+<div class="pollTextArea">Oceano Pacífico</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pollPhoneActions"><button>‹ Voltar</button><button>Avançar ›</button></div>
+</div>
+<div class="seoMiniCard seoMiniCardTight seoThemeCard"><div class="seoThemeCaption">Do seu jeito</div><div class="seoThemeControls"><button aria-label="Padrão" aria-pressed="true" class="seoThemeDot default isActive" data-phone-theme="default" type="button"></button><button aria-label="Safira" aria-pressed="false" class="seoThemeDot sapphire" data-phone-theme="sapphire" type="button"></button><button aria-label="Esmeralda" aria-pressed="false" class="seoThemeDot emerald" data-phone-theme="emerald" type="button"></button><button aria-label="Rubi" aria-pressed="false" class="seoThemeDot ruby" data-phone-theme="ruby" type="button"></button><button aria-label="Violeta" aria-pressed="false" class="seoThemeDot violet" data-phone-theme="violet" type="button"></button><button aria-label="Âmbar" aria-pressed="false" class="seoThemeDot amber" data-phone-theme="amber" type="button"></button><button aria-label="Aurora" aria-pressed="false" class="seoThemeDot aurora" data-phone-theme="aurora" type="button"></button><button aria-label="Preto" aria-pressed="false" class="seoThemeDot noir" data-phone-theme="noir" type="button"></button></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="pollSignatureSection">
+<div class="container pollSignatureGrid">
+<article class="pollSignatureCard pollSignatureWide">
+<div class="pollSignatureIcon"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg></div>
+<span>Dinâmica do jogo</span>
+<h3>O quiz acontece dentro do Telegram</h3>
+<p>As perguntas aparecem uma por vez, o progresso fica visível e ninguém precisa abrir um formulário externo. O quiz parece parte do Telegram, não um site separado.</p>
+</article>
+<article class="pollSignatureCard">
+<div class="pollSignatureIcon"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M20 21a8 8 0 0 0-16 0"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+<span>Final e prêmios</span>
+<h3>Você decide como o quiz termina</h3>
+<p>Finalize sem escolher vencedores, libere um cupom promocional ou faça um sorteio com o sistema aleatório integrado. O tipo de final é definido na configuração do quiz.</p>
+</article>
+<article class="pollSignatureCard">
+<div class="pollSignatureIcon"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 5.8 2 10.5 2 14.9 5.7 18 10.2 18H12c1.2 0 2 .8 2 2s.8 2 2 2c3.3 0 6-3.8 6-8.5C22 7.2 17.5 2 12 2Z"></path></svg></div>
+<span>Identidade visual</span>
+<h3>Deixe o quiz com a cara do seu projeto</h3>
+<p>Ajuste o tema da WebApp ao seu canal, marca, curso ou campanha para que o jogo combine com a presença do seu projeto no Telegram.</p>
+</article>
+</div>
+</section>
+<section class="pollSection" id="features">
+<div class="container">
+<div class="seoSectionHeader">
+<div class="seoKicker">Mecânica do quiz</div>
+<h2>Perguntas, pontuação e um final adequado ao seu objetivo</h2>
+<p class="seoSectionText">O TgDraw reúne perguntas, respostas corretas, pontuação e regras de acesso em um único quiz WebApp. Use para ensino, engajamento da audiência, jogos de marca e campanhas promocionais.</p>
+</div>
+<div class="pollFeatureGrid"><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg><h3>Publique o jogo no seu canal</h3><p>Publique o quiz em um canal ou grupo do Telegram. Os participantes abrem a WebApp e começam a jogar sem sair do mensageiro.</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M8 6h13"></path><path d="M8 12h13"></path><path d="M8 18h13"></path><path d="M3 6h.01"></path><path d="M3 12h.01"></path><path d="M3 18h.01"></path></svg><h3>Respostas corretas e pontuação</h3><p>Marque as opções corretas e atribua pontos a cada pergunta. O TgDraw calcula automaticamente a pontuação final de cada participante.</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M12 3l8 4v5c0 5-3.4 8-8 9-4.6-1-8-4-8-9V7Z"></path><path d="m9 12 2 2 4-5"></path></svg><h3>Acesso apenas para inscritos</h3><p>Adicione os canais obrigatórios. Antes do início, o TgDraw verifica as inscrições e libera apenas quem atende à regra.</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.9Z"></path></svg><h3>Três formas de finalizar</h3><p>Finalize sem vencedores, libere um cupom promocional ou faça um sorteio entre os participantes que cumpriram suas condições.</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 5.8 2 10.5 2 14.9 5.7 18 10.2 18H12c1.2 0 2 .8 2 2s.8 2 2 2c3.3 0 6-3.8 6-8.5C22 7.2 17.5 2 12 2Z"></path></svg><h3>Uma WebApp no seu estilo</h3><p>Escolha um tema alinhado à sua marca ou à ideia do jogo para integrar o quiz ao seu projeto no Telegram.</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg><h3>Resultados prontos para exportar</h3><p>Confira respostas, pontuações e dados dos participantes. A exportação ajuda a validar os resultados, salvar os dados do vencedor e identificar perguntas difíceis.</p></article></div>
+</div>
+</section>
+<section class="pollSection pollSectionSoft" id="formats">
+<div class="container pollFormatWrap">
+<div class="pollFormatIntro">
+<div class="seoKicker">Cenários de uso</div>
+<h2>Monte o jogo de acordo com seu objetivo</h2>
+<p>Crie um desafio rápido para inscritos, uma avaliação de conhecimento, um jogo com cupom ou um quiz com prêmio e sorteio aleatório.</p>
+<img alt="Abrir @tgdraw_bot" class="pollFormatQr" decoding="async" height="550" loading="lazy" src="/tgdraw-qr-bot.png" width="480"/>
+</div>
+<div class="pollFormatGrid"><article class="pollFormatCard"><span>01</span><h3>Uma resposta correta</h3><p>Uma pergunta clássica com apenas uma opção correta.</p></article><article class="pollFormatCard"><span>02</span><h3>Várias respostas corretas</h3><p>Use quando mais de uma opção puder estar certa.</p></article><article class="pollFormatCard"><span>03</span><h3>Resposta livre</h3><p>Colete termos, nomes ou respostas curtas sem apresentar uma lista de opções.</p></article><article class="pollFormatCard"><span>04</span><h3>Pontuação flexível</h3><p>Dê pesos diferentes às perguntas e compare os participantes pela pontuação final.</p></article><article class="pollFormatCard"><span>05</span><h3>Final sem vencedores</h3><p>Mostre a pontuação, uma explicação ou uma mensagem final quando não houver competição nem prêmio.</p></article><article class="pollFormatCard"><span>06</span><h3>Cupom ou sorteio aleatório</h3><p>Libere um cupom promocional ao final ou escolha aleatoriamente um vencedor entre quem cumpriu suas condições.</p></article></div>
+</div>
+</section>
+<section class="pollSection" id="how-to-create-telegram-quiz">
+<div class="container">
+<div class="seoSectionHeader"><div class="seoKicker">Lançamento</div><h2>Como criar um quiz no Telegram em quatro passos</h2><p class="seoSectionText pollStepsIntroText">Para aprender como criar um quiz no Telegram, prepare as perguntas e respostas corretas e depois configure a pontuação, o acesso e o tipo de final: sem vencedores, com cupom ou com sorteio aleatório.</p></div>
+<div class="pollStepsGrid"><article class="pollStepCard"><span>01</span><h3>Defina o objetivo do quiz</h3><p>Escolha o tema, o público e a quantidade de perguntas. Defina o que os participantes devem ver ou receber ao concluir.</p></article><article class="pollStepCard"><span>02</span><h3>Configure o teste de conhecimento</h3><p>Adicione opções de resposta, marque as corretas e atribua pontos a cada pergunta.</p></article><article class="pollStepCard"><span>03</span><h3>Configure a publicação e o acesso</h3><p>Escolha um canal ou grupo, adicione inscrições obrigatórias quando necessário e revise o quiz antes de publicar.</p></article><article class="pollStepCard"><span>04</span><h3>Escolha o tipo de final</h3><p>Publique o quiz e finalize sem vencedores, libere um cupom ou use o sorteio aleatório. As respostas e pontuações podem ser salvas na exportação.</p></article></div>
+</div>
+</section>
+<section class="pollSection pollSectionBlend">
+<div class="container pollBlendGrid">
+<div class="pollBlendCopy">
+<div class="seoKicker">Experiência do participante</div>
+<h2>Os participantes veem um jogo, não um formulário longo</h2>
+<p>As perguntas aparecem uma por vez e mantêm o foco no desafio. O progresso mostra quanto falta, e a tela final pode exibir o resultado, um cupom ou um aviso sobre o sorteio.</p>
+</div>
+<div class="pollSoftCards"><article class="pollSoftCard"><h3>Uma pergunta por vez</h3><p>Os participantes avançam passo a passo sem encarar uma página longa cheia de campos e opções.</p></article><article class="pollSoftCard"><h3>Um final claro</h3><p>Os participantes entendem o resultado na hora: veem a pontuação, recebem um cupom ou descobrem que estão aptos para o sorteio do vencedor.</p></article></div>
+</div>
+</section>
+<section class="pollSection" id="telegram-quiz-faq">
+<div class="container">
+<div class="seoSectionHeader">
+<div class="seoKicker">FAQ</div>
+<h2>FAQ sobre quizzes no Telegram</h2>
+</div>
+<div class="seoFaq pollFaqWide"><article class="seoFaqItem"><h3>Como criar um quiz no Telegram?</h3><p>Abra o TgDraw, adicione perguntas e respostas corretas, atribua pontos, configure a publicação e escolha o final: sem vencedores, com cupom ou com sorteio aleatório.</p></article><article class="seoFaqItem"><h3>Quais tipos de final estão disponíveis?</h3><p>Você pode finalizar mostrando o resultado sem escolher vencedores, liberar um cupom promocional ou usar o sorteio integrado para selecionar um vencedor ao acaso.</p></article><article class="seoFaqItem"><h3>Como funciona o sorteio aleatório integrado?</h3><p>O TgDraw monta a lista de participantes de acordo com suas condições e escolhe um vencedor ao acaso. A lista pode incluir todos que concluíram o quiz ou apenas quem atingiu a pontuação exigida.</p></article><article class="seoFaqItem"><h3>Posso limitar o quiz aos inscritos?</h3><p>Sim. Adicione os canais obrigatórios do Telegram e o bot verificará cada inscrição antes do início.</p></article><article class="seoFaqItem"><h3>Posso usar um cupom em vez de escolher um vencedor?</h3><p>Sim. No tipo de final escolhido, os participantes podem ver um cupom após concluir o quiz sem que nenhum vencedor seja selecionado.</p></article><article class="seoFaqItem"><h3>Quais resultados ficam disponíveis após o quiz?</h3><p>Você pode conferir respostas e pontuações e, quando a exportação estiver disponível, salvar dados dos participantes, estatísticas das perguntas e informações sobre o resultado ou vencedor.</p></article></div>
+</div>
+</section>
+<section class="seoCta">
+<div class="container seoCtaBox pollCtaBox">
+<div>
+<h2>Crie um quiz no Telegram</h2>
+<p>Adicione perguntas, configure a pontuação e o acesso e escolha o final adequado: sem vencedores, com cupom ou com sorteio aleatório integrado.</p>
+</div>
+<img alt="Abrir @tgdraw_bot" class="pollCtaQr" decoding="async" height="550" loading="lazy" src="/tgdraw-qr-bot.png" width="480"/>
+</div>
+</section>
+</main>
+<footer class="seoFooter"><div class="container seoFooterInner"><div class="seoFooterText">TgDraw — bot do Telegram para enquetes, quizzes e sorteios.</div><div class="seoFooterLinks"><a href="/pt-br/">Início</a><a href="/pt-br/telegram-polls/">Enquetes no Telegram</a><a href="/pt-br/telegram-quiz/">Quizzes no Telegram</a></div></div></footer>
+<script src="/assets/telegram-quiz.js?v=1"></script>
+<script defer src="/assets/site-navigation.js?v=1"></script>
+</body>
+</html>

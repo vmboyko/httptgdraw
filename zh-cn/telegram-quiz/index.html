@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>如何在 Telegram 创建测验 — 题目、计分与结果 | TgDraw</title>
+<meta content="了解如何在 Telegram 创建测验：设置正确答案、计分、订阅检查，并选择三种结束方式之一——不设获胜者、发放优惠码或内置随机抽奖。" name="description"/>
+<meta content="如何在 Telegram 创建测验，Telegram 测验机器人，Telegram 知识问答，正确答案，测验计分，订阅检查，优惠码，随机抽取获胜者，无获胜者测验，结果导出" name="keywords"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<meta content="#0b74d1" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="zh_CN" property="og:locale"/>
+<meta content="TgDraw" property="og:site_name"/>
+<meta content="支持计分与灵活结果的 Telegram 测验 — TgDraw" property="og:title"/>
+<meta content="创建 Telegram 测验、核对答案，并选择不设获胜者、发放优惠码或使用内置随机工具抽取获胜者。" property="og:description"/>
+<meta content="https://tgdraw.com/zh-cn/telegram-quiz/" property="og:url"/>
+<meta content="https://tgdraw.com/logo.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="支持计分与灵活结果的 Telegram 测验 — TgDraw" name="twitter:title"/>
+<meta content="创建 Telegram 测验、核对答案，并选择不设获胜者、发放优惠码或使用内置随机工具抽取获胜者。" name="twitter:description"/>
+<meta content="https://tgdraw.com/logo.png" name="twitter:image"/>
+<link href="/logo.png" rel="icon" type="image/png"/>
+<link href="/assets/index-3-rQnzYZ-phone-v6.css" rel="stylesheet"/>
+<link href="/assets/telegram-polls.css?v=7" rel="stylesheet"/>
+<link href="/assets/telegram-quiz.css?v=1" rel="stylesheet"/>
+<link href="https://tgdraw.com/zh-cn/telegram-quiz/" rel="canonical"/><link href="https://tgdraw.com/telegram-quiz/" hreflang="x-default" rel="alternate"/><link href="https://tgdraw.com/telegram-quiz/" hreflang="en" rel="alternate"/><link href="https://tgdraw.com/ru/telegram-quiz/" hreflang="ru" rel="alternate"/><link href="https://tgdraw.com/es/telegram-quiz/" hreflang="es" rel="alternate"/><link href="https://tgdraw.com/de/telegram-quiz/" hreflang="de" rel="alternate"/><link href="https://tgdraw.com/fr/telegram-quiz/" hreflang="fr" rel="alternate"/><link href="https://tgdraw.com/pt-br/telegram-quiz/" hreflang="pt-BR" rel="alternate"/><link href="https://tgdraw.com/it/telegram-quiz/" hreflang="it" rel="alternate"/><link href="https://tgdraw.com/nl/telegram-quiz/" hreflang="nl" rel="alternate"/><link href="https://tgdraw.com/pl/telegram-quiz/" hreflang="pl" rel="alternate"/><link href="https://tgdraw.com/th/telegram-quiz/" hreflang="th" rel="alternate"/><link href="https://tgdraw.com/tr/telegram-quiz/" hreflang="tr" rel="alternate"/><link href="https://tgdraw.com/uk/telegram-quiz/" hreflang="uk" rel="alternate"/><link href="https://tgdraw.com/be/telegram-quiz/" hreflang="be" rel="alternate"/><link href="https://tgdraw.com/kk/telegram-quiz/" hreflang="kk" rel="alternate"/><link href="https://tgdraw.com/uz/telegram-quiz/" hreflang="uz" rel="alternate"/><link href="https://tgdraw.com/az/telegram-quiz/" hreflang="az" rel="alternate"/><link href="https://tgdraw.com/ka/telegram-quiz/" hreflang="ka" rel="alternate"/><link href="https://tgdraw.com/hy/telegram-quiz/" hreflang="hy" rel="alternate"/><link href="https://tgdraw.com/ro/telegram-quiz/" hreflang="ro" rel="alternate"/><link href="https://tgdraw.com/ar/telegram-quiz/" hreflang="ar" rel="alternate"/><link href="https://tgdraw.com/fa/telegram-quiz/" hreflang="fa" rel="alternate"/><link href="https://tgdraw.com/zh-cn/telegram-quiz/" hreflang="zh-CN" rel="alternate"/><link href="https://tgdraw.com/zh-tw/telegram-quiz/" hreflang="zh-TW" rel="alternate"/><link href="https://tgdraw.com/ja/telegram-quiz/" hreflang="ja" rel="alternate"/><link href="https://tgdraw.com/ko/telegram-quiz/" hreflang="ko" rel="alternate"/><link href="https://tgdraw.com/hi/telegram-quiz/" hreflang="hi" rel="alternate"/><link href="https://tgdraw.com/id/telegram-quiz/" hreflang="id" rel="alternate"/><link href="https://tgdraw.com/pt-pt/telegram-quiz/" hreflang="pt-PT" rel="alternate"/><link href="https://tgdraw.com/cs/telegram-quiz/" hreflang="cs" rel="alternate"/><link href="https://tgdraw.com/ms/telegram-quiz/" hreflang="ms" rel="alternate"/><link href="https://tgdraw.com/vi/telegram-quiz/" hreflang="vi" rel="alternate"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://tgdraw.com/zh-cn/"},{"@type":"ListItem","position":2,"name":"Telegram 测验","item":"https://tgdraw.com/zh-cn/telegram-quiz/"}]},{"@type":"SoftwareApplication","name":"TgDraw","applicationCategory":"BusinessApplication","operatingSystem":"Telegram","url":"https://t.me/tgdraw_bot","image":"https://tgdraw.com/logo.png","description":"TgDraw 是一款 Telegram 测验机器人，支持正确答案、计分、订阅检查和灵活的结束方式：不设获胜者、发放优惠码或内置随机抽奖。","featureList":["Telegram 测验","正确答案与计分","订阅检查","不设获胜者的结果","完成后发放优惠码","内置随机抽取获胜者","结果导出"],"offers":{"@type":"Offer","category":"订阅"}}]}</script>
+<link href="/assets/site-navigation.css?v=1" rel="stylesheet"/>
+</head>
+<body class="pollsLandingPage quizLandingPage">
+<header class="siteHeader">
+<div class="container headerInner">
+<a aria-label="TgDraw" class="logo" href="/zh-cn/"><img alt="TgDraw" src="/logo2.png"/><span class="logoFallback">TgDraw</span></a>
+<div class="headerRight">
+<div class="languageSelectWrap" data-language-select="">
+<button aria-expanded="false" aria-haspopup="listbox" aria-label="选择语言" class="languageSelectButton" data-language-button="" type="button">
+<img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/cn.png" srcset="https://flagcdn.com/w80/cn.png 2x"/><span>简体中文</span>
+<svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<div aria-label="选择语言" class="languageMenu" data-language-menu="" hidden="" role="listbox"><button aria-selected="false" class="languageOption" data-lang-href="/ar/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/sa.png" srcset="https://flagcdn.com/w80/sa.png 2x"/><span>العربية</span></button><button aria-selected="false" class="languageOption" data-lang-href="/hy/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/am.png" srcset="https://flagcdn.com/w80/am.png 2x"/><span>Հայերեն</span></button><button aria-selected="false" class="languageOption" data-lang-href="/az/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/az.png" srcset="https://flagcdn.com/w80/az.png 2x"/><span>Azərbaycan</span></button><button aria-selected="false" class="languageOption" data-lang-href="/be/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/by.png" srcset="https://flagcdn.com/w80/by.png 2x"/><span>Беларуская</span></button><button aria-selected="true" class="languageOption isActive" data-lang-href="/zh-cn/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/cn.png" srcset="https://flagcdn.com/w80/cn.png 2x"/><span>简体中文</span></button><button aria-selected="false" class="languageOption" data-lang-href="/zh-tw/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/tw.png" srcset="https://flagcdn.com/w80/tw.png 2x"/><span>繁體中文</span></button><button aria-selected="false" class="languageOption" data-lang-href="/cs/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/cz.png" srcset="https://flagcdn.com/w80/cz.png 2x"/><span>Čeština</span></button><button aria-selected="false" class="languageOption" data-lang-href="/nl/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/nl.png" srcset="https://flagcdn.com/w80/nl.png 2x"/><span>Nederlands</span></button><button aria-selected="false" class="languageOption" data-lang-href="/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/gb.png" srcset="https://flagcdn.com/w80/gb.png 2x"/><span>English</span></button><button aria-selected="false" class="languageOption" data-lang-href="/fr/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/fr.png" srcset="https://flagcdn.com/w80/fr.png 2x"/><span>Français</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ka/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ge.png" srcset="https://flagcdn.com/w80/ge.png 2x"/><span>ქართული</span></button><button aria-selected="false" class="languageOption" data-lang-href="/de/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/de.png" srcset="https://flagcdn.com/w80/de.png 2x"/><span>Deutsch</span></button><button aria-selected="false" class="languageOption" data-lang-href="/hi/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/in.png" srcset="https://flagcdn.com/w80/in.png 2x"/><span>हिन्दी</span></button><button aria-selected="false" class="languageOption" data-lang-href="/id/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/id.png" srcset="https://flagcdn.com/w80/id.png 2x"/><span>Bahasa Indonesia</span></button><button aria-selected="false" class="languageOption" data-lang-href="/it/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/it.png" srcset="https://flagcdn.com/w80/it.png 2x"/><span>Italiano</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ja/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/jp.png" srcset="https://flagcdn.com/w80/jp.png 2x"/><span>日本語</span></button><button aria-selected="false" class="languageOption" data-lang-href="/kk/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/kz.png" srcset="https://flagcdn.com/w80/kz.png 2x"/><span>Қазақша</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ko/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/kr.png" srcset="https://flagcdn.com/w80/kr.png 2x"/><span>한국어</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ms/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/my.png" srcset="https://flagcdn.com/w80/my.png 2x"/><span>Bahasa Melayu</span></button><button aria-selected="false" class="languageOption" data-lang-href="/fa/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ir.png" srcset="https://flagcdn.com/w80/ir.png 2x"/><span>فارسی</span></button><button aria-selected="false" class="languageOption" data-lang-href="/pl/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/pl.png" srcset="https://flagcdn.com/w80/pl.png 2x"/><span>Polski</span></button><button aria-selected="false" class="languageOption" data-lang-href="/pt-br/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/br.png" srcset="https://flagcdn.com/w80/br.png 2x"/><span>Português (Brasil)</span></button><button aria-selected="false" class="languageOption" data-lang-href="/pt-pt/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/pt.png" srcset="https://flagcdn.com/w80/pt.png 2x"/><span>Português (Portugal)</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ro/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ro.png" srcset="https://flagcdn.com/w80/ro.png 2x"/><span>Română</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ru/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ru.png" srcset="https://flagcdn.com/w80/ru.png 2x"/><span>Русский</span></button><button aria-selected="false" class="languageOption" data-lang-href="/es/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/es.png" srcset="https://flagcdn.com/w80/es.png 2x"/><span>Español</span></button><button aria-selected="false" class="languageOption" data-lang-href="/th/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/th.png" srcset="https://flagcdn.com/w80/th.png 2x"/><span>ไทย</span></button><button aria-selected="false" class="languageOption" data-lang-href="/tr/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/tr.png" srcset="https://flagcdn.com/w80/tr.png 2x"/><span>Türkçe</span></button><button aria-selected="false" class="languageOption" data-lang-href="/uk/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ua.png" srcset="https://flagcdn.com/w80/ua.png 2x"/><span>Українська</span></button><button aria-selected="false" class="languageOption" data-lang-href="/uz/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/uz.png" srcset="https://flagcdn.com/w80/uz.png 2x"/><span>O‘zbekcha</span></button><button aria-selected="false" class="languageOption" data-lang-href="/vi/telegram-quiz/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/vn.png" srcset="https://flagcdn.com/w80/vn.png 2x"/><span>Tiếng Việt</span></button></div>
+</div>
+<a class="btn btn-primary btnSmall" href="https://t.me/tgdraw_bot" rel="noreferrer" target="_blank">Open TgDraw <svg aria-hidden="true" class="lucide lucide-send" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg></a>
+</div>
+</div>
+</header>
+<main>
+<section class="pollHero" id="telegram-quiz">
+<div class="container">
+<div class="pollHeroGrid">
+<div class="pollHeroCopy">
+<div class="seoEyebrow"><svg aria-hidden="true" class="pollEyebrowIcon" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="17"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg><span>Telegram 测验</span></div>
+<h1>创建规则清晰、结果灵活的 Telegram 测验</h1>
+<p class="pollHeroLead">TgDraw 可帮助你设置正确答案、计分和订阅检查。测验结束时，可以只显示结果、不设获胜者，也可以发放优惠码，或使用内置随机工具抽取获胜者。</p>
+<div class="pollHeroActions">
+<a class="btn btn-primary" href="https://t.me/tgdraw_bot" rel="noreferrer" target="_blank">在 Telegram 中开始 <svg aria-hidden="true" class="lucide lucide-send" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg></a>
+<a class="btn btn-secondary" href="#formats">选择场景</a>
+</div>
+<div class="pollHeroMiniNav"><a href="#formats">测验</a><a href="#formats">正确答案</a><a href="#formats">计分</a><a href="#formats">随机抽选</a><a href="#formats">导出</a></div>
+</div>
+<div class="pollHeroVisual">
+<div class="seoPhoneStage pollPhoneStage">
+<div class="floatingCard seoFloatingCard seoFloatingCardOne pollFloatingCardOne"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="20"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg><span>正确答案</span></div>
+<div class="floatingCard seoFloatingCard seoFloatingCardThree pollFloatingCardThree"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="20"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 5.8 2 10.5 2 14.9 5.7 18 10.2 18H12c1.2 0 2 .8 2 2s.8 2 2 2c3.3 0 6-3.8 6-8.5C22 7.2 17.5 2 12 2Z"></path></svg><span>主题设置</span></div>
+<div aria-label="TgDraw Telegram WebApp 测验预览" class="seoPhoneWrap" data-color-theme="default">
+<div class="seoPhoneAura"></div>
+<div class="seoPhone">
+<div class="seoPhoneTop"></div>
+<div class="seoPhoneScreen">
+<div class="seoAppTop">
+<div class="seoAppBrand"><img alt="" aria-hidden="true" src="/logo.png"/>TgDraw</div>
+<div class="seoAppPill">WebApp</div>
+</div>
+<div class="seoMiniCard seoMiniCardTight pollQuestionSliderCard">
+<div class="pollCardHead">
+<div class="pollHeadLeft"><span class="pollLogoMini">T</span><strong>测验</strong></div>
+<div class="pollHeadRight">
+<span>进度</span>
+<div class="pollProgressLine"><i></i></div>
+<b data-poll-progress-count="">1 / 3</b>
+</div>
+</div>
+<div class="pollSliderWindow">
+<div class="pollSliderTrack">
+<div class="pollAppSlide">
+<div class="question-kicker">题目</div>
+<div class="question-title">哪颗行星被称为“红色星球”？</div>
+<div class="poll-answer">
+<label class="pollAppOption active"><span class="pollAppInput radio"></span><b>火星</b></label>
+<label class="pollAppOption"><span class="pollAppInput radio"></span><b>金星</b></label>
+<label class="pollAppOption"><span class="pollAppInput radio"></span><b>木星</b></label>
+</div>
+</div>
+<div class="pollAppSlide">
+<div class="question-kicker">题目</div>
+<div class="question-title">以下哪些是编程语言？</div>
+<div class="poll-answer">
+<label class="pollAppOption active"><span class="pollAppInput checkbox"></span><b>Python</b></label>
+<label class="pollAppOption active"><span class="pollAppInput checkbox"></span><b>JavaScript</b></label>
+<label class="pollAppOption"><span class="pollAppInput checkbox"></span><b>HTML</b></label>
+</div>
+</div>
+<div class="pollAppSlide">
+<div class="question-kicker">题目</div>
+<div class="question-title">请输入世界上最大的海洋</div>
+<div class="poll-answer">
+<div class="pollTextArea">太平洋</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pollPhoneActions"><button>‹ 上一步</button><button>下一步 ›</button></div>
+</div>
+<div class="seoMiniCard seoMiniCardTight seoThemeCard"><div class="seoThemeCaption">按你的风格定制</div><div class="seoThemeControls"><button aria-label="默认" aria-pressed="true" class="seoThemeDot default isActive" data-phone-theme="default" type="button"></button><button aria-label="蓝宝石" aria-pressed="false" class="seoThemeDot sapphire" data-phone-theme="sapphire" type="button"></button><button aria-label="翡翠" aria-pressed="false" class="seoThemeDot emerald" data-phone-theme="emerald" type="button"></button><button aria-label="红宝石" aria-pressed="false" class="seoThemeDot ruby" data-phone-theme="ruby" type="button"></button><button aria-label="紫罗兰" aria-pressed="false" class="seoThemeDot violet" data-phone-theme="violet" type="button"></button><button aria-label="琥珀" aria-pressed="false" class="seoThemeDot amber" data-phone-theme="amber" type="button"></button><button aria-label="极光" aria-pressed="false" class="seoThemeDot aurora" data-phone-theme="aurora" type="button"></button><button aria-label="暗黑" aria-pressed="false" class="seoThemeDot noir" data-phone-theme="noir" type="button"></button></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="pollSignatureSection">
+<div class="container pollSignatureGrid">
+<article class="pollSignatureCard pollSignatureWide">
+<div class="pollSignatureIcon"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg></div>
+<span>答题流程</span>
+<h3>测验直接在 Telegram 内运行</h3>
+<p>题目逐一显示，进度始终清晰，参与者无需打开外部表单。整个测验更像 Telegram 的原生功能，而不是独立网站。</p>
+</article>
+<article class="pollSignatureCard">
+<div class="pollSignatureIcon"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M20 21a8 8 0 0 0-16 0"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+<span>结果与奖励</span>
+<h3>测验如何结束由你决定</h3>
+<p>可以不选择获胜者直接结束，也可以显示优惠码，或使用内置工具进行随机抽奖。结束方式在配置测验时设定。</p>
+</article>
+<article class="pollSignatureCard">
+<div class="pollSignatureIcon"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 5.8 2 10.5 2 14.9 5.7 18 10.2 18H12c1.2 0 2 .8 2 2s.8 2 2 2c3.3 0 6-3.8 6-8.5C22 7.2 17.5 2 12 2Z"></path></svg></div>
+<span>视觉风格</span>
+<h3>让测验自然融入你的项目</h3>
+<p>让 WebApp 主题与频道、品牌、课程或活动保持一致，使测验自然融入你的 Telegram 项目。</p>
+</article>
+</div>
+</section>
+<section class="pollSection" id="features">
+<div class="container">
+<div class="seoSectionHeader">
+<div class="seoKicker">测验机制</div>
+<h2>题目、计分与符合目标的结果</h2>
+<p class="seoSectionText">TgDraw 将题目、正确答案、计分和访问规则整合到一个 WebApp 测验中，适合教学、社群互动、品牌游戏和推广活动。</p>
+</div>
+<div class="pollFeatureGrid"><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg><h3>在频道中发布挑战</h3><p>将测验发布到 Telegram 频道或群组。参与者打开 WebApp 即可开始答题，无需离开 Telegram。</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M8 6h13"></path><path d="M8 12h13"></path><path d="M8 18h13"></path><path d="M3 6h.01"></path><path d="M3 12h.01"></path><path d="M3 18h.01"></path></svg><h3>正确答案与计分</h3><p>标记正确选项并为每道题设置分值，TgDraw 会自动计算每位参与者的最终得分。</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M12 3l8 4v5c0 5-3.4 8-8 9-4.6-1-8-4-8-9V7Z"></path><path d="m9 12 2 2 4-5"></path></svg><h3>仅限订阅者参与</h3><p>添加必订频道。测验开始前，TgDraw 会检查订阅状态，只允许符合条件的用户参与。</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.9Z"></path></svg><h3>三种结束方式</h3><p>可以不设获胜者、发放优惠码，或在符合条件的参与者中随机抽取获胜者。</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 5.8 2 10.5 2 14.9 5.7 18 10.2 18H12c1.2 0 2 .8 2 2s.8 2 2 2c3.3 0 6-3.8 6-8.5C22 7.2 17.5 2 12 2Z"></path></svg><h3>符合你风格的 WebApp</h3><p>选择符合品牌或游戏主题的样式，让测验自然融入你的 Telegram 项目。</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg><h3>可导出的结果</h3><p>查看答案、得分和参与者数据。导出结果可用于核对结论、保存获胜者信息并分析难题。</p></article></div>
+</div>
+</section>
+<section class="pollSection pollSectionSoft" id="formats">
+<div class="container pollFormatWrap">
+<div class="pollFormatIntro">
+<div class="seoKicker">测验场景</div>
+<h2>围绕目标设计答题体验</h2>
+<p>创建订阅者挑战、学习测评、优惠码游戏，或带随机抽奖的有奖测验。</p>
+<img alt="打开 @tgdraw_bot" class="pollFormatQr" decoding="async" height="550" loading="lazy" src="/tgdraw-qr-bot.png" width="480"/>
+</div>
+<div class="pollFormatGrid"><article class="pollFormatCard"><span>01</span><h3>一个正确答案</h3><p>经典单选题，只需选择一个正确选项。</p></article><article class="pollFormatCard"><span>02</span><h3>多个正确答案</h3><p>当题目有多个正确选项时使用。</p></article><article class="pollFormatCard"><span>03</span><h3>文本作答</h3><p>不提供选项，让参与者填写术语、名称或简短答案。</p></article><article class="pollFormatCard"><span>04</span><h3>灵活计分</h3><p>为题目设置不同分值，并按最终得分比较参与者。</p></article><article class="pollFormatCard"><span>05</span><h3>不设获胜者的结果</h3><p>无需竞赛或奖品时，可在最后一题后显示得分、说明或结束语。</p></article><article class="pollFormatCard"><span>06</span><h3>优惠码或随机抽选</h3><p>答题完成后显示优惠码，或从符合条件的参与者中随机抽取获胜者。</p></article></div>
+</div>
+</section>
+<section class="pollSection" id="how-to-create-telegram-quiz">
+<div class="container">
+<div class="seoSectionHeader"><div class="seoKicker">发布</div><h2>如何通过四个步骤在 Telegram 创建测验</h2><p class="seoSectionText pollStepsIntroText">要在 Telegram 创建测验，先准备题目和正确答案，再设置计分、访问条件和合适的结束方式：不设获胜者、发放优惠码或随机抽奖。</p></div>
+<div class="pollStepsGrid"><article class="pollStepCard"><span>01</span><h3>明确测验目标</h3><p>确定主题、受众和题目数量，并决定参与者完成后看到或获得什么。</p></article><article class="pollStepCard"><span>02</span><h3>设置知识考查</h3><p>添加答案选项、标记正确答案，并为每道题设置分值。</p></article><article class="pollStepCard"><span>03</span><h3>配置发布与访问</h3><p>选择频道或群组，按需添加必订频道，并在发布前预览测验。</p></article><article class="pollStepCard"><span>04</span><h3>选择结束方式</h3><p>发布测验后，可选择不设获胜者、显示优惠码或进行随机抽选。答案和得分可保存在导出文件中。</p></article></div>
+</div>
+</section>
+<section class="pollSection pollSectionBlend">
+<div class="container pollBlendGrid">
+<div class="pollBlendCopy">
+<div class="seoKicker">参与体验</div>
+<h2>参与者看到的是游戏，而不是冗长表单</h2>
+<p>题目逐一出现，让注意力始终集中在挑战上。进度显示剩余内容，最终页面可展示结果、优惠码或即将抽奖的提示。</p>
+</div>
+<div class="pollSoftCards"><article class="pollSoftCard"><h3>一次一道题</h3><p>参与者按步骤完成挑战，无需面对满屏字段和选项。</p></article><article class="pollSoftCard"><h3>清晰的结束反馈</h3><p>参与者会立即了解结果：查看得分、领取优惠码，或得知自己已进入随机抽选名单。</p></article></div>
+</div>
+</section>
+<section class="pollSection" id="telegram-quiz-faq">
+<div class="container">
+<div class="seoSectionHeader">
+<div class="seoKicker">FAQ</div>
+<h2>Telegram 测验常见问题</h2>
+</div>
+<div class="seoFaq pollFaqWide"><article class="seoFaqItem"><h3>如何在 Telegram 创建测验？</h3><p>打开 TgDraw，添加题目和正确答案，设置分值与发布方式，再选择结束方式：不设获胜者、发放优惠码或随机抽选。</p></article><article class="seoFaqItem"><h3>可以选择哪些结束方式？</h3><p>可以只显示常规结果而不设获胜者，也可以发放优惠码，或使用内置随机工具抽取获胜者。</p></article><article class="seoFaqItem"><h3>内置随机抽选如何工作？</h3><p>TgDraw 会根据你的条件生成参与者名单并随机选出获胜者。名单可以包含所有完成测验的人，也可以只包含达到指定分数的人。</p></article><article class="seoFaqItem"><h3>可以只允许订阅者参加吗？</h3><p>可以。添加必订 Telegram 频道后，机器人会在测验开始前核验每位用户的订阅状态。</p></article><article class="seoFaqItem"><h3>可以用优惠码代替选择获胜者吗？</h3><p>可以。参与者完成测验后即可看到优惠码，无需选择任何获胜者。</p></article><article class="seoFaqItem"><h3>测验结束后可以查看哪些结果？</h3><p>可以查看答案和得分；支持导出时，还能保存参与者数据、题目统计以及结果或获胜者信息。</p></article></div>
+</div>
+</section>
+<section class="seoCta">
+<div class="container seoCtaBox pollCtaBox">
+<div>
+<h2>发布 Telegram 测验</h2>
+<p>添加题目，设置计分与访问条件，再选择合适的结束方式：不设获胜者、发放优惠码或使用内置随机抽选。</p>
+</div>
+<img alt="打开 @tgdraw_bot" class="pollCtaQr" decoding="async" height="550" loading="lazy" src="/tgdraw-qr-bot.png" width="480"/>
+</div>
+</section>
+</main>
+<footer class="seoFooter"><div class="container seoFooterInner"><div class="seoFooterText">TgDraw — 用于投票、测验和抽奖的 Telegram 机器人。</div><div class="seoFooterLinks"><a href="/zh-cn/">首页</a><a href="/zh-cn/telegram-polls/">Telegram 投票</a><a href="/zh-cn/telegram-quiz/">Telegram 测验</a></div></div></footer>
+<script src="/assets/telegram-quiz.js?v=1"></script>
+<script defer src="/assets/site-navigation.js?v=1"></script>
+</body>
+</html>
