@@ -1,6 +1,7 @@
 (function () {
   "use strict";
 
+  // Keep this single table in sync with the 31 localized homepage H1 values.
   var headings = {
   "en": "Telegram bot for giveaways, polls and quizzes",
   "ru": "Telegram-бот для розыгрышей, опросов и викторин",
