@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ka">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>როგორ შევქმნათ გამოკითხვა Telegram-ში — TgDraw ბოტი</title>
+<meta content="შექმენით Telegram-ში გამოკითხვები და WebApp-ანკეტები სხვადასხვა ტიპის კითხვებით, გამოწერის შემოწმებით, შეფასებებით, საკონტაქტო ველებითა და შედეგების ექსპორტით TgDraw-ში." name="description"/>
+<meta content="Telegram გამოკითხვის ბოტი, როგორ შევქმნათ გამოკითხვა Telegram-ში, Telegram გამოკითხვები, Telegram ანკეტის ბოტი, WebApp ანკეტა, გამოკითხვის კონსტრუქტორი, გამოწერის შემოწმება, საკონტაქტო ფორმა, შედეგების ექსპორტი" name="keywords"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<meta content="#0b74d1" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="ka_GE" property="og:locale"/>
+<meta content="TgDraw" property="og:site_name"/>
+<meta content="როგორ შევქმნათ გამოკითხვა Telegram-ში — TgDraw ბოტი" property="og:title"/>
+<meta content="შექმენით Telegram-ში გამოკითხვები და WebApp-ანკეტები სხვადასხვა ტიპის კითხვებით, გამოწერის შემოწმებით, საკონტაქტო ველებით, შეფასებებითა და შედეგების ექსპორტით." property="og:description"/>
+<meta content="https://tgdraw.com/ka/telegram-polls/" property="og:url"/>
+<meta content="https://tgdraw.com/logo.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="როგორ შევქმნათ გამოკითხვა Telegram-ში — TgDraw ბოტი" name="twitter:title"/>
+<meta content="შექმენით Telegram-ში გამოკითხვები და WebApp-ანკეტები სხვადასხვა ტიპის კითხვებით, გამოწერის შემოწმებით, საკონტაქტო ველებით, შეფასებებითა და შედეგების ექსპორტით." name="twitter:description"/>
+<meta content="https://tgdraw.com/logo.png" name="twitter:image"/>
+<link href="/logo.png" rel="icon" type="image/png"/>
+<link href="/assets/index-3-rQnzYZ-phone-v6.css" rel="stylesheet"/>
+<link href="/assets/telegram-polls.css?v=7" rel="stylesheet"/>
+<link href="https://tgdraw.com/ka/telegram-polls/" rel="canonical"/><link href="https://tgdraw.com/telegram-polls/" hreflang="x-default" rel="alternate"/><link href="https://tgdraw.com/telegram-polls/" hreflang="en" rel="alternate"/><link href="https://tgdraw.com/ru/telegram-polls/" hreflang="ru" rel="alternate"/><link href="https://tgdraw.com/uk/telegram-polls/" hreflang="uk" rel="alternate"/><link href="https://tgdraw.com/be/telegram-polls/" hreflang="be" rel="alternate"/><link href="https://tgdraw.com/kk/telegram-polls/" hreflang="kk" rel="alternate"/><link href="https://tgdraw.com/uz/telegram-polls/" hreflang="uz" rel="alternate"/><link href="https://tgdraw.com/az/telegram-polls/" hreflang="az" rel="alternate"/><link href="https://tgdraw.com/ka/telegram-polls/" hreflang="ka" rel="alternate"/><link href="https://tgdraw.com/hy/telegram-polls/" hreflang="hy" rel="alternate"/><link href="https://tgdraw.com/ro/telegram-polls/" hreflang="ro" rel="alternate"/><link href="https://tgdraw.com/es/telegram-polls/" hreflang="es" rel="alternate"/><link href="https://tgdraw.com/de/telegram-polls/" hreflang="de" rel="alternate"/><link href="https://tgdraw.com/fr/telegram-polls/" hreflang="fr" rel="alternate"/><link href="https://tgdraw.com/pt-br/telegram-polls/" hreflang="pt-BR" rel="alternate"/><link href="https://tgdraw.com/pt-pt/telegram-polls/" hreflang="pt-PT" rel="alternate"/><link href="https://tgdraw.com/it/telegram-polls/" hreflang="it" rel="alternate"/><link href="https://tgdraw.com/nl/telegram-polls/" hreflang="nl" rel="alternate"/><link href="https://tgdraw.com/pl/telegram-polls/" hreflang="pl" rel="alternate"/><link href="https://tgdraw.com/cs/telegram-polls/" hreflang="cs" rel="alternate"/><link href="https://tgdraw.com/tr/telegram-polls/" hreflang="tr" rel="alternate"/><link href="https://tgdraw.com/ar/telegram-polls/" hreflang="ar" rel="alternate"/><link href="https://tgdraw.com/fa/telegram-polls/" hreflang="fa" rel="alternate"/><link href="https://tgdraw.com/zh-cn/telegram-polls/" hreflang="zh-CN" rel="alternate"/><link href="https://tgdraw.com/zh-tw/telegram-polls/" hreflang="zh-TW" rel="alternate"/><link href="https://tgdraw.com/ja/telegram-polls/" hreflang="ja" rel="alternate"/><link href="https://tgdraw.com/ko/telegram-polls/" hreflang="ko" rel="alternate"/><link href="https://tgdraw.com/hi/telegram-polls/" hreflang="hi" rel="alternate"/><link href="https://tgdraw.com/id/telegram-polls/" hreflang="id" rel="alternate"/><link href="https://tgdraw.com/ms/telegram-polls/" hreflang="ms" rel="alternate"/><link href="https://tgdraw.com/vi/telegram-polls/" hreflang="vi" rel="alternate"/><link href="https://tgdraw.com/th/telegram-polls/" hreflang="th" rel="alternate"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"მთავარი","item":"https://tgdraw.com/ka/"},{"@type":"ListItem","position":2,"name":"Telegram გამოკითხვები","item":"https://tgdraw.com/ka/telegram-polls/"}]},{"@type":"SoftwareApplication","name":"TgDraw","applicationCategory":"BusinessApplication","operatingSystem":"Telegram","url":"https://t.me/tgdraw_bot","image":"https://tgdraw.com/logo.png","description":"TgDraw არის Telegram ბოტი გამოკითხვებისა და WebApp-ანკეტების შესაქმნელად, გამოწერის შემოწმებით, შეფასებებით, საკონტაქტო ველებითა და შედეგების ექსპორტით.","featureList":["გამოკითხვები და ანკეტები Telegram-ში","WebApp-ანკეტები","ერთი ან რამდენიმე პასუხის ვარიანტი","ტექსტური პასუხები, შეფასებები და NPS","გამოწერის შემოწმება","საკონტაქტო მონაცემების შეგროვება","შედეგების ექსპორტი"],"offers":{"@type":"Offer","category":"გამოწერა"}}]}</script>
+<link href="/assets/site-navigation.css?v=1" rel="stylesheet"/>
+</head>
+<body class="pollsLandingPage">
+<header class="siteHeader">
+<div class="container headerInner">
+<a aria-label="TgDraw" class="logo" href="/ka/"><img alt="TgDraw" src="/logo2.png"/><span class="logoFallback">TgDraw</span></a>
+<div class="headerRight">
+<div class="languageSelectWrap" data-language-select="">
+<button aria-expanded="false" aria-haspopup="listbox" aria-label="ენის არჩევა" class="languageSelectButton" data-language-button="" type="button">
+<img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ge.png" srcset="https://flagcdn.com/w80/ge.png 2x"/><span>ქართული</span>
+<svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<div aria-label="ენის არჩევა" class="languageMenu" data-language-menu="" hidden="" role="listbox"><button aria-selected="false" class="languageOption" data-lang-href="/ar/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/sa.png" srcset="https://flagcdn.com/w80/sa.png 2x"/><span>العربية</span></button><button aria-selected="false" class="languageOption" data-lang-href="/hy/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/am.png" srcset="https://flagcdn.com/w80/am.png 2x"/><span>Հայերեն</span></button><button aria-selected="false" class="languageOption" data-lang-href="/az/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/az.png" srcset="https://flagcdn.com/w80/az.png 2x"/><span>Azərbaycan</span></button><button aria-selected="false" class="languageOption" data-lang-href="/be/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/by.png" srcset="https://flagcdn.com/w80/by.png 2x"/><span>Беларуская</span></button><button aria-selected="false" class="languageOption" data-lang-href="/zh-cn/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/cn.png" srcset="https://flagcdn.com/w80/cn.png 2x"/><span>简体中文</span></button><button aria-selected="false" class="languageOption" data-lang-href="/zh-tw/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/tw.png" srcset="https://flagcdn.com/w80/tw.png 2x"/><span>繁體中文</span></button><button aria-selected="false" class="languageOption" data-lang-href="/cs/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/cz.png" srcset="https://flagcdn.com/w80/cz.png 2x"/><span>Čeština</span></button><button aria-selected="false" class="languageOption" data-lang-href="/nl/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/nl.png" srcset="https://flagcdn.com/w80/nl.png 2x"/><span>Nederlands</span></button><button aria-selected="false" class="languageOption" data-lang-href="/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/gb.png" srcset="https://flagcdn.com/w80/gb.png 2x"/><span>English</span></button><button aria-selected="false" class="languageOption" data-lang-href="/fr/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/fr.png" srcset="https://flagcdn.com/w80/fr.png 2x"/><span>Français</span></button><button aria-selected="true" class="languageOption isActive" data-lang-href="/ka/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ge.png" srcset="https://flagcdn.com/w80/ge.png 2x"/><span>ქართული</span></button><button aria-selected="false" class="languageOption" data-lang-href="/de/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/de.png" srcset="https://flagcdn.com/w80/de.png 2x"/><span>Deutsch</span></button><button aria-selected="false" class="languageOption" data-lang-href="/hi/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/in.png" srcset="https://flagcdn.com/w80/in.png 2x"/><span>हिन्दी</span></button><button aria-selected="false" class="languageOption" data-lang-href="/id/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/id.png" srcset="https://flagcdn.com/w80/id.png 2x"/><span>Bahasa Indonesia</span></button><button aria-selected="false" class="languageOption" data-lang-href="/it/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/it.png" srcset="https://flagcdn.com/w80/it.png 2x"/><span>Italiano</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ja/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/jp.png" srcset="https://flagcdn.com/w80/jp.png 2x"/><span>日本語</span></button><button aria-selected="false" class="languageOption" data-lang-href="/kk/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/kz.png" srcset="https://flagcdn.com/w80/kz.png 2x"/><span>Қазақша</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ko/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/kr.png" srcset="https://flagcdn.com/w80/kr.png 2x"/><span>한국어</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ms/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/my.png" srcset="https://flagcdn.com/w80/my.png 2x"/><span>Bahasa Melayu</span></button><button aria-selected="false" class="languageOption" data-lang-href="/fa/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ir.png" srcset="https://flagcdn.com/w80/ir.png 2x"/><span>فارسی</span></button><button aria-selected="false" class="languageOption" data-lang-href="/pl/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/pl.png" srcset="https://flagcdn.com/w80/pl.png 2x"/><span>Polski</span></button><button aria-selected="false" class="languageOption" data-lang-href="/pt-br/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/br.png" srcset="https://flagcdn.com/w80/br.png 2x"/><span>Português (Brasil)</span></button><button aria-selected="false" class="languageOption" data-lang-href="/pt-pt/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/pt.png" srcset="https://flagcdn.com/w80/pt.png 2x"/><span>Português (Portugal)</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ro/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ro.png" srcset="https://flagcdn.com/w80/ro.png 2x"/><span>Română</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ru/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ru.png" srcset="https://flagcdn.com/w80/ru.png 2x"/><span>Русский</span></button><button aria-selected="false" class="languageOption" data-lang-href="/es/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/es.png" srcset="https://flagcdn.com/w80/es.png 2x"/><span>Español</span></button><button aria-selected="false" class="languageOption" data-lang-href="/th/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/th.png" srcset="https://flagcdn.com/w80/th.png 2x"/><span>ไทย</span></button><button aria-selected="false" class="languageOption" data-lang-href="/tr/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/tr.png" srcset="https://flagcdn.com/w80/tr.png 2x"/><span>Türkçe</span></button><button aria-selected="false" class="languageOption" data-lang-href="/uk/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ua.png" srcset="https://flagcdn.com/w80/ua.png 2x"/><span>Українська</span></button><button aria-selected="false" class="languageOption" data-lang-href="/uz/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/uz.png" srcset="https://flagcdn.com/w80/uz.png 2x"/><span>O‘zbekcha</span></button><button aria-selected="false" class="languageOption" data-lang-href="/vi/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/vn.png" srcset="https://flagcdn.com/w80/vn.png 2x"/><span>Tiếng Việt</span></button></div>
+</div>
+<a class="btn btn-primary btnSmall" href="https://t.me/tgdraw_bot" rel="noreferrer" target="_blank">გახსენით TgDraw <svg aria-hidden="true" class="lucide lucide-send" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg></a>
+</div>
+</div>
+</header>
+<main>
+<section class="pollHero" id="telegram-polls">
+<div class="container">
+<div class="pollHeroGrid">
+<div class="pollHeroCopy">
+<div class="seoEyebrow"><svg aria-hidden="true" class="pollEyebrowIcon" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="17"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg><span>გამოკითხვები Telegram-ში</span></div>
+<h1>შექმენით Telegram გამოკითხვები გარე ფორმების გარეშე</h1>
+<p class="pollHeroLead">TgDraw გეხმარებათ უშუალოდ Telegram-ში გაუშვათ გამოკითხვა, კენჭისყრა ან WebApp-ანკეტა. დაამატეთ სხვადასხვა ტიპის კითხვები, შეაგროვეთ კონტაქტები, შეამოწმეთ გამოწერა და მოამზადეთ შედეგები ანალიზისთვის.</p>
+<div class="pollHeroActions">
+<a class="btn btn-primary" href="https://t.me/tgdraw_bot" rel="noreferrer" target="_blank">დაწყება Telegram-ში <svg aria-hidden="true" class="lucide lucide-send" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg></a>
+<a class="btn btn-secondary" href="#formats">აირჩიეთ ფორმატი</a>
+</div>
+<div class="pollHeroMiniNav"><a href="#formats">გამოკითხვები</a><a href="#formats">ანკეტები</a><a href="#formats">შეფასებები</a><a href="#formats">კონტაქტები</a><a href="#formats">შედეგები</a></div>
+</div>
+<div class="pollHeroVisual">
+<div class="seoPhoneStage pollPhoneStage">
+<div class="floatingCard seoFloatingCard seoFloatingCardOne pollFloatingCardOne"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="20"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg><span>მოსახერხებელი ფორმატი</span></div>
+<div class="floatingCard seoFloatingCard seoFloatingCardThree pollFloatingCardThree"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="20"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 5.8 2 10.5 2 14.9 5.7 18 10.2 18H12c1.2 0 2 .8 2 2s.8 2 2 2c3.3 0 6-3.8 6-8.5C22 7.2 17.5 2 12 2Z"></path></svg><span>თემის პარამეტრები</span></div>
+<div aria-label="TgDraw-ის გამოკითხვის წინასწარი ნახვა Telegram WebApp-ში" class="seoPhoneWrap" data-color-theme="default">
+<div class="seoPhoneAura"></div>
+<div class="seoPhone">
+<div class="seoPhoneTop"></div>
+<div class="seoPhoneScreen">
+<div class="seoAppTop">
+<div class="seoAppBrand"><img alt="" aria-hidden="true" src="/logo.png"/>TgDraw</div>
+<div class="seoAppPill">WebApp</div>
+</div>
+<div class="seoMiniCard seoMiniCardTight pollQuestionSliderCard">
+<div class="pollCardHead">
+<div class="pollHeadLeft"><span class="pollLogoMini">T</span><strong>გამოკითხვა</strong></div>
+<div class="pollHeadRight">
+<span>პროგრესი</span>
+<div class="pollProgressLine"><i></i></div>
+<b data-poll-progress-count="">1 / 6</b>
+</div>
+</div>
+<div class="pollSliderWindow">
+<div class="pollSliderTrack">
+<div class="pollAppSlide">
+<div class="question-kicker">კითხვა</div>
+<div class="question-title">რომელი ფორმატი გჭირდებათ?</div>
+<div class="poll-answer">
+<label class="pollAppOption active"><span class="pollAppInput radio"></span><b>სწრაფი გამოკითხვა</b></label>
+<label class="pollAppOption"><span class="pollAppInput radio"></span><b>დეტალური ანკეტა</b></label>
+<label class="pollAppOption"><span class="pollAppInput radio"></span><b>საკონტაქტო ფორმა</b></label>
+</div>
+</div>
+<div class="pollAppSlide">
+<div class="question-kicker">კითხვა</div>
+<div class="question-title">რომელი ფუნქციები დავამატოთ?</div>
+<div class="poll-answer">
+<label class="pollAppOption active"><span class="pollAppInput checkbox"></span><b>გამოწერის შემოწმება</b></label>
+<label class="pollAppOption active"><span class="pollAppInput checkbox"></span><b>შეფასება</b></label>
+<label class="pollAppOption"><span class="pollAppInput checkbox"></span><b>საკონტაქტო ველები</b></label>
+</div>
+</div>
+<div class="pollAppSlide">
+<div class="question-kicker">კითხვა</div>
+<div class="question-title">გვიამბეთ უფრო დეტალურად</div>
+<div class="poll-answer">
+<div class="pollTextArea">ჩაწერეთ პასუხი</div>
+</div>
+</div>
+<div class="pollAppSlide">
+<div class="question-kicker">კითხვა</div>
+<div class="question-title">შეაფასეთ გამოცდილება</div>
+<div class="rating-field">
+<span class="active">★</span><span class="active">★</span><span class="active">★</span><span>★</span><span>★</span>
+</div>
+</div>
+<div class="pollAppSlide">
+<div class="question-kicker">კითხვა</div>
+<div class="question-title">ურჩევდით ამ არხს სხვებს?</div>
+<div class="nps-field">
+<span class="">0</span><span class="">1</span><span class="">2</span><span class="">3</span><span class="">4</span><span class="selected">5</span><span class="">6</span><span class="">7</span><span class="">8</span><span class="">9</span><span class="">10</span>
+</div>
+</div>
+<div class="pollAppSlide pollSlideContact">
+<div class="question-kicker">კითხვა</div>
+<div class="question-title">დატოვეთ საკონტაქტო მონაცემები</div>
+<div class="contact-fields">
+<label>სახელი<span>შეიყვანეთ სახელი</span></label>
+<label>ტელეფონი<span>შეიყვანეთ ტელეფონის ნომერი</span></label>
+<label>e-mail<span>შეიყვანეთ ელფოსტა</span></label>
+</div>
+</div>
+</div>
+</div>
+<div class="pollPhoneActions"><button>‹ უკან</button><button>შემდეგი ›</button></div>
+</div>
+<div class="seoMiniCard seoMiniCardTight seoThemeCard"><div class="seoThemeCaption">მოარგეთ თქვენს სტილს</div><div class="seoThemeControls"><button aria-label="სტანდარტული" aria-pressed="true" class="seoThemeDot default isActive" data-phone-theme="default" type="button"></button><button aria-label="საფირონი" aria-pressed="false" class="seoThemeDot sapphire" data-phone-theme="sapphire" type="button"></button><button aria-label="ზურმუხტი" aria-pressed="false" class="seoThemeDot emerald" data-phone-theme="emerald" type="button"></button><button aria-label="ლალი" aria-pressed="false" class="seoThemeDot ruby" data-phone-theme="ruby" type="button"></button><button aria-label="იისფერი" aria-pressed="false" class="seoThemeDot violet" data-phone-theme="violet" type="button"></button><button aria-label="ქარვა" aria-pressed="false" class="seoThemeDot amber" data-phone-theme="amber" type="button"></button><button aria-label="ავრორა" aria-pressed="false" class="seoThemeDot aurora" data-phone-theme="aurora" type="button"></button><button aria-label="ნუარი" aria-pressed="false" class="seoThemeDot noir" data-phone-theme="noir" type="button"></button></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="pollSignatureSection">
+<div class="container pollSignatureGrid">
+<article class="pollSignatureCard pollSignatureWide">
+<div class="pollSignatureIcon"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg></div>
+<span>მოსახერხებელი გამოკითხვის კონსტრუქტორი</span>
+<h3>თითოეული გამოკითხვა იხსნება გასაგები მინიინტერფეისის სახით</h3>
+<p>კითხვები, ღილაკები, პროგრესი და საბოლოო ეკრანი ერთ WebApp-შია თავმოყრილი. მონაწილეებს შეუძლიათ ანკეტის შევსება შეტყობინებებსა და გარე საიტებს შორის გადართვის გარეშე.</p>
+</article>
+<article class="pollSignatureCard">
+<div class="pollSignatureIcon"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M20 21a8 8 0 0 0-16 0"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+<span>აუდიტორიის სასარგებლო მონაცემები</span>
+<h3>პასუხები და კონტაქტები ერთ ანკეტაში</h3>
+<p>დაამატეთ სახელი, ტელეფონი, ელფოსტა და სხვა ველები, როცა მხოლოდ აზრის გაგება არ კმარა და გსურთ განაცხადებისა ან შემდგომი კავშირის მონაცემების შეგროვება.</p>
+</article>
+<article class="pollSignatureCard">
+<div class="pollSignatureIcon"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 5.8 2 10.5 2 14.9 5.7 18 10.2 18H12c1.2 0 2 .8 2 2s.8 2 2 2c3.3 0 6-3.8 6-8.5C22 7.2 17.5 2 12 2Z"></path></svg></div>
+<span>პროექტის სტილი</span>
+<h3>თქვენს არხზე მორგებული გაფორმება</h3>
+<p>მოარგეთ WebApp-ის თემა თქვენს ბრენდს, კამპანიას, სეზონურ აქციას ან Telegram არხის სტილს.</p>
+</article>
+</div>
+</section>
+<section class="pollSection" id="features">
+<div class="container">
+<div class="seoSectionHeader">
+<div class="seoKicker">შესაძლებლობები</div>
+<h2>ყველაფერი Telegram გამოკითხვებისთვის</h2>
+<p class="seoSectionText">შექმენით სწრაფი კენჭისყრები, დეტალური ანკეტები და უკუკავშირის ფორმები არხებისთვის, ჯგუფებისთვის, თემებისთვის, ბრენდებისა და საგანმანათლებლო პროექტებისთვის.</p>
+</div>
+<div class="pollFeatureGrid"><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg><h3>გამოკითხვები არხებისა და ჯგუფებისთვის</h3><p>გამოაქვეყნეთ გამოკითხვა არჩეულ Telegram არხში ან ჯგუფში. მონაწილეები ხსნიან WebApp-ს და პასუხობენ მესენჯერიდან გაუსვლელად.</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M8 6h13"></path><path d="M8 12h13"></path><path d="M8 18h13"></path><path d="M3 6h.01"></path><path d="M3 12h.01"></path><path d="M3 18h.01"></path></svg><h3>მოსახერხებელი ფორმატი</h3><p>ერთ ანკეტაში გააერთიანეთ ერთი ან რამდენიმე პასუხის არჩევა, თავისუფალი ტექსტი, შეფასებები, NPS და საკონტაქტო ველები.</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M12 3l8 4v5c0 5-3.4 8-8 9-4.6-1-8-4-8-9V7Z"></path><path d="m9 12 2 2 4-5"></path></svg><h3>გამოწერის შემოწმება</h3><p>მონაწილეობის უფლება მიეცით მხოლოდ არჩეული არხების გამომწერებს. TgDraw გამოკითხვის დაწყებამდე შეამოწმებს პირობის შესრულებას.</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.9Z"></path></svg><h3>შეფასებები და NPS</h3><p>გაზომეთ მომსახურებით, კონტენტით ან პროდუქტით კმაყოფილება და მიიღეთ აუდიტორიის მკაფიო უკუკავშირი.</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 5.8 2 10.5 2 14.9 5.7 18 10.2 18H12c1.2 0 2 .8 2 2s.8 2 2 2c3.3 0 6-3.8 6-8.5C22 7.2 17.5 2 12 2Z"></path></svg><h3>WebApp-ის გაფორმება</h3><p>მოარგეთ ანკეტის დიზაინი თქვენს ბრენდს, პროექტს ან Telegram არხს.</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg><h3>შედეგების ექსპორტი</h3><p>შეინახეთ პასუხები, მონაწილეთა მონაცემები და კითხვების სტატისტიკა ანალიზისთვის, ანგარიშგებისა და შემდგომი მუშაობისთვის.</p></article></div>
+</div>
+</section>
+<section class="pollSection pollSectionSoft" id="formats">
+<div class="container pollFormatWrap">
+<div class="pollFormatIntro">
+<div class="seoKicker">კითხვების ფორმატები</div>
+<h2>აირჩიეთ შესაბამისი გამოკითხვის ფორმატი</h2>
+<p>შექმენით ერთკითხვიანი კენჭისყრა ან სრულფასოვანი WebApp-ანკეტა სხვადასხვა ტიპის პასუხებით, შეფასებებითა და საკონტაქტო მონაცემებით.</p>
+<img alt="გახსენით @tgdraw_bot" class="pollFormatQr" decoding="async" height="550" loading="lazy" src="/tgdraw-qr-bot.png" width="480"/>
+</div>
+<div class="pollFormatGrid"><article class="pollFormatCard"><span>01</span><h3>ერთი პასუხი</h3><p>გამოიყენეთ, როცა მონაწილემ სიიდან მხოლოდ ერთი ვარიანტი უნდა აირჩიოს.</p></article><article class="pollFormatCard"><span>02</span><h3>რამდენიმე პასუხი</h3><p>გამოიყენეთ, როცა ერთზე მეტი პასუხი შეიძლება იყოს შესაბამისი.</p></article><article class="pollFormatCard"><span>03</span><h3>ტექსტური პასუხი</h3><p>შეაგროვეთ შეფასებები, წინადადებები, იდეები და დეტალური კომენტარები.</p></article><article class="pollFormatCard"><span>04</span><h3>შეფასება და NPS</h3><p>მიიღეთ მომსახურების ხარისხის, პროდუქტის, კონტენტის ან მომხმარებლის გამოცდილების მკაფიო შეფასება.</p></article><article class="pollFormatCard"><span>05</span><h3>საკონტაქტო ველები</h3><p>დაამატეთ სახელი, ტელეფონის ნომერი ან ელფოსტა განაცხადებისთვის, ჯავშნებისა და შემდგომი კავშირისთვის.</p></article><article class="pollFormatCard"><span>06</span><h3>საბოლოო ეკრანი</h3><p>აჩვენეთ შედეგი, პრომოკოდი, მადლობის შეტყობინება ან შემდეგი ნაბიჯი.</p></article></div>
+</div>
+</section>
+<section class="pollSection" id="how-to-create-telegram-poll">
+<div class="container">
+<div class="seoSectionHeader"><div class="seoKicker">როგორ მუშაობს</div><h2>როგორ შევქმნათ Telegram გამოკითხვა 4 ნაბიჯში</h2><p class="seoSectionText pollStepsIntroText">მარტივი სცენარით შექმენით გამოკითხვა, მოარგეთ თქვენს მიზანს და დაიწყეთ პასუხების შეგროვება.</p></div>
+<div class="pollStepsGrid"><article class="pollStepCard"><span>01</span><h3>გახსენით TgDraw</h3><p>გაუშვით ბოტი Telegram-ში და აირჩიეთ გამოკითხვის შექმნა. ცალკე ფორმების კონსტრუქტორი ან რთული დაყენება საჭირო არ არის.</p></article><article class="pollStepCard"><span>02</span><h3>დაამატეთ კითხვები</h3><p>აირჩიეთ პასუხების ტიპები, მიუთითეთ სავალდებულო ველები და საჭიროების შემთხვევაში დაამატეთ შეფასება, NPS ან კონტაქტების შეგროვება.</p></article><article class="pollStepCard"><span>03</span><h3>დააყენეთ გამოქვეყნება</h3><p>აირჩიეთ არხი ან ჯგუფი, საჭიროების შემთხვევაში ჩართეთ გამოწერის შემოწმება და შეარჩიეთ WebApp-ის თემა.</p></article><article class="pollStepCard"><span>04</span><h3>შეაგროვეთ შედეგები</h3><p>გამოაქვეყნეთ გამოკითხვა, აკონტროლეთ პასუხები და დასრულების შემდეგ გაიტანეთ მონაწილეთა მონაცემები და კითხვების სტატისტიკა.</p></article></div>
+</div>
+</section>
+<section class="pollSection pollSectionBlend">
+<div class="container pollBlendGrid">
+<div class="pollBlendCopy">
+<div class="seoKicker">კომფორტი მონაწილეებისთვის</div>
+<h2>რატომ არის WebApp-ანკეტების შევსება უფრო მარტივი</h2>
+<p>კითხვები ერთ ეკრანზე თანმიმდევრულად ჩნდება. მონაწილემ იცის, რა გააკეთოს შემდეგ, ხედავს პროგრესს და თავს არიდებს ზედმეტ გადამისამართებებს.</p>
+</div>
+<div class="pollSoftCards"><article class="pollSoftCard"><h3>ხილული პროგრესი</h3><p>მონაწილე ხედავს მიმდინარე კითხვას და რამდენი ნაბიჯი დარჩა.</p></article><article class="pollSoftCard"><h3>გასაგები დასრულება</h3><p>ბოლო პასუხის შემდეგ აჩვენეთ მადლობის შეტყობინება, შედეგი, პრომოკოდი ან შემდეგი ინსტრუქცია.</p></article></div>
+</div>
+</section>
+<section class="pollSection" id="telegram-polls-faq">
+<div class="container">
+<div class="seoSectionHeader">
+<div class="seoKicker">კითხვები და პასუხები</div>
+<h2>ხშირად დასმული კითხვები Telegram გამოკითხვებზე</h2>
+</div>
+<div class="seoFaq pollFaqWide"><article class="seoFaqItem"><h3>როგორ შევქმნა გამოკითხვა Telegram-ში?</h3><p>გახსენით TgDraw, აირჩიეთ გამოკითხვის ფორმატი, დაამატეთ კითხვები და პარამეტრები, შემდეგ კი გამოაქვეყნეთ საჭირო არხში ან ჯგუფში.</p></article><article class="seoFaqItem"><h3>რომელი ტიპის კითხვების გამოყენება შემიძლია?</h3><p>შეგიძლიათ დაამატოთ ერთი ან რამდენიმე პასუხის არჩევა, თავისუფალი ტექსტი, შეფასებები, NPS და საკონტაქტო ველები.</p></article><article class="seoFaqItem"><h3>შეიძლება გამოკითხვა მხოლოდ არხის გამომწერებისთვის იყოს ხელმისაწვდომი?</h3><p>დიახ. დაამატეთ სავალდებულო Telegram არხები და TgDraw ანკეტის დაწყებამდე შეამოწმებს გამოწერას.</p></article><article class="seoFaqItem"><h3>შეიძლება განაცხადებისა და საკონტაქტო მონაცემების შეგროვება?</h3><p>დიახ. შემდგომი კავშირისთვის WebApp-ანკეტას დაამატეთ სახელი, ტელეფონის ნომერი, ელფოსტა ან სხვა ველები.</p></article><article class="seoFaqItem"><h3>როგორ მივიღო გამოკითხვის შედეგები?</h3><p>დასრულების შემდეგ გადახედეთ პასუხებს და, თუ თქვენს წვდომის რეჟიმში ექსპორტი ხელმისაწვდომია, შეინახეთ მონაწილეთა მონაცემები და კითხვების სტატისტიკა.</p></article><article class="seoFaqItem"><h3>რისთვის შეიძლება TgDraw-ის გამოკითხვების გამოყენება?</h3><p>გამოიყენეთ კენჭისყრისთვის, აუდიტორიის შესასწავლად, უკუკავშირისა და განაცხადების შესაგროვებლად, მომსახურების შესაფასებლად და Telegram არხებსა თუ ჯგუფებში ანკეტების ჩასატარებლად.</p></article></div>
+</div>
+</section>
+<section class="seoCta">
+<div class="container seoCtaBox pollCtaBox">
+<div>
+<h2>შექმენით თქვენი პირველი Telegram გამოკითხვა</h2>
+<p>დააყენეთ კითხვები, გამოაქვეყნეთ WebApp-ანკეტა და მიიღეთ სტრუქტურირებული პასუხები გარე ფორმებისა და მონაცემების ხელით გადატანის გარეშე.</p>
+</div>
+<img alt="გახსენით @tgdraw_bot" class="pollCtaQr" decoding="async" height="550" loading="lazy" src="/tgdraw-qr-bot.png" width="480"/>
+</div>
+</section>
+</main>
+<footer class="seoFooter"><div class="container seoFooterInner"><div class="seoFooterText">TgDraw — Telegram ბოტი გამოკითხვებისთვის, ვიქტორინებისა და გათამაშებებისთვის.</div><div class="seoFooterLinks"><a href="/ka/">მთავარი</a><a href="/ka/telegram-polls/">Telegram გამოკითხვები</a><a href="/ka/telegram-quizzes/">Telegram ვიქტორინები</a></div></div></footer>
+<script src="/assets/telegram-polls.js?v=4"></script>
+<script defer src="/assets/site-navigation.js?v=1"></script>
+</body>
+</html>

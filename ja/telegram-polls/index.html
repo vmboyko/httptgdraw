@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Telegramでアンケートを作成する方法 — TgDrawボット</title>
+<meta content="TgDrawでTelegram内に投票やWebAppアンケートを作成。多彩な質問形式、登録確認、評価、連絡先項目、結果のエクスポートに対応。" name="description"/>
+<meta content="Telegramアンケートボット, Telegramでアンケートを作成する方法, Telegram投票, Telegram調査ボット, WebAppアンケート, アンケート作成, 登録確認, 連絡先フォーム, 結果エクスポート" name="keywords"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<meta content="#0b74d1" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="TgDraw" property="og:site_name"/>
+<meta content="Telegramでアンケートを作成する方法 — TgDrawボット" property="og:title"/>
+<meta content="多彩な質問形式、登録確認、連絡先項目、評価、結果エクスポートに対応したTelegramの投票・WebAppアンケートを作成できます。" property="og:description"/>
+<meta content="https://tgdraw.com/ja/telegram-polls/" property="og:url"/>
+<meta content="https://tgdraw.com/logo.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Telegramでアンケートを作成する方法 — TgDrawボット" name="twitter:title"/>
+<meta content="多彩な質問形式、登録確認、連絡先項目、評価、結果エクスポートに対応したTelegramの投票・WebAppアンケートを作成できます。" name="twitter:description"/>
+<meta content="https://tgdraw.com/logo.png" name="twitter:image"/>
+<link href="/logo.png" rel="icon" type="image/png"/>
+<link href="/assets/index-3-rQnzYZ-phone-v6.css" rel="stylesheet"/>
+<link href="/assets/telegram-polls.css?v=7" rel="stylesheet"/>
+<link href="https://tgdraw.com/ja/telegram-polls/" rel="canonical"/><link href="https://tgdraw.com/telegram-polls/" hreflang="x-default" rel="alternate"/><link href="https://tgdraw.com/telegram-polls/" hreflang="en" rel="alternate"/><link href="https://tgdraw.com/ru/telegram-polls/" hreflang="ru" rel="alternate"/><link href="https://tgdraw.com/uk/telegram-polls/" hreflang="uk" rel="alternate"/><link href="https://tgdraw.com/be/telegram-polls/" hreflang="be" rel="alternate"/><link href="https://tgdraw.com/kk/telegram-polls/" hreflang="kk" rel="alternate"/><link href="https://tgdraw.com/uz/telegram-polls/" hreflang="uz" rel="alternate"/><link href="https://tgdraw.com/az/telegram-polls/" hreflang="az" rel="alternate"/><link href="https://tgdraw.com/ka/telegram-polls/" hreflang="ka" rel="alternate"/><link href="https://tgdraw.com/hy/telegram-polls/" hreflang="hy" rel="alternate"/><link href="https://tgdraw.com/ro/telegram-polls/" hreflang="ro" rel="alternate"/><link href="https://tgdraw.com/es/telegram-polls/" hreflang="es" rel="alternate"/><link href="https://tgdraw.com/de/telegram-polls/" hreflang="de" rel="alternate"/><link href="https://tgdraw.com/fr/telegram-polls/" hreflang="fr" rel="alternate"/><link href="https://tgdraw.com/pt-br/telegram-polls/" hreflang="pt-BR" rel="alternate"/><link href="https://tgdraw.com/pt-pt/telegram-polls/" hreflang="pt-PT" rel="alternate"/><link href="https://tgdraw.com/it/telegram-polls/" hreflang="it" rel="alternate"/><link href="https://tgdraw.com/nl/telegram-polls/" hreflang="nl" rel="alternate"/><link href="https://tgdraw.com/pl/telegram-polls/" hreflang="pl" rel="alternate"/><link href="https://tgdraw.com/cs/telegram-polls/" hreflang="cs" rel="alternate"/><link href="https://tgdraw.com/tr/telegram-polls/" hreflang="tr" rel="alternate"/><link href="https://tgdraw.com/ar/telegram-polls/" hreflang="ar" rel="alternate"/><link href="https://tgdraw.com/fa/telegram-polls/" hreflang="fa" rel="alternate"/><link href="https://tgdraw.com/zh-cn/telegram-polls/" hreflang="zh-CN" rel="alternate"/><link href="https://tgdraw.com/zh-tw/telegram-polls/" hreflang="zh-TW" rel="alternate"/><link href="https://tgdraw.com/ja/telegram-polls/" hreflang="ja" rel="alternate"/><link href="https://tgdraw.com/ko/telegram-polls/" hreflang="ko" rel="alternate"/><link href="https://tgdraw.com/hi/telegram-polls/" hreflang="hi" rel="alternate"/><link href="https://tgdraw.com/id/telegram-polls/" hreflang="id" rel="alternate"/><link href="https://tgdraw.com/ms/telegram-polls/" hreflang="ms" rel="alternate"/><link href="https://tgdraw.com/vi/telegram-polls/" hreflang="vi" rel="alternate"/><link href="https://tgdraw.com/th/telegram-polls/" hreflang="th" rel="alternate"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://tgdraw.com/ja/"},{"@type":"ListItem","position":2,"name":"Telegramアンケート","item":"https://tgdraw.com/ja/telegram-polls/"}]},{"@type":"SoftwareApplication","name":"TgDraw","applicationCategory":"BusinessApplication","operatingSystem":"Telegram","url":"https://t.me/tgdraw_bot","image":"https://tgdraw.com/logo.png","description":"TgDrawは、登録確認、評価、連絡先項目、結果エクスポートに対応したTelegram投票・WebAppアンケート作成ボットです。","featureList":["Telegram内の投票とアンケート","WebAppアンケート","単一選択と複数選択","自由記述・評価・NPS","登録確認","連絡先の収集","結果のエクスポート"],"offers":{"@type":"Offer","category":"サブスクリプション"}}]}</script>
+<link href="/assets/site-navigation.css?v=1" rel="stylesheet"/>
+</head>
+<body class="pollsLandingPage">
+<header class="siteHeader">
+<div class="container headerInner">
+<a aria-label="TgDraw" class="logo" href="/ja/"><img alt="TgDraw" src="/logo2.png"/><span class="logoFallback">TgDraw</span></a>
+<div class="headerRight">
+<div class="languageSelectWrap" data-language-select="">
+<button aria-expanded="false" aria-haspopup="listbox" aria-label="言語を選択" class="languageSelectButton" data-language-button="" type="button">
+<img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/jp.png" srcset="https://flagcdn.com/w80/jp.png 2x"/><span>日本語</span>
+<svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="15"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<div aria-label="言語を選択" class="languageMenu" data-language-menu="" hidden="" role="listbox"><button aria-selected="false" class="languageOption" data-lang-href="/ar/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/sa.png" srcset="https://flagcdn.com/w80/sa.png 2x"/><span>العربية</span></button><button aria-selected="false" class="languageOption" data-lang-href="/hy/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/am.png" srcset="https://flagcdn.com/w80/am.png 2x"/><span>Հայերեն</span></button><button aria-selected="false" class="languageOption" data-lang-href="/az/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/az.png" srcset="https://flagcdn.com/w80/az.png 2x"/><span>Azərbaycan</span></button><button aria-selected="false" class="languageOption" data-lang-href="/be/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/by.png" srcset="https://flagcdn.com/w80/by.png 2x"/><span>Беларуская</span></button><button aria-selected="false" class="languageOption" data-lang-href="/zh-cn/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/cn.png" srcset="https://flagcdn.com/w80/cn.png 2x"/><span>简体中文</span></button><button aria-selected="false" class="languageOption" data-lang-href="/zh-tw/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/tw.png" srcset="https://flagcdn.com/w80/tw.png 2x"/><span>繁體中文</span></button><button aria-selected="false" class="languageOption" data-lang-href="/cs/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/cz.png" srcset="https://flagcdn.com/w80/cz.png 2x"/><span>Čeština</span></button><button aria-selected="false" class="languageOption" data-lang-href="/nl/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/nl.png" srcset="https://flagcdn.com/w80/nl.png 2x"/><span>Nederlands</span></button><button aria-selected="false" class="languageOption" data-lang-href="/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/gb.png" srcset="https://flagcdn.com/w80/gb.png 2x"/><span>English</span></button><button aria-selected="false" class="languageOption" data-lang-href="/fr/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/fr.png" srcset="https://flagcdn.com/w80/fr.png 2x"/><span>Français</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ka/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ge.png" srcset="https://flagcdn.com/w80/ge.png 2x"/><span>ქართული</span></button><button aria-selected="false" class="languageOption" data-lang-href="/de/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/de.png" srcset="https://flagcdn.com/w80/de.png 2x"/><span>Deutsch</span></button><button aria-selected="false" class="languageOption" data-lang-href="/hi/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/in.png" srcset="https://flagcdn.com/w80/in.png 2x"/><span>हिन्दी</span></button><button aria-selected="false" class="languageOption" data-lang-href="/id/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/id.png" srcset="https://flagcdn.com/w80/id.png 2x"/><span>Bahasa Indonesia</span></button><button aria-selected="false" class="languageOption" data-lang-href="/it/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/it.png" srcset="https://flagcdn.com/w80/it.png 2x"/><span>Italiano</span></button><button aria-selected="true" class="languageOption isActive" data-lang-href="/ja/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/jp.png" srcset="https://flagcdn.com/w80/jp.png 2x"/><span>日本語</span></button><button aria-selected="false" class="languageOption" data-lang-href="/kk/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/kz.png" srcset="https://flagcdn.com/w80/kz.png 2x"/><span>Қазақша</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ko/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/kr.png" srcset="https://flagcdn.com/w80/kr.png 2x"/><span>한국어</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ms/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/my.png" srcset="https://flagcdn.com/w80/my.png 2x"/><span>Bahasa Melayu</span></button><button aria-selected="false" class="languageOption" data-lang-href="/fa/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ir.png" srcset="https://flagcdn.com/w80/ir.png 2x"/><span>فارسی</span></button><button aria-selected="false" class="languageOption" data-lang-href="/pl/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/pl.png" srcset="https://flagcdn.com/w80/pl.png 2x"/><span>Polski</span></button><button aria-selected="false" class="languageOption" data-lang-href="/pt-br/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/br.png" srcset="https://flagcdn.com/w80/br.png 2x"/><span>Português (Brasil)</span></button><button aria-selected="false" class="languageOption" data-lang-href="/pt-pt/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/pt.png" srcset="https://flagcdn.com/w80/pt.png 2x"/><span>Português (Portugal)</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ro/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ro.png" srcset="https://flagcdn.com/w80/ro.png 2x"/><span>Română</span></button><button aria-selected="false" class="languageOption" data-lang-href="/ru/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ru.png" srcset="https://flagcdn.com/w80/ru.png 2x"/><span>Русский</span></button><button aria-selected="false" class="languageOption" data-lang-href="/es/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/es.png" srcset="https://flagcdn.com/w80/es.png 2x"/><span>Español</span></button><button aria-selected="false" class="languageOption" data-lang-href="/th/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/th.png" srcset="https://flagcdn.com/w80/th.png 2x"/><span>ไทย</span></button><button aria-selected="false" class="languageOption" data-lang-href="/tr/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/tr.png" srcset="https://flagcdn.com/w80/tr.png 2x"/><span>Türkçe</span></button><button aria-selected="false" class="languageOption" data-lang-href="/uk/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/ua.png" srcset="https://flagcdn.com/w80/ua.png 2x"/><span>Українська</span></button><button aria-selected="false" class="languageOption" data-lang-href="/uz/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/uz.png" srcset="https://flagcdn.com/w80/uz.png 2x"/><span>O‘zbekcha</span></button><button aria-selected="false" class="languageOption" data-lang-href="/vi/telegram-polls/" role="option" type="button"><img alt="" aria-hidden="true" class="languageFlagImg" loading="lazy" src="https://flagcdn.com/w40/vn.png" srcset="https://flagcdn.com/w80/vn.png 2x"/><span>Tiếng Việt</span></button></div>
+</div>
+<a class="btn btn-primary btnSmall" href="https://t.me/tgdraw_bot" rel="noreferrer" target="_blank">TgDrawを開く <svg aria-hidden="true" class="lucide lucide-send" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg></a>
+</div>
+</div>
+</header>
+<main>
+<section class="pollHero" id="telegram-polls">
+<div class="container">
+<div class="pollHeroGrid">
+<div class="pollHeroCopy">
+<div class="seoEyebrow"><svg aria-hidden="true" class="pollEyebrowIcon" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="17"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg><span>Telegramアンケート</span></div>
+<h1>外部フォームなしでTelegramアンケートを作成</h1>
+<p class="pollHeroLead">TgDrawなら、Telegram内で投票やWebAppアンケートを直接開始できます。多彩な質問形式、連絡先の収集、チャンネル登録確認、分析しやすい結果管理に対応しています。</p>
+<div class="pollHeroActions">
+<a class="btn btn-primary" href="https://t.me/tgdraw_bot" rel="noreferrer" target="_blank">Telegramで始める <svg aria-hidden="true" class="lucide lucide-send" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg></a>
+<a class="btn btn-secondary" href="#formats">形式を選ぶ</a>
+</div>
+<div class="pollHeroMiniNav"><a href="#formats">投票</a><a href="#formats">アンケート</a><a href="#formats">評価</a><a href="#formats">連絡先</a><a href="#formats">結果</a></div>
+</div>
+<div class="pollHeroVisual">
+<div class="seoPhoneStage pollPhoneStage">
+<div class="floatingCard seoFloatingCard seoFloatingCardOne pollFloatingCardOne"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="20"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg><span>使いやすい形式</span></div>
+<div class="floatingCard seoFloatingCard seoFloatingCardThree pollFloatingCardThree"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="20"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 5.8 2 10.5 2 14.9 5.7 18 10.2 18H12c1.2 0 2 .8 2 2s.8 2 2 2c3.3 0 6-3.8 6-8.5C22 7.2 17.5 2 12 2Z"></path></svg><span>テーマ設定</span></div>
+<div aria-label="TgDraw Telegram WebAppアンケートのプレビュー" class="seoPhoneWrap" data-color-theme="default">
+<div class="seoPhoneAura"></div>
+<div class="seoPhone">
+<div class="seoPhoneTop"></div>
+<div class="seoPhoneScreen">
+<div class="seoAppTop">
+<div class="seoAppBrand"><img alt="" aria-hidden="true" src="/logo.png"/>TgDraw</div>
+<div class="seoAppPill">WebApp</div>
+</div>
+<div class="seoMiniCard seoMiniCardTight pollQuestionSliderCard">
+<div class="pollCardHead">
+<div class="pollHeadLeft"><span class="pollLogoMini">T</span><strong>アンケート</strong></div>
+<div class="pollHeadRight">
+<span>進捗</span>
+<div class="pollProgressLine"><i></i></div>
+<b data-poll-progress-count="">1 / 6</b>
+</div>
+</div>
+<div class="pollSliderWindow">
+<div class="pollSliderTrack">
+<div class="pollAppSlide">
+<div class="question-kicker">質問</div>
+<div class="question-title">どの形式が必要ですか？</div>
+<div class="poll-answer">
+<label class="pollAppOption active"><span class="pollAppInput radio"></span><b>かんたん投票</b></label>
+<label class="pollAppOption"><span class="pollAppInput radio"></span><b>詳細アンケート</b></label>
+<label class="pollAppOption"><span class="pollAppInput radio"></span><b>連絡先フォーム</b></label>
+</div>
+</div>
+<div class="pollAppSlide">
+<div class="question-kicker">質問</div>
+<div class="question-title">追加する機能を選んでください</div>
+<div class="poll-answer">
+<label class="pollAppOption active"><span class="pollAppInput checkbox"></span><b>登録確認</b></label>
+<label class="pollAppOption active"><span class="pollAppInput checkbox"></span><b>評価</b></label>
+<label class="pollAppOption"><span class="pollAppInput checkbox"></span><b>連絡先項目</b></label>
+</div>
+</div>
+<div class="pollAppSlide">
+<div class="question-kicker">質問</div>
+<div class="question-title">詳しく教えてください</div>
+<div class="poll-answer">
+<div class="pollTextArea">回答を入力</div>
+</div>
+</div>
+<div class="pollAppSlide">
+<div class="question-kicker">質問</div>
+<div class="question-title">体験を評価してください</div>
+<div class="rating-field">
+<span class="active">★</span><span class="active">★</span><span class="active">★</span><span>★</span><span>★</span>
+</div>
+</div>
+<div class="pollAppSlide">
+<div class="question-kicker">質問</div>
+<div class="question-title">このチャンネルをおすすめしますか？</div>
+<div class="nps-field">
+<span class="">0</span><span class="">1</span><span class="">2</span><span class="">3</span><span class="">4</span><span class="selected">5</span><span class="">6</span><span class="">7</span><span class="">8</span><span class="">9</span><span class="">10</span>
+</div>
+</div>
+<div class="pollAppSlide pollSlideContact">
+<div class="question-kicker">質問</div>
+<div class="question-title">連絡先を入力してください</div>
+<div class="contact-fields">
+<label>名前<span>名前を入力</span></label>
+<label>電話番号<span>電話番号を入力</span></label>
+<label>メールアドレス<span>メールアドレスを入力</span></label>
+</div>
+</div>
+</div>
+</div>
+<div class="pollPhoneActions"><button>‹ 戻る</button><button>次へ ›</button></div>
+</div>
+<div class="seoMiniCard seoMiniCardTight seoThemeCard"><div class="seoThemeCaption">自分好みに設定</div><div class="seoThemeControls"><button aria-label="デフォルト" aria-pressed="true" class="seoThemeDot default isActive" data-phone-theme="default" type="button"></button><button aria-label="サファイア" aria-pressed="false" class="seoThemeDot sapphire" data-phone-theme="sapphire" type="button"></button><button aria-label="エメラルド" aria-pressed="false" class="seoThemeDot emerald" data-phone-theme="emerald" type="button"></button><button aria-label="ルビー" aria-pressed="false" class="seoThemeDot ruby" data-phone-theme="ruby" type="button"></button><button aria-label="バイオレット" aria-pressed="false" class="seoThemeDot violet" data-phone-theme="violet" type="button"></button><button aria-label="アンバー" aria-pressed="false" class="seoThemeDot amber" data-phone-theme="amber" type="button"></button><button aria-label="オーロラ" aria-pressed="false" class="seoThemeDot aurora" data-phone-theme="aurora" type="button"></button><button aria-label="ダーク" aria-pressed="false" class="seoThemeDot noir" data-phone-theme="noir" type="button"></button></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="pollSignatureSection">
+<div class="container pollSignatureGrid">
+<article class="pollSignatureCard pollSignatureWide">
+<div class="pollSignatureIcon"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg></div>
+<span>かんたんアンケート作成</span>
+<h3>アンケートは見やすいミニ画面で開きます</h3>
+<p>質問、ボタン、進捗、完了画面はすべて1つのWebApp内に表示されます。参加者はメッセージや外部サイトを行き来せずに回答できます。</p>
+</article>
+<article class="pollSignatureCard">
+<div class="pollSignatureIcon"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M20 21a8 8 0 0 0-16 0"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+<span>役立つオーディエンスデータ</span>
+<h3>回答と連絡先を1つのアンケートで収集</h3>
+<p>意見だけでなく見込み客情報やフォロー用データも必要な場合は、名前、電話番号、メールアドレスなどの項目を追加できます。</p>
+</article>
+<article class="pollSignatureCard">
+<div class="pollSignatureIcon"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 5.8 2 10.5 2 14.9 5.7 18 10.2 18H12c1.2 0 2 .8 2 2s.8 2 2 2c3.3 0 6-3.8 6-8.5C22 7.2 17.5 2 12 2Z"></path></svg></div>
+<span>プロジェクトに合うデザイン</span>
+<h3>チャンネルに合ったデザイン</h3>
+<p>ブランド、キャンペーン、季節のプロモーション、Telegramチャンネルの雰囲気に合わせてWebAppのテーマを設定できます。</p>
+</article>
+</div>
+</section>
+<section class="pollSection" id="features">
+<div class="container">
+<div class="seoSectionHeader">
+<div class="seoKicker">機能</div>
+<h2>Telegramアンケートに必要な機能をまとめて</h2>
+<p class="seoSectionText">チャンネル、グループ、コミュニティ、ブランド、教育プロジェクト向けに、簡単な投票から詳細アンケート、フィードバックフォームまで作成できます。</p>
+</div>
+<div class="pollFeatureGrid"><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg><h3>チャンネルとグループ向けアンケート</h3><p>選んだTelegramチャンネルやグループにアンケートを公開できます。参加者はTelegramを離れずにWebAppを開いて回答します。</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M8 6h13"></path><path d="M8 12h13"></path><path d="M8 18h13"></path><path d="M3 6h.01"></path><path d="M3 12h.01"></path><path d="M3 18h.01"></path></svg><h3>使いやすい形式</h3><p>単一選択、複数選択、自由記述、評価、NPS、連絡先項目を1つのアンケートに組み合わせられます。</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M12 3l8 4v5c0 5-3.4 8-8 9-4.6-1-8-4-8-9V7Z"></path><path d="m9 12 2 2 4-5"></path></svg><h3>登録確認</h3><p>指定したチャンネルの登録者だけが参加できるように設定できます。TgDrawがアンケート開始前に登録状況を確認します。</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.9Z"></path></svg><h3>評価とNPS</h3><p>サービス、コンテンツ、商品への満足度を測り、分かりやすいフィードバックを集められます。</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 5.8 2 10.5 2 14.9 5.7 18 10.2 18H12c1.2 0 2 .8 2 2s.8 2 2 2c3.3 0 6-3.8 6-8.5C22 7.2 17.5 2 12 2Z"></path></svg><h3>WebAppデザイン</h3><p>ブランド、プロジェクト、Telegramチャンネルの雰囲気に合わせてアンケートをカスタマイズできます。</p></article><article class="pollFeatureCard"><svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15" viewbox="0 0 24 24" width="22"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg><h3>結果のエクスポート</h3><p>回答、参加者データ、質問ごとの統計を保存し、分析、レポート、フォローアップに活用できます。</p></article></div>
+</div>
+</section>
+<section class="pollSection pollSectionSoft" id="formats">
+<div class="container pollFormatWrap">
+<div class="pollFormatIntro">
+<div class="seoKicker">質問形式</div>
+<h2>目的に合うアンケート形式を選ぶ</h2>
+<p>1問だけの投票から、さまざまな回答形式、評価、連絡先項目を含む本格的なWebAppアンケートまで作成できます。</p>
+<img alt="@tgdraw_botを開く" class="pollFormatQr" decoding="async" height="550" loading="lazy" src="/tgdraw-qr-bot.png" width="480"/>
+</div>
+<div class="pollFormatGrid"><article class="pollFormatCard"><span>01</span><h3>単一選択</h3><p>一覧から1つだけ選んでもらう場合に使います。</p></article><article class="pollFormatCard"><span>02</span><h3>複数選択</h3><p>複数の回答が当てはまる場合に使います。</p></article><article class="pollFormatCard"><span>03</span><h3>自由記述</h3><p>レビュー、提案、アイデア、詳しいコメントを集められます。</p></article><article class="pollFormatCard"><span>04</span><h3>評価とNPS</h3><p>サービス品質、商品、コンテンツ、顧客体験を分かりやすいスコアで把握できます。</p></article><article class="pollFormatCard"><span>05</span><h3>連絡先項目</h3><p>見込み客、予約、フォローアップのために名前、電話番号、メールアドレスを追加できます。</p></article><article class="pollFormatCard"><span>06</span><h3>完了画面</h3><p>結果、プロモコード、お礼メッセージ、次の案内を表示できます。</p></article></div>
+</div>
+</section>
+<section class="pollSection" id="how-to-create-telegram-poll">
+<div class="container">
+<div class="seoSectionHeader"><div class="seoKicker">使い方</div><h2>Telegramでアンケートを作成する方法：4ステップ</h2><p class="seoSectionText pollStepsIntroText">シンプルな手順でアンケートを作成し、目的に合わせて設定して回答の収集を始められます。</p></div>
+<div class="pollStepsGrid"><article class="pollStepCard"><span>01</span><h3>TgDrawを開く</h3><p>Telegramでボットを開き、アンケート作成を選びます。別のフォーム作成ツールや複雑な設定は必要ありません。</p></article><article class="pollStepCard"><span>02</span><h3>質問を追加</h3><p>回答形式と必須項目を設定し、必要に応じて評価、NPS、連絡先収集を追加します。</p></article><article class="pollStepCard"><span>03</span><h3>公開設定を行う</h3><p>チャンネルまたはグループを選び、必要なら登録確認を有効にしてWebAppテーマを設定します。</p></article><article class="pollStepCard"><span>04</span><h3>結果を集める</h3><p>アンケートを公開し、回答を確認して、終了後に参加者データと質問統計をエクスポートします。</p></article></div>
+</div>
+</section>
+<section class="pollSection pollSectionBlend">
+<div class="container pollBlendGrid">
+<div class="pollBlendCopy">
+<div class="seoKicker">参加者の使いやすさ</div>
+<h2>WebAppアンケートが回答しやすい理由</h2>
+<p>質問は1つの画面に順番に表示されます。参加者は次に何をすればよいか分かり、進捗を確認でき、不要なページ移動もありません。</p>
+</div>
+<div class="pollSoftCards"><article class="pollSoftCard"><h3>分かりやすい進捗</h3><p>現在の質問と残りのステップ数を確認できます。</p></article><article class="pollSoftCard"><h3>明確な完了画面</h3><p>最後の回答後に、お礼メッセージ、結果、プロモコード、次の案内を表示できます。</p></article></div>
+</div>
+</section>
+<section class="pollSection" id="telegram-polls-faq">
+<div class="container">
+<div class="seoSectionHeader">
+<div class="seoKicker">質問と回答</div>
+<h2>Telegramアンケートに関するよくある質問</h2>
+</div>
+<div class="seoFaq pollFaqWide"><article class="seoFaqItem"><h3>Telegramでアンケートを作成するには？</h3><p>TgDrawを開き、アンケート形式を選び、質問と設定を追加して、必要なチャンネルまたはグループに公開します。</p></article><article class="seoFaqItem"><h3>どの質問形式を使えますか？</h3><p>単一選択、複数選択、自由記述、評価、NPS、連絡先項目を追加できます。</p></article><article class="seoFaqItem"><h3>チャンネル登録者だけに参加を限定できますか？</h3><p>はい。対象のTelegramチャンネルを追加すると、TgDrawがアンケート開始前に登録状況を確認します。</p></article><article class="seoFaqItem"><h3>見込み客情報や連絡先を収集できますか？</h3><p>はい。フォローアップ用に、WebAppアンケートへ名前、電話番号、メールアドレスなどの項目を追加できます。</p></article><article class="seoFaqItem"><h3>アンケート結果はどうやって取得できますか？</h3><p>終了後に回答を確認し、利用中のアクセスモードでエクスポートが可能な場合は、参加者データと質問統計を保存できます。</p></article><article class="seoFaqItem"><h3>TgDrawのアンケートは何に使えますか？</h3><p>投票、オーディエンス調査、フィードバック収集、見込み客フォーム、サービス評価、Telegramチャンネルやグループでのアンケートに使えます。</p></article></div>
+</div>
+</section>
+<section class="seoCta">
+<div class="container seoCtaBox pollCtaBox">
+<div>
+<h2>最初のTelegramアンケートを作成</h2>
+<p>質問を設定してWebAppアンケートを公開すれば、外部フォームや手作業でのデータ移行なしに整理された回答を受け取れます。</p>
+</div>
+<img alt="@tgdraw_botを開く" class="pollCtaQr" decoding="async" height="550" loading="lazy" src="/tgdraw-qr-bot.png" width="480"/>
+</div>
+</section>
+</main>
+<footer class="seoFooter"><div class="container seoFooterInner"><div class="seoFooterText">TgDraw — アンケート、クイズ、抽選のためのTelegramボット。</div><div class="seoFooterLinks"><a href="/ja/">ホーム</a><a href="/ja/telegram-polls/">Telegramアンケート</a><a href="/ja/telegram-quizzes/">Telegramクイズ</a></div></div></footer>
+<script src="/assets/telegram-polls.js?v=4"></script>
+<script defer src="/assets/site-navigation.js?v=1"></script>
+</body>
+</html>
