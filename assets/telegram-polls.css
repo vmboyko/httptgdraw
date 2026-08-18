@@ -51,26 +51,25 @@
   position: relative;
   z-index: 2;
   max-width: 650px;
+  min-height: 570px;
+  display: flex;
+  flex-direction: column;
 }
 
 .pollHeroCopy .seoEyebrow {
   margin-bottom: 18px;
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  width: max-content;
-  max-width: 100%;
-  min-height: 42px;
-  padding: 0 18px;
+  gap: 8px;
+  width: fit-content;
+  padding: 8px 13px;
   border: 1px solid #d8e7f6;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  color: #0f3b73;
+  background: #ffffffb8;
+  color: #21466f;
   font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 0;
-  text-transform: none;
-  box-shadow: 0 8px 22px rgba(8, 27, 54, 0.06);
+  font-weight: 800;
+  white-space: nowrap;
 }
 
 .pollHeroCopy h1 {
@@ -156,10 +155,6 @@
   top: 82px;
 }
 
-.pollFloatingCardTwo {
-  right: -10px;
-  top: 244px;
-}
 
 .pollFloatingCardThree {
   left: auto;
@@ -228,12 +223,10 @@
 }
 
 .pollSignatureCard:nth-child(2) .pollSignatureIcon {
-  background: #1f8bff;
   color: #10a37f;
 }
 
 .pollSignatureCard:nth-child(3) .pollSignatureIcon {
-  background: #0f7ab0;
   color: #8b5cf6;
 }
 
@@ -380,6 +373,9 @@
   padding: 24px;
   background: linear-gradient(180deg, #fff, #f6fbff);
   box-shadow: 0 14px 34px rgba(8, 27, 54, 0.06);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .pollFormatIntro h2 {
@@ -393,6 +389,25 @@
   line-height: var(--line-height-body);
 }
 
+.pollFormatQr {
+  display: block;
+  width: min(32%, 180px);
+  height: auto;
+  margin: auto auto 0;
+  padding-top: 24px;
+}
+
+.pollCtaQr {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 170px;
+  height: auto;
+  flex: 0 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.15);
+}
+
 .pollFormatGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -402,7 +417,7 @@
 .pollFormatCard {
   border: 1px solid #d9e6f4;
   border-radius: 24px;
-  padding: 22px;
+  padding: 0px 22px;
   background: #fff;
   box-shadow: 0 12px 28px rgba(8, 27, 54, 0.06);
 }
@@ -418,6 +433,7 @@
   color: #0b74d1;
   font-size: 13px;
   font-weight: 950;
+  margin-top: 17px;
 }
 
 .pollFormatCard h3 {
@@ -634,12 +650,11 @@
 }
 
 .pollPhoneStage > .pollFloatingCardOne {
-  left: 0;
-  top: 88px;
+  left: 260px;
+  top: auto;
   right: auto;
-  bottom: auto;
+  bottom: 220px;
   position: absolute;
-  inset: auto;
   width: auto;
   min-width: 0;
   max-width: max-content;
@@ -664,44 +679,13 @@
   z-index: 20;
 }
 
-.pollPhoneStage > .pollFloatingCardTwo {
-  right: 0;
-  top: 238px;
-  left: auto;
-  bottom: auto;
-  position: absolute;
-  inset: auto;
-  width: auto;
-  min-width: 0;
-  max-width: max-content;
-  height: auto;
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-  padding: 0 13px;
-  border-radius: 15px;
-  border: 1px solid rgba(0, 118, 236, 0.55);
-  background: rgba(255, 255, 255, 0.96);
-  color: #0f3b73;
-  font-size: 13px;
-  line-height: 1;
-  font-weight: 900;
-  white-space: nowrap;
-  box-shadow: 0 14px 32px rgba(8, 27, 54, 0.1);
-  backdrop-filter: none;
-  transform: none;
-  z-index: 20;
-}
 
 .pollPhoneStage > .pollFloatingCardThree {
-  right: 26px;
-  bottom: 28px;
-  left: auto;
+  right: auto;
+  bottom: 80px;
+  left: 240px;
   top: auto;
   position: absolute;
-  inset: auto;
   width: auto;
   min-width: 0;
   max-width: max-content;
@@ -1494,6 +1478,78 @@
   background: linear-gradient(90deg, #e3182c 0%, #0b74d1 100%);
 }
 
+@keyframes pollSlides {
+  0%,
+  12% {
+    transform: translateX(0);
+  }
+
+  16%,
+  28% {
+    transform: translateX(-16.6667%);
+  }
+
+  33%,
+  45% {
+    transform: translateX(-33.3334%);
+  }
+
+  50%,
+  62% {
+    transform: translateX(-50%);
+  }
+
+  66%,
+  78% {
+    transform: translateX(-66.6668%);
+  }
+
+  83%,
+  95% {
+    transform: translateX(-83.3335%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pollProgress {
+  0%,
+  12% {
+    width: 16.6667%;
+  }
+
+  16%,
+  28% {
+    width: 33.3334%;
+  }
+
+  33%,
+  45% {
+    width: 50%;
+  }
+
+  50%,
+  62% {
+    width: 66.6667%;
+  }
+
+  66%,
+  78% {
+    width: 83.3334%;
+  }
+
+  83%,
+  95% {
+    width: 100%;
+  }
+
+  100% {
+    width: 16.6667%;
+  }
+}
+
 @media (max-width: 1180px) {
 .pollHeroGrid {
     grid-template-columns: 1fr;
@@ -1501,6 +1557,8 @@
 
   .pollHeroCopy {
     max-width: none;
+    min-height: 0;
+    justify-content: flex-start;
   }
 
   .pollHeroVisual {
@@ -1551,10 +1609,6 @@
     top: 74px;
   }
 
-  .pollFloatingCardTwo {
-    right: calc(50% - 184px);
-    top: 214px;
-  }
 
   .pollFloatingCardThree {
     left: calc(50% - 112px);
@@ -1605,36 +1659,25 @@
     align-items: flex-start;
   }
 
+  .pollFormatQr {
+    display: none;
+  }
+
+  .pollCtaQr {
+    width: 150px;
+    align-self: center;
+  }
+
   .pollFloatingCardOne {
     left: -4px;
     top: 78px;
   }
 
-  .pollFloatingCardTwo {
-    right: -8px;
-    top: 238px;
-  }
 
   .pollFloatingCardThree {
     right: 18px;
     bottom: 20px;
   }
-
-  .pollPhoneStage > .pollFloatingCardOne {
-    left: 0;
-    top: 82px;
-  }
-
-  .pollPhoneStage > .pollFloatingCardTwo {
-    right: -4px;
-    top: 228px;
-  }
-
-  .pollPhoneStage > .pollFloatingCardThree {
-    right: 18px;
-    bottom: 22px;
-  }
-}
 
 @media (max-width: 430px) {
 .pollPhoneStage {
@@ -1652,10 +1695,6 @@
     left: 6px;
   }
 
-  .pollFloatingCardTwo {
-    top: 208px;
-    right: 0;
-  }
 
   .pollFloatingCardThree {
     left: calc(50% - 108px);
@@ -1675,17 +1714,72 @@
     font-size: 12px;
     min-height: 40px;
     padding: 0 10px;
+    width: fit-content;
   }
 
   .pollPhoneStage > .pollFloatingCardOne {
-    left: 6px;
+    left: 260px;
   }
 
-  .pollPhoneStage > .pollFloatingCardTwo {
-    right: 0;
-  }
 
   .pollPhoneStage > .pollFloatingCardThree {
     right: 20px;
+    bottom: 30px;
+    top: auto;
+  }
+}
+}
+
+
+/* Arabic RTL corrections: keep Arabic glyphs joined and mirror directional UI. */
+html[lang="ar"] .pollsLandingPage h1,
+html[lang="ar"] .pollsLandingPage h2,
+html[lang="ar"] .pollsLandingPage h3,
+html[lang="ar"] .pollsLandingPage .pollSignatureCard span,
+html[lang="ar"] .pollsLandingPage .pollStepCard > span,
+html[lang="ar"] .pollsLandingPage .question-kicker {
+  letter-spacing: 0;
+}
+
+html[lang="ar"] .pollsLandingPage .pollSignatureCard span,
+html[lang="ar"] .pollsLandingPage .question-kicker {
+  text-transform: none;
+}
+
+html[lang="ar"] .pollPhoneStage .question-title,
+html[lang="ar"] .pollPhoneStage .question-kicker {
+  padding-left: 0;
+  padding-right: 5px;
+  text-align: right;
+}
+
+html[lang="ar"] .pollPhoneStage .pollAppOption,
+html[lang="ar"] .pollPhoneStage .pollTextArea,
+html[lang="ar"] .pollPhoneStage .contact-fields label,
+html[lang="ar"] .pollPhoneStage .contact-fields label span {
+  text-align: right;
+}
+
+html[lang="ar"] .pollPhoneStage .nps-field {
+  direction: ltr;
+}
+
+html[lang="ar"] .pollPhoneStage .pollPhoneActions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  direction: rtl;
+}
+
+@media (min-width: 1181px) {
+  html[lang="ar"] .pollPhoneStage > .pollFloatingCardOne {
+    left: auto;
+    right: 260px;
+  }
+
+  html[lang="ar"] .pollPhoneStage > .pollFloatingCardThree {
+    left: auto;
+    right: 240px;
   }
 }

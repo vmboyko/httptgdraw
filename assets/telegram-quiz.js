@@ -1,19 +1,34 @@
-
 (() => {
   document.querySelectorAll('[data-language-select]').forEach((wrap) => {
     const button = wrap.querySelector('[data-language-button]');
     const menu = wrap.querySelector('[data-language-menu]');
     if (!button || !menu) return;
-    const close = () => { menu.hidden = true; button.setAttribute('aria-expanded', 'false'); };
-    const open = () => { menu.hidden = false; button.setAttribute('aria-expanded', 'true'); };
-    button.addEventListener('click', (event) => { event.stopPropagation(); menu.hidden ? open() : close(); });
+
+    const close = () => {
+      menu.hidden = true;
+      button.setAttribute('aria-expanded', 'false');
+    };
+    const open = () => {
+      menu.hidden = false;
+      button.setAttribute('aria-expanded', 'true');
+    };
+
+    button.addEventListener('click', (event) => {
+      event.stopPropagation();
+      menu.hidden ? open() : close();
+    });
     menu.addEventListener('click', (event) => {
       const option = event.target.closest('[data-lang-href]');
       if (option) window.location.href = option.getAttribute('data-lang-href');
     });
-    document.addEventListener('click', (event) => { if (!wrap.contains(event.target)) close(); });
-    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') close(); });
+    document.addEventListener('click', (event) => {
+      if (!wrap.contains(event.target)) close();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') close();
+    });
   });
+
   document.querySelectorAll('.seoPhoneWrap').forEach((phoneWrap) => {
     const dots = phoneWrap.querySelectorAll('[data-phone-theme]');
     const setTheme = (theme) => {
@@ -24,28 +39,25 @@
         dot.setAttribute('aria-pressed', active ? 'true' : 'false');
       });
     };
-    dots.forEach((dot) => dot.addEventListener('click', () => setTheme(dot.getAttribute('data-phone-theme'))));
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => setTheme(dot.getAttribute('data-phone-theme')));
+    });
     setTheme(phoneWrap.getAttribute('data-color-theme') || 'default');
   });
+
   document.querySelectorAll('.pollQuestionSliderCard').forEach((card) => {
     const counter = card.querySelector('[data-poll-progress-count]');
     const slides = card.querySelectorAll('.pollAppSlide');
     if (!counter || slides.length === 0) return;
 
-    const duration = 24000;
-    const thresholds = [0, 0.16, 0.33, 0.5, 0.66, 0.83];
+    const duration = slides.length * 4000;
     const startedAt = performance.now();
     let lastIndex = -1;
 
     const renderCounter = (now) => {
       const progress = ((now - startedAt) % duration) / duration;
-      let index = thresholds.length - 1;
-      for (let i = thresholds.length - 1; i >= 0; i -= 1) {
-        if (progress >= thresholds[i]) {
-          index = i;
-          break;
-        }
-      }
+      const index = Math.min(slides.length - 1, Math.floor(progress * slides.length));
 
       if (index !== lastIndex) {
         counter.textContent = `${index + 1} / ${slides.length}`;
@@ -56,5 +68,4 @@
 
     window.requestAnimationFrame(renderCounter);
   });
-
 })();

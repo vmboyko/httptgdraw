@@ -129,7 +129,8 @@ textarea {
 }
 
 .logo img {
-  width: 138px;
+  width: 200px;
+  padding: 5px;
   height: auto;
 }
 
@@ -679,12 +680,12 @@ h1,
 
 .floatingCard {
   z-index: 3;
-  min-height: 50px;
+  height: 44px;
   box-shadow: var(--shadow-soft);
   color: #17365d;
   background: #ffffffeb;
   border: 1px solid #e0eaf5;
-  border-radius: 16px;
+  border-radius: 15px;
   align-items: center;
   gap: 9px;
   padding: 0 14px;
@@ -692,6 +693,7 @@ h1,
   font-weight: 800;
   display: inline-flex;
   position: absolute;
+  border: 1px solid rgba(0, 118, 236, 0.82);
 }
 
 .floatingCard svg {
@@ -1777,15 +1779,56 @@ lottie-player:not(:defined).endLottie:before {
   margin-top: 42px;
 }
 
+@keyframes phoneSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes phoneSearchPulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.95;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 0.72;
+  }
+}
+
+@keyframes phoneTrophyFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes phoneConfetti {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translateY(0) scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1);
+  }
+}
+
 @media (max-width: 1100px) {
   .floatingCardTwo {
     left: 16%;
-    bottom: 102px;
-    right: 12%;
+    bottom: 112px;
   }
 
   .floatingCardThree {
-    right: 12%;
     top: 238px;
     left: 16%;
   }
@@ -1829,7 +1872,7 @@ lottie-player:not(:defined).endLottie:before {
   .floatingCardTwo {
     left: 8px;
     bottom: 102px;
-    top: 238px;
+    top: auto;
     right: 0;
   }
 
@@ -1902,7 +1945,8 @@ lottie-player:not(:defined).endLottie:before {
   }
 
   .floatingCard {
-    min-height: 46px;
+    height: 40px;
+    width: fit-content;
     font-size: 12.5px;
   }
 
@@ -2100,11 +2144,13 @@ lottie-player:not(:defined).endLottie:before {
   .floatingCardTwo {
     left: -8px;
     right: -8px;
+    bottom: 112px;
   }
 
   .floatingCardThree {
-    right: -8px;
-    top: 225px;
+    right: 1px;
+    top: 238px;
+    left: auto;
   }
 
   .resultDemoCard {

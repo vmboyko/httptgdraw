@@ -1,0 +1,28 @@
+/* Three-question phone preview for /telegram-quiz/. */
+.quizLandingPage .pollPhoneStage .pollSliderTrack {
+  width: 300%;
+  animation: quizSlides 12s infinite ease-in-out;
+}
+
+.quizLandingPage .pollPhoneStage .pollAppSlide {
+  width: 33.3333%;
+  flex: 0 0 33.3333%;
+}
+
+.quizLandingPage .pollPhoneStage .pollProgressLine i {
+  animation: quizProgress 12s infinite ease-in-out;
+}
+
+@keyframes quizSlides {
+  0%, 28% { transform: translateX(0); }
+  33%, 61% { transform: translateX(-33.3333%); }
+  66%, 94% { transform: translateX(-66.6666%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes quizProgress {
+  0%, 28% { width: 33.3333%; }
+  33%, 61% { width: 66.6667%; }
+  66%, 94% { width: 100%; }
+  100% { width: 33.3333%; }
+}
